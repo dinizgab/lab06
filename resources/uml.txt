@@ -1,149 +1,149 @@
-Facade
-association PessoaController
-association AtividadeController
-association TarefaController
+    Facade
+    association PessoaController
+    association AtividadeController
+    association TarefaController
 
----
-- PessoaController: pessoaController
-- AtividadeController: atividadeController
-- TarefaController: tarefaController
----
-+ Facade()
-//pessoa
-+ cadastrarPessoa(cpf: str, nome: str, habilidades: str[]): void
-+ exibirPessoa(cpf: str): str
-+ alterarNomePessoa(cpf: str, novoNome: str): void
-+ alterarHabilidadesPessoa(cpf: str, novasHabilidades: str[]): void
-+ removerPessoa(cpf: str): void
-+ adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void
-+ listarComentariosPessoa(cpf: str): str
-//atividade
-+ cadastrarAtividade(nome: str, descricao: str, cpf: str): str
-+ encerrarAtividade(atividadeId: str): void
-+ desativarAtividade(atividadeId: str): void
-+ reabrirAtividade(atividadeId: str): void
-+ exibirAtividade(atividadeId: str): str
-+ alterarDescricaoAtividade(atividadeId: str, descricao: str): void
-+ alterarResponsavelAtividade(atividadeId: str, cpf: str): void
-//tarefa
-+ cadastrarTarefa(atividadeId: str, nome: str, habilidades: str[]): str
-+ alterarNomeTarefa(idTarefa: str, novoNome: str): void
-+ alterarHabilidadesTarefa(idTarefa: str, habilidades: str[]): void
-+ adicionarHorasTarefa(idTarefa: str, horas: int): void
-+ removerHorasTarefa(idTarefa: str, horas: int): void
-+ concluirTarefa(idTarefa: str): void
-+ removerTarefa(idTarefa: str): void
-+ exibirTarefa(idTarefa: str): str
-+ associarPessoaTarefa(cpf: str, idTarefa: str): void
-+ removerPessoaTarefa(cpf: str, idTarefa: str): void
----
+    ---
+    - PessoaController: pessoaController
+    - AtividadeController: atividadeController
+    - TarefaController: tarefaController
+    ---
+    + Facade()
+    //pessoa
+    + cadastrarPessoa(cpf: str, nome: str, habilidades: str[]): void
+    + exibirPessoa(cpf: str): str
+    + alterarNomePessoa(cpf: str, novoNome: str): void
+    + alterarHabilidadesPessoa(cpf: str, novasHabilidades: str[]): void
+    + removerPessoa(cpf: str): void
+    + adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void
+    + listarComentariosPessoa(cpf: str): str
+    //atividade
+    + cadastrarAtividade(nome: str, descricao: str, cpf: str): str
+    + encerrarAtividade(atividadeId: str): void
+    + desativarAtividade(atividadeId: str): void
+    + reabrirAtividade(atividadeId: str): void
+    + exibirAtividade(atividadeId: str): str
+    + alterarDescricaoAtividade(atividadeId: str, descricao: str): void
+    + alterarResponsavelAtividade(atividadeId: str, cpf: str): void
+    //tarefa
+    + cadastrarTarefa(atividadeId: str, nome: str, habilidades: str[]): str
+    + alterarNomeTarefa(idTarefa: str, novoNome: str): void
+    + alterarHabilidadesTarefa(idTarefa: str, habilidades: str[]): void
+    + adicionarHorasTarefa(idTarefa: str, horas: int): void
+    + removerHorasTarefa(idTarefa: str, horas: int): void
+    + concluirTarefa(idTarefa: str): void
+    + removerTarefa(idTarefa: str): void
+    + exibirTarefa(idTarefa: str): str
+    + associarPessoaTarefa(cpf: str, idTarefa: str): void
+    + removerPessoaTarefa(cpf: str, idTarefa: str): void
+    ---
 
-PessoaController
-association PessoaService
----
-- pessoaService: PessoaService 
----
-+ cadastrarPessoa(cpf: str, nome: str, habilidades: str[]): void
-+ exibirPessoa(cpf: str): str
-+ alterarNomePessoa(cpf: str, novoNome: str): void
-+ alterarHabilidadesPessoa(cpf: str, novasHabilidades: str[]): void
-+ removerPessoa(cpf: str): void
-+ adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void
-+ listarComentariosPessoa(cpf: str): str
----
-PessoaService
-composes Pessoa
----
-- pessoas: Map<str, Pessoa>
----
-+ cadastrarPessoa(cpf: str, nome: str, habilidades: str[]): void
-+ exibirPessoa(cpf: str): str
-+ alterarNomePessoa(cpf: str, novoNome: str): void
-+ alterarHabilidadesPessoa(cpf: str, novasHabilidades: str[]): void
-+ removerPessoa(cpf: str): void
-+ adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void
-+ listarComentariosPessoa(cpf: str): str
----
+    PessoaController
+    association PessoaService
+    ---
+    - pessoaService: PessoaService
+    ---
+    + cadastrarPessoa(cpf: str, nome: str, habilidades: str[]): void
+    + exibirPessoa(cpf: str): str
+    + alterarNomePessoa(cpf: str, novoNome: str): void
+    + alterarHabilidadesPessoa(cpf: str, novasHabilidades: str[]): void
+    + removerPessoa(cpf: str): void
+    + adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void
+    + listarComentariosPessoa(cpf: str): str
+    ---
+    PessoaService
+    composes Pessoa
+    ---
+    - pessoas: Map<str, Pessoa>
+    ---
+    + cadastrarPessoa(cpf: str, nome: str, habilidades: str[]): void
+    + exibirPessoa(cpf: str): str
+    + alterarNomePessoa(cpf: str, novoNome: str): void
+    + alterarHabilidadesPessoa(cpf: str, novasHabilidades: str[]): void
+    + removerPessoa(cpf: str): void
+    + adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void
+    + listarComentariosPessoa(cpf: str): str
+    ---
 
-Pessoa
-composes Comentario
----
-- comentarios:Comentrario[]
-- cpf: str
-- nome: str
-- habilidades: str[]
----
-+ Pessoa(cpf: str, nome: str, habilidades: str[])
-+ toString(): str
-+ setNome(novoNome: str): void
-+ setHabiidades(novasHabilidades: str[]): void
-+ adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void
-+ getComentarios(): Comentario[]
----
+    Pessoa
+    composes Comentario
+    ---
+    - comentarios:Comentrario[]
+    - cpf: str
+    - nome: str
+    - habilidades: str[]
+    ---
+    + Pessoa(cpf: str, nome: str, habilidades: str[])
+    + toString(): str
+    + setNome(novoNome: str): void
+    + setHabiidades(novasHabilidades: str[]): void
+    + adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void
+    + getComentarios(): Comentario[]
+    ---
 
-Comentario
----
-- autor: Pessoa
-- data: Date
-- descricao: str
----
-+ Comentario(autor: Pessoa, descricao: str)
-+ toString(): str
----
+    Comentario
+    ---
+    - autor: Pessoa
+    - data: Date
+    - descricao: str
+    ---
+    + Comentario(autor: Pessoa, descricao: str)
+    + toString(): str
+    ---
 
-AtividadeController
-association AtividadeService
----
-- atividadeService: AtividadeService
----
-+ cadastrarAtividade(nome: str, descricao: str, cpf: str): str
-+ encerrarAtividade(atividadeId: str): void
-+ desativarAtividade(atividadeId: str): void
-+ reabrirAtividade(atividadeId: str): void
-+ exibirAtividade(atividadeId: str): str
-+ alterarDescricaoAtividade(atividadeId: str, descricao: str): void
-+ alterarResponsavelAtividade(atividadeId: str, cpf: str): void
----
+    AtividadeController
+    association AtividadeService
+    ---
+    - atividadeService: AtividadeService
+    ---
+    + cadastrarAtividade(nome: str, descricao: str, cpf: str): str
+    + encerrarAtividade(atividadeId: str): void
+    + desativarAtividade(atividadeId: str): void
+    + reabrirAtividade(atividadeId: str): void
+    + exibirAtividade(atividadeId: str): str
+    + alterarDescricaoAtividade(atividadeId: str, descricao: str): void
+    + alterarResponsavelAtividade(atividadeId: str, cpf: str): void
+    ---
 
 
-AtividadeService
----
----
-+ cadastrarAtividade(nome: str, descricao: str, cpf: str): str
-+ encerrarAtividade(atividadeId: str): void
-+ desativarAtividade(atividadeId: str): void
-+ reabrirAtividade(atividadeId: str): void
-+ exibirAtividade(atividadeId: str): str
-+ alterarDescricaoAtividade(atividadeId: str, descricao: str): void
-+ alterarResponsavelAtividade(atividadeId: str, cpf: str): void
----
+    AtividadeService
+    ---
+    ---
+    + cadastrarAtividade(nome: str, descricao: str, cpf: str): str
+    + encerrarAtividade(atividadeId: str): void
+    + desativarAtividade(atividadeId: str): void
+    + reabrirAtividade(atividadeId: str): void
+    + exibirAtividade(atividadeId: str): str
+    + alterarDescricaoAtividade(atividadeId: str, descricao: str): void
+    + alterarResponsavelAtividade(atividadeId: str, cpf: str): void
+    ---
 
-Atividade
----
-- nome: str
-- descricao: str
-- cpf: str
-- status: str
----
-+ Atividade(nome: str, descricao: str, cpf: str)
-+ encerrar(): void
-+ desativar(atividadeId: str): void
-+ reabrir(): void
-+ toString(): str
-+ setDescricao(descricao: str): void
-+ setResponsavel(cpf: str): void
----
+    Atividade
+    ---
+    - nome: str
+    - descricao: str
+    - cpf: str
+    - status: str
+    ---
+    + Atividade(nome: str, descricao: str, cpf: str)
+    + encerrar(): void
+    + desativar(atividadeId: str): void
+    + reabrir(): void
+    + toString(): str
+    + setDescricao(descricao: str): void
+    + setResponsavel(cpf: str): void
+    ---
 
-TarefaController
-association TarefaService
----
-- tarefaController: TarefaController
----
----
+    TarefaController
+    association TarefaService
+    ---
+    - tarefaController: TarefaController
+    ---
+    ---
 
-TarefaService
----
----
----
+    TarefaService
+    ---
+    ---
+    ---
 
 
