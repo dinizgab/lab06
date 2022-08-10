@@ -16,7 +16,16 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        // TODO - Formatar as habilidadades da pessoa noa toString
-        return this.nome + " - " + this.cpf;
+        String habilidadesFormatadas = this.formataHabilidades();
+        return this.nome + " - " + this.cpf + "\n" + habilidadesFormatadas;
+    }
+
+    private String formataHabilidades() {
+        String habilidadesFormatadas = "";
+
+        for (String habilidade : this.habilidades) {
+            habilidadesFormatadas += "- " + habilidade + "\n";
+        }
+        return habilidadesFormatadas;
     }
 }

@@ -15,4 +15,10 @@ public class PessoaService {
 
         pessoaRepository.put(p.getCpf(), p);
     }
+
+    public String recuperaPessoa(String cpf) {
+        Pessoa p = pessoaRepository.get(cpf);
+
+        return p.toString();
+    }
 }
