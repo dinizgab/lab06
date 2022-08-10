@@ -2,7 +2,7 @@
 
 ## Equipe 
 - Gabriel Diniz - 121111468
-- Sabrina Barbosa - 
+- Sabrina Barbosa - 121110444
 - João Victor Lucena - 
 
 ## Responsabilidades
