@@ -1,0 +1,266 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"2a7fa8a2-f375-4b73-b918-a37d0ff3fdab\" name=\"Changes\" comment=\"Initial configurations\">\n      <change afterPath=\"$PROJECT_DIR$/src/sapo/atividade/AtividadeController.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/sapo/atividade/AtividadeService.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/sapo/tarefa/TarefaController.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/sapo/tarefa/TarefaService.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/sapo/AtividadeController.java\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/sapo/Pessoa.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/sapo/pessoa/Pessoa.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/sapo/PessoaController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/sapo/pessoa/PessoaController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/sapo/PessoaService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/sapo/pessoa/PessoaService.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/sapo/SapoFacade.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/sapo/SapoFacade.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/sapo/TarefaController.java\" beforeDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2D5H7flVrICsiS9AePZIKwnqJmd\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CreateClassDialog.RecentsKey\">\n      <recent name=\"sapo\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"2a7fa8a2-f375-4b73-b918-a37d0ff3fdab\" name=\"Changes\" comment=\"\" />\n      <created>1659981860840</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1659981860840</updated>\n      <workItem from=\"1659981862880\" duration=\"5521000\" />\n      <workItem from=\"1660139812179\" duration=\"3627000\" />\n      <workItem from=\"1660176823524\" duration=\"205000\" />\n      <workItem from=\"1660177476199\" duration=\"208000\" />\n      <workItem from=\"1660186978425\" duration=\"2447000\" />\n      <workItem from=\"1660223885276\" duration=\"415000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Initial configurations\">\n      <created>1659984232645</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659984232645</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"2\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Initial configurations\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Initial configurations\" />\n  </component>\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\n    <expand />\n    <select />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision c953e31c836e59307089980a8439aeaf33d0fe5c)
++++ b/.idea/workspace.xml	(date 1660238609211)
+@@ -2,17 +2,7 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Initial configurations">
+-      <change afterPath="$PROJECT_DIR$/src/sapo/atividade/AtividadeController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/sapo/atividade/AtividadeService.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaService.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/sapo/AtividadeController.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/sapo/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/Pessoa.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/sapo/PessoaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/PessoaController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/sapo/PessoaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/PessoaService.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/sapo/SapoFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/SapoFacade.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/sapo/TarefaController.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/resources/uml.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/uml.txt" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -69,6 +59,7 @@
+       <workItem from="1660177476199" duration="208000" />
+       <workItem from="1660186978425" duration="2447000" />
+       <workItem from="1660223885276" duration="415000" />
++      <workItem from="1660238280723" duration="328000" />
+     </task>
+     <task id="LOCAL-00001" summary="Initial configurations">
+       <created>1659984232645</created>
+Index: resources/uml.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Facade\nassociation PessoaController\nassociation AtividadeController\nassociation TarefaController\n\n---\n- PessoaController: pessoaController\n- AtividadeController: atividadeController\n- TarefaController: tarefaController\n---\n+ Facade()\n//pessoa\n+ cadastrarPessoa(cpf: str, nome: str, habilidades: str[]): void\n+ exibirPessoa(cpf: str): str\n+ alterarNomePessoa(cpf: str, novoNome: str): void\n+ alterarHabilidadesPessoa(cpf: str, novasHabilidades: str[]): void\n+ removerPessoa(cpf: str): void\n+ adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void\n+ listarComentariosPessoa(cpf: str): str\n//atividade\n+ cadastrarAtividade(nome: str, descricao: str, cpf: str): str\n+ encerrarAtividade(atividadeId: str): void\n+ desativarAtividade(atividadeId: str): void\n+ reabrirAtividade(atividadeId: str): void\n+ exibirAtividade(atividadeId: str): str\n+ alterarDescricaoAtividade(atividadeId: str, descricao: str): void\n+ alterarResponsavelAtividade(atividadeId: str, cpf: str): void\n//tarefa\n+ cadastrarTarefa(atividadeId: str, nome: str, habilidades: str[]): str\n+ alterarNomeTarefa(idTarefa: str, novoNome: str): void\n+ alterarHabilidadesTarefa(idTarefa: str, habilidades: str[]): void\n+ adicionarHorasTarefa(idTarefa: str, horas: int): void\n+ removerHorasTarefa(idTarefa: str, horas: int): void\n+ concluirTarefa(idTarefa: str): void\n+ removerTarefa(idTarefa: str): void\n+ exibirTarefa(idTarefa: str): str\n+ associarPessoaTarefa(cpf: str, idTarefa: str): void\n+ removerPessoaTarefa(cpf: str, idTarefa: str): void\n---\n\nPessoaController\nassociation PessoaService\n---\n- pessoaService: PessoaService \n---\n+ PessoaController(ps: PessoaService)\n+ cadastrarPessoa(cpf: str, nome: str, habilidades: str[]): void\n+ exibirPessoa(cpf: str): str\n+ alterarNomePessoa(cpf: str, novoNome: str): void\n+ alterarHabilidadesPessoa(cpf: str, novasHabilidades: str[]): void\n+ removerPessoa(cpf: str): void\n+ adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void\n+ listarComentariosPessoa(cpf: str): str\n---\n\nPessoaService\ncomposes Pessoa\n---\n- pessoas: Map<str, Pessoa>\n---\n+ PessoaService()\n+ cadastrarPessoa(cpf: str, nome: str, habilidades: str[]): void\n+ recuperaPessoa(cpf: str): Pessoa\n+ exibirPessoa(cpf: str): str\n+ alterarNomePessoa(cpf: str, novoNome: str): void\n+ alterarHabilidadesPessoa(cpf: str, novasHabilidades: str[]): void\n+ removerPessoa(cpf: str): void\n+ adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void\n+ listarComentariosPessoa(cpf: str): str\n---\n\nPessoa\ncomposes Comentario\n---\n- comentarios: List<Comentario>\n- cpf: str\n- nome: str\n- habilidades: str[]\n---\n+ Pessoa(cpf: str, nome: str, habilidades: str[])\n+ toString(): str\n+ setNome(novoNome: str): void\n+ setHabiidades(novasHabilidades: str[]): void\n+ getNome(): str\n+ getCPF(): str\n+ adicionarComentario(cpf: str, comentario: str, autor: Pessoa): void\n+ getComentarios(): Comentario[]\n---\n\nComentario\n---\n- autor: Pessoa\n- data: Date\n- descricao: str\n---\n+ Comentario(autor: Pessoa, descricao: str)\n+ getData(): Date\n+ toString(): str\n---\n\nAtividadeController\nassociation AtividadeService\n---\n- atividadeService: AtividadeService\n---\n+ AtividadeController(at: AtividadeService)\n+ cadastrarAtividade(nome: str, descricao: str, cpf: str): str\n+ encerrarAtividade(atividadeId: str): void\n+ desativarAtividade(atividadeId: str): void\n+ reabrirAtividade(atividadeId: str): void\n+ exibirAtividade(atividadeId: str): str\n+ alterarDescricaoAtividade(atividadeId: str, descricao: str): void\n+ alterarResponsavelAtividade(atividadeId: str, cpf: str): void\n---\n\nAtividadeService\nassociation PessoaService\ncomposes Atividade\n---\n- ps: PessoaService\n- atividades: Map<String, Atividade>\n---\n+ AtividadeService(ps: PessoaService)\n+ cadastrarAtividade(nome: str, descricao: str, cpf: str): str\n+ encerrarAtividade(atividadeId: str): void\n+ desativarAtividade(atividadeId: str): void\n+ reabrirAtividade(atividadeId: str): void\n+ exibirAtividade(atividadeId: str): str\n+ alterarDescricaoAtividade(atividadeId: str, descricao: str): void\n+ alterarResponsavelAtividade(atividadeId: str, novoResponsavel: Pessoa): void\n\n+ cadastraTarefa(idAtividade: str, tarefa: Tarefa): str\n+ recuperarTarefa(idTarefa: str): str\n+ removerTarefa(idTarefa: str): void\n+ adicionarHorasTarefa(idTarefa: str, horas: int): void\n+ removerHorasTarefa(idTarefa: str, horas: int): void\n+ alterarNomeTarefa(idTarefa: str, novoNome: str): void\n+ alterarHabilidadesTarefa(idTarefa: str, habilidades: str[]): void\n---\n\nAtividade\ncomposes Tarefa\n---\n- nome: str\n- descricao: str\n- responsavel: Pessoa\n- status: str\n- tarefas: Set<Tarefa>\n---\n+ Atividade(nome: str, descricao: str, cpf: str)\n+ encerrar(): void\n+ desativar(atividadeId: str): void\n+ reabrir(): void\n+ getTarefas(): Set<Tarefa>\n+ toString(): str\n+ setDescricao(descricao: str): void\n+ setResponsavel(novoResponsavel: Pessoa): void\n---\n\nTarefaController\nassociation TarefaService\n---\n- tarefaService: TarefaService\n---\n+ TarefaController(ts: TarefaService)\n+ cadastrarTarefa(atividadeId: str, nome: str, habilidades: str[]): str\n+ alterarNomeTarefa(idTarefa: str, novoNome: str): void\n+ alterarHabilidadesTarefa(idTarefa: str, habilidades: str[]): void\n+ adicionarHorasTarefa(idTarefa: str, horas: int): void\n+ removerHorasTarefa(idTarefa: str, horas: int): void\n+ concluirTarefa(idTarefa: str): void\n+ removerTarefa(idTarefa: str): void\n+ exibirTarefa(idTarefa: str): str\n+ associarPessoaTarefa(cpf: str, idTarefa: str): void\n+ removerPessoaTarefa(cpf: str, idTarefa: str): void\n---\n\nTarefaService\nassociation AtividadeService\n---\n- atividadeService: AtividadeService\n- pessoaService: PessoaService\n---\n+ TarefaService(at: AtividadeService, ps: PessoaService)\n+ cadastrarTarefa(atividadeId: str, nome: str, habilidades: str[]): str\n+ removerTarefa(idTarefa: str): void\n+ exibirTarefa(idTarefa: str): str\n+ alterarNomeTarefa(idTarefa: str, novoNome: str): void\n+ alterarHabilidadesTarefa(idTarefa: str, habilidades: str[]): void\n+ concluirTarefa(idTarefa: str): void\n+ associarPessoaTarefa(cpf: str, idTarefa: str): void\n+ removerPessoaTarefa(cpf: str, idTarefa: str): void\n+ adicionarHorasTarefa(idTarefa: str, horas: int): void\n+ removerHorasTarefa(idTarefa: str, horas: int): void\n---\n\nTarefa\n---\n- nome: str\n- habilidadesRecomendadas: str[]\n- responsaveis: Map<String, Pessoa>\n- status: bool\n- id: str\n- duracao: int\n---\n+ Tarefa(nome: str, habilidadesRecomendadas: str[])\n+ setNome(novoNome: str): void\n+ setHabilidades(novasHabilidades: str[]): void\n+ concluirTarefa(): void\n+ adicionaHoras(horas: int): void\n+ removeHoras(horas: int): void\n+ adicionarResponsavel(cpf: str): void\n+ removerResponsavel(cpf: str): void\n+ toString(): str\n---\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/resources/uml.txt b/resources/uml.txt
+--- a/resources/uml.txt	(revision c953e31c836e59307089980a8439aeaf33d0fe5c)
++++ b/resources/uml.txt	(date 1660238324163)
+@@ -1,4 +1,5 @@
+ Facade
++<<<<<<< HEAD
+ association PessoaController
+ association AtividadeController
+ association TarefaController
+@@ -213,4 +214,211 @@
+ + removerResponsavel(cpf: str): void
+ + toString(): str
+ ---
++=======
++  association PessoaController
++  association AtividadeController
++  ---
++  - pessoaController: PessoaController 
++  - atividadeController: AtividadeController
++  ---
++  + Facade()
++  // Pessoa
++  + cadastrarPessoa(cpf: String, nome: String, habilidades: String[]): void
++  + exibirPessoa(cpf: String): String
++  + alterarNomePessoa(cpf: String, novoNome: String): void
++  + alterarHabilidadesPessoa(cpf: String, novasHabilidades: String[]): void
++  + removerPessoa(cpf: String): void
++  + adicionarComentarioPessoa(cpf: String, comentario: String, autorCpf: String): void
++  + listarComentariosPessoa(cpf: String): String
++  // Atividade
++  + cadastrarAtividade(nome: String, descricao: String, cpf: String): String
++  + encerrarAtividade(atividadeId: String): void
++  + desativarAtividade(atividadeId: String): void
++  + reabrirAtividade(atividadeId: String): void
++  + exibirAtividade(atividadeId: String): String
++  + alterarDescricaoAtividade(atividadeId: String, descricao: String): void
++  + alterarResponsavelAtividade(atividadeId: String, cpf: String): void
++  // Tarefa
++  + cadastrarTarefa(atividadeId: String, nome: String, habilidades: String[]): String
++  + alterarNomeTarefa(idTarefa: String, novoNome: String): void
++  + alterarHabilidadesTarefa(idTarefa: String, habilidades: String[]): void
++  + adicionarHorasTarefa(idTarefa: String, horas: int): void
++  + removerHorasTarefa(idTarefa: String, horas: int): void
++  + concluirTarefa(idTarefa: String): void
++  + removerTarefa(idTarefa: String): void
++  + exibirTarefa(idTarefa: String): String
++  + associarPessoaTarefa(cpf: String, idTarefa: String): void
++  + removerPessoaTarefa(cpf: String, idTarefa: String): void
++  ---
++
++PessoaController
++  association PessoaService
++  ---
++  - pessoaService: PessoaService
++  ---
++  + PessoaController()
++  + cadastrarPessoa(cpf: String, nome: String, habilidades: String[]): void
++  + exibirPessoa(cpf: String): String
++  + alterarNomePessoa(cpf: String, novoNome: String): void
++  + alterarHabilidadesPessoa(cpf: String, novasHabilidades: String[]): void
++  + removerPessoa(cpf: String): void
++  + adicionarComentarioPessoa(cpf: String, comentario: String, autorCpf: String): void
++  + listarComentariosPessoa(cpf: String): String
++  ---
++
++PessoaService
++  composes Pessoa
++  association PessoaDTO
++  ---
++  - pessoas: Map<String, Pessoa>
++  ---
++  + getPessoa(cpf: String): PessoaDTO
++  + cadastrarPessoa(cpf: String, nome: String, habilidades: String[]): void
++  + exibirPessoa(cpf: String): String
++  + alterarNomePessoa(cpf: String, novoNome: String): void
++  + alterarHabilidadesPessoa(cpf: String, novasHabilidades: String[]): void
++  + removerPessoa(cpf: String): void
++  + adicionarComentarioPessoa(cpf: String, comentario: String, autorCpf: String): void
++  + listarComentariosPessoa(cpf: String): String
++  ---
++
++Pessoa
++  composes Comentario
++  ---
++  - comentarios: Comentrario[]
++  - cpf: String
++  - nome: String
++  - habilidades: String[]
++  ---
++  + Pessoa(cpf: String, nome: String, habilidades: String[])
++  + toString(): String
++  + setNome(novoNome: String): void
++  + setHabiidades(novasHabilidades: String[]): void
++  + adicionarComentarioPessoa(cpf: String, comentario: String, autorCpf: String): void
++  + getComentarios(): Comentario[]
++  ---
++
++PessoaDTO
++  ---
++  - comentarios: Comentrario[]
++  - cpf: String
++  - nome: String
++  ---
++  + PessoaDTO(pessoa: Pessoa)
++  + toString(): String
++  + getComentarios(): Comentario[]
++  + getCPF(): String
++  + getNome(): String
++  ---
++
++Comentario
++  ---
++  - autor: Pessoa
++  - data: Date
++  - descricao: String
++  ---
++  + Comentario(autor: Pessoa, descricao: String)
++  + toString(): String
++  ---
++
++AtividadeController
++  association AtividadeService
++  association PessoaService
++  ---
++  - atividadeService: AtividadeService
++  - pessoaService: PessoaService
++  ---
++  + AtividadeController()
++  + cadastrarAtividade(nome: String, descricao: String, cpf: String): String
++  + encerrarAtividade(atividadeId: String): void
++  + desativarAtividade(atividadeId: String): void
++  + reabrirAtividade(atividadeId: String): void
++  + exibirAtividade(atividadeId: String): String
++  + alterarDescricaoAtividade(atividadeId: String, descricao: String): void
++  + alterarResponsavelAtividade(atividadeId: String, cpf: String): void
++  // Tarefa
++  + cadastrarTarefa(atividadeId: String, nome: String, habilidades: String[]): String
++  + alterarNomeTarefa(idTarefa: String, novoNome: String): void
++  + alterarHabilidadesTarefa(idTarefa: String, habilidades: String[]): void
++  + adicionarHorasTarefa(idTarefa: String, horas: int): void
++  + removerHorasTarefa(idTarefa: String, horas: int): void
++  + concluirTarefa(idTarefa: String): void
++  + removerTarefa(idTarefa: String): void
++  + exibirTarefa(idTarefa: String): String
++  + associarPessoaTarefa(cpf: String, idTarefa: String): void
++  + removerPessoaTarefa(cpf: String, idTarefa: String): void
++  ---
++
++AtividadeService
++  composes Atividade
++  ---
++  - atividades: Map<String, Atividade>
++  ---
++  + AtividadeService()
++  + cadastrarAtividade(nome: String, descricao: String, cpf: String): String
++  + encerrarAtividade(atividadeId: String): void
++  + desativarAtividade(atividadeId: String): void
++  + reabrirAtividade(atividadeId: String): void
++  + exibirAtividade(atividadeId: String): String
++  + alterarDescricaoAtividade(atividadeId: String, descricao: String): void
++  + alterarResponsavelAtividade(atividadeId: String, cpf: String): void
++  // Tarefa
++  + cadastrarTarefa(atividadeId: String, nome: String, habilidades: String[]): String
++  + alterarNomeTarefa(idTarefa: String, novoNome: String): void
++  + alterarHabilidadesTarefa(idTarefa: String, habilidades: String[]): void
++  + adicionarHorasTarefa(idTarefa: String, horas: int): void
++  + removerHorasTarefa(idTarefa: String, horas: int): void
++  + concluirTarefa(idTarefa: String): void
++  + removerTarefa(idTarefa: String): void
++  + exibirTarefa(idTarefa: String): String
++  + associarPessoaTarefa(cpf: String, idTarefa: String): void
++  + removerPessoaTarefa(cpf: String, idTarefa: String): void
++  ---
+ 
++Atividade
++  composes Tarefa
++  ---
++  - nome: String
++  - descricao: String
++  - cpf: String
++  - status: String
++  - tarefas: Map<String, Tarefa>
++  ---
++  + Atividade(nome: String, descricao: String, cpf: String)
++  + encerrar(): void
++  + desativar(atividadeId: String): void
++  + reabrir(): void
++  + toString(): String
++  + setDescricao(descricao: String): void
++  + setResponsavel(cpf: String): void
++  + addTarefa(nome: String, habilidades: String[]): String
++  + alterarNomeTarefa(idTarefa: String, novoNome: String): void
++  + alterarHabilidadesTarefa(idTarefa: String, habilidades: String[]): void
++  + adicionarHorasTarefa(idTarefa: String, horas: int): void
++  + removerHorasTarefa(idTarefa: String, horas: int): void
++  + concluirTarefa(idTarefa: String): void
++  + removerTarefa(idTarefa: String): void
++  + exibirTarefa(idTarefa: String): String
++  + associarPessoaTarefa(pessoa: PessoaDTO, idTarefa: String): void
++  + removerPessoaTarefa(pessoa: PessoaDTO, idTarefa: String): void
++  ---
++>>>>>>> origin/main
++
++Tarefa
++  ---
++  - duracao: int
++  - nome: String
++  - habilidadesRecomendadas: String[]
++  - pessoasAssociadas: Map<String, Pessoas>
++  ---
++  + Tarefa(nome: String, habilidades: String[])
++  + setNome(novoNome: String): void
++  + setHabilidades(habilidades: String[]): void
++  + adicionarHoras(horas: int): void
++  + removerHoras(horas: int): void
++  + concluir(): void
++  + remover(): void
++  + toString(): String
++  + associarPessoa(pessoa: PessoaDTO): void
++  + removerPessoa(pessoa: PessoaDTO): void
++  ---
+\ No newline at end of file
