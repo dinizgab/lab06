@@ -1,10 +1,10 @@
-package sapo;
+package sapo.pessoa;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class PessoaService {
-    Map<String, Pessoa> pessoaRepository;
+    private Map<String, Pessoa> pessoaRepository;
 
     public PessoaService() {
         this.pessoaRepository = new HashMap<>();

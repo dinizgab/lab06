@@ -1,10 +1,10 @@
-package sapo;
+package sapo.pessoa;
 
 public class PessoaController {
     private PessoaService ps;
 
-    public PessoaController() {
-        this.ps = new PessoaService();
+    public PessoaController(PessoaService ps) {
+        this.ps = ps;
     }
 
     public void cadastraPessoa(String cpf, String nome, String[] habilidades) {

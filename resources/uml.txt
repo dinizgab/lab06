@@ -1,149 +1,216 @@
-    Facade
-    association PessoaController
-    association AtividadeController
-    association TarefaController
+Facade
+association PessoaController
+association AtividadeController
+association TarefaController
 
-    ---
-    - PessoaController: pessoaController
-    - AtividadeController: atividadeController
-    - TarefaController: tarefaController
-    ---
-    + Facade()
-    //pessoa
-    + cadastrarPessoa(cpf: str, nome: str, habilidades: str[]): void
-    + exibirPessoa(cpf: str): str
-    + alterarNomePessoa(cpf: str, novoNome: str): void
-    + alterarHabilidadesPessoa(cpf: str, novasHabilidades: str[]): void
-    + removerPessoa(cpf: str): void
-    + adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void
-    + listarComentariosPessoa(cpf: str): str
-    //atividade
-    + cadastrarAtividade(nome: str, descricao: str, cpf: str): str
-    + encerrarAtividade(atividadeId: str): void
-    + desativarAtividade(atividadeId: str): void
-    + reabrirAtividade(atividadeId: str): void
-    + exibirAtividade(atividadeId: str): str
-    + alterarDescricaoAtividade(atividadeId: str, descricao: str): void
-    + alterarResponsavelAtividade(atividadeId: str, cpf: str): void
-    //tarefa
-    + cadastrarTarefa(atividadeId: str, nome: str, habilidades: str[]): str
-    + alterarNomeTarefa(idTarefa: str, novoNome: str): void
-    + alterarHabilidadesTarefa(idTarefa: str, habilidades: str[]): void
-    + adicionarHorasTarefa(idTarefa: str, horas: int): void
-    + removerHorasTarefa(idTarefa: str, horas: int): void
-    + concluirTarefa(idTarefa: str): void
-    + removerTarefa(idTarefa: str): void
-    + exibirTarefa(idTarefa: str): str
-    + associarPessoaTarefa(cpf: str, idTarefa: str): void
-    + removerPessoaTarefa(cpf: str, idTarefa: str): void
-    ---
+---
+- PessoaController: pessoaController
+- AtividadeController: atividadeController
+- TarefaController: tarefaController
+---
++ Facade()
+//pessoa
++ cadastrarPessoa(cpf: str, nome: str, habilidades: str[]): void
++ exibirPessoa(cpf: str): str
++ alterarNomePessoa(cpf: str, novoNome: str): void
++ alterarHabilidadesPessoa(cpf: str, novasHabilidades: str[]): void
++ removerPessoa(cpf: str): void
++ adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void
++ listarComentariosPessoa(cpf: str): str
+//atividade
++ cadastrarAtividade(nome: str, descricao: str, cpf: str): str
++ encerrarAtividade(atividadeId: str): void
++ desativarAtividade(atividadeId: str): void
++ reabrirAtividade(atividadeId: str): void
++ exibirAtividade(atividadeId: str): str
++ alterarDescricaoAtividade(atividadeId: str, descricao: str): void
++ alterarResponsavelAtividade(atividadeId: str, cpf: str): void
+//tarefa
++ cadastrarTarefa(atividadeId: str, nome: str, habilidades: str[]): str
++ alterarNomeTarefa(idTarefa: str, novoNome: str): void
++ alterarHabilidadesTarefa(idTarefa: str, habilidades: str[]): void
++ adicionarHorasTarefa(idTarefa: str, horas: int): void
++ removerHorasTarefa(idTarefa: str, horas: int): void
++ concluirTarefa(idTarefa: str): void
++ removerTarefa(idTarefa: str): void
++ exibirTarefa(idTarefa: str): str
++ associarPessoaTarefa(cpf: str, idTarefa: str): void
++ removerPessoaTarefa(cpf: str, idTarefa: str): void
+---
 
-    PessoaController
-    association PessoaService
-    ---
-    - pessoaService: PessoaService
-    ---
-    + cadastrarPessoa(cpf: str, nome: str, habilidades: str[]): void
-    + exibirPessoa(cpf: str): str
-    + alterarNomePessoa(cpf: str, novoNome: str): void
-    + alterarHabilidadesPessoa(cpf: str, novasHabilidades: str[]): void
-    + removerPessoa(cpf: str): void
-    + adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void
-    + listarComentariosPessoa(cpf: str): str
-    ---
-    PessoaService
-    composes Pessoa
-    ---
-    - pessoas: Map<str, Pessoa>
-    ---
-    + cadastrarPessoa(cpf: str, nome: str, habilidades: str[]): void
-    + exibirPessoa(cpf: str): str
-    + alterarNomePessoa(cpf: str, novoNome: str): void
-    + alterarHabilidadesPessoa(cpf: str, novasHabilidades: str[]): void
-    + removerPessoa(cpf: str): void
-    + adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void
-    + listarComentariosPessoa(cpf: str): str
-    ---
+PessoaController
+association PessoaService
+---
+- pessoaService: PessoaService 
+---
++ PessoaController(ps: PessoaService)
++ cadastrarPessoa(cpf: str, nome: str, habilidades: str[]): void
++ exibirPessoa(cpf: str): str
++ alterarNomePessoa(cpf: str, novoNome: str): void
++ alterarHabilidadesPessoa(cpf: str, novasHabilidades: str[]): void
++ removerPessoa(cpf: str): void
++ adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void
++ listarComentariosPessoa(cpf: str): str
+---
 
-    Pessoa
-    composes Comentario
-    ---
-    - comentarios:Comentrario[]
-    - cpf: str
-    - nome: str
-    - habilidades: str[]
-    ---
-    + Pessoa(cpf: str, nome: str, habilidades: str[])
-    + toString(): str
-    + setNome(novoNome: str): void
-    + setHabiidades(novasHabilidades: str[]): void
-    + adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void
-    + getComentarios(): Comentario[]
-    ---
+PessoaService
+composes Pessoa
+---
+- pessoas: Map<str, Pessoa>
+---
++ PessoaService()
++ cadastrarPessoa(cpf: str, nome: str, habilidades: str[]): void
++ recuperaPessoa(cpf: str): Pessoa
++ exibirPessoa(cpf: str): str
++ alterarNomePessoa(cpf: str, novoNome: str): void
++ alterarHabilidadesPessoa(cpf: str, novasHabilidades: str[]): void
++ removerPessoa(cpf: str): void
++ adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void
++ listarComentariosPessoa(cpf: str): str
+---
 
-    Comentario
-    ---
-    - autor: Pessoa
-    - data: Date
-    - descricao: str
-    ---
-    + Comentario(autor: Pessoa, descricao: str)
-    + toString(): str
-    ---
+Pessoa
+composes Comentario
+---
+- comentarios: List<Comentario>
+- cpf: str
+- nome: str
+- habilidades: str[]
+---
++ Pessoa(cpf: str, nome: str, habilidades: str[])
++ toString(): str
++ setNome(novoNome: str): void
++ setHabiidades(novasHabilidades: str[]): void
++ getNome(): str
++ getCPF(): str
++ adicionarComentario(cpf: str, comentario: str, autor: Pessoa): void
++ getComentarios(): Comentario[]
+---
 
-    AtividadeController
-    association AtividadeService
-    ---
-    - atividadeService: AtividadeService
-    ---
-    + cadastrarAtividade(nome: str, descricao: str, cpf: str): str
-    + encerrarAtividade(atividadeId: str): void
-    + desativarAtividade(atividadeId: str): void
-    + reabrirAtividade(atividadeId: str): void
-    + exibirAtividade(atividadeId: str): str
-    + alterarDescricaoAtividade(atividadeId: str, descricao: str): void
-    + alterarResponsavelAtividade(atividadeId: str, cpf: str): void
-    ---
+Comentario
+---
+- autor: Pessoa
+- data: Date
+- descricao: str
+---
++ Comentario(autor: Pessoa, descricao: str)
++ getData(): Date
++ toString(): str
+---
 
+AtividadeController
+association AtividadeService
+---
+- atividadeService: AtividadeService
+---
++ AtividadeController(at: AtividadeService)
++ cadastrarAtividade(nome: str, descricao: str, cpf: str): str
++ encerrarAtividade(atividadeId: str): void
++ desativarAtividade(atividadeId: str): void
++ reabrirAtividade(atividadeId: str): void
++ exibirAtividade(atividadeId: str): str
++ alterarDescricaoAtividade(atividadeId: str, descricao: str): void
++ alterarResponsavelAtividade(atividadeId: str, cpf: str): void
+---
 
-    AtividadeService
-    ---
-    ---
-    + cadastrarAtividade(nome: str, descricao: str, cpf: str): str
-    + encerrarAtividade(atividadeId: str): void
-    + desativarAtividade(atividadeId: str): void
-    + reabrirAtividade(atividadeId: str): void
-    + exibirAtividade(atividadeId: str): str
-    + alterarDescricaoAtividade(atividadeId: str, descricao: str): void
-    + alterarResponsavelAtividade(atividadeId: str, cpf: str): void
-    ---
+AtividadeService
+association PessoaService
+composes Atividade
+---
+- ps: PessoaService
+- atividades: Map<String, Atividade>
+---
++ AtividadeService(ps: PessoaService)
++ cadastrarAtividade(nome: str, descricao: str, cpf: str): str
++ encerrarAtividade(atividadeId: str): void
++ desativarAtividade(atividadeId: str): void
++ reabrirAtividade(atividadeId: str): void
++ exibirAtividade(atividadeId: str): str
++ alterarDescricaoAtividade(atividadeId: str, descricao: str): void
++ alterarResponsavelAtividade(atividadeId: str, novoResponsavel: Pessoa): void
 
-    Atividade
-    ---
-    - nome: str
-    - descricao: str
-    - cpf: str
-    - status: str
-    ---
-    + Atividade(nome: str, descricao: str, cpf: str)
-    + encerrar(): void
-    + desativar(atividadeId: str): void
-    + reabrir(): void
-    + toString(): str
-    + setDescricao(descricao: str): void
-    + setResponsavel(cpf: str): void
-    ---
++ cadastraTarefa(idAtividade: str, tarefa: Tarefa): str
++ recuperarTarefa(idTarefa: str): str
++ removerTarefa(idTarefa: str): void
++ adicionarHorasTarefa(idTarefa: str, horas: int): void
++ removerHorasTarefa(idTarefa: str, horas: int): void
++ alterarNomeTarefa(idTarefa: str, novoNome: str): void
++ alterarHabilidadesTarefa(idTarefa: str, habilidades: str[]): void
+---
 
-    TarefaController
-    association TarefaService
-    ---
-    - tarefaController: TarefaController
-    ---
-    ---
+Atividade
+composes Tarefa
+---
+- nome: str
+- descricao: str
+- responsavel: Pessoa
+- status: str
+- tarefas: Set<Tarefa>
+---
++ Atividade(nome: str, descricao: str, cpf: str)
++ encerrar(): void
++ desativar(atividadeId: str): void
++ reabrir(): void
++ getTarefas(): Set<Tarefa>
++ toString(): str
++ setDescricao(descricao: str): void
++ setResponsavel(novoResponsavel: Pessoa): void
+---
 
-    TarefaService
-    ---
-    ---
-    ---
+TarefaController
+association TarefaService
+---
+- tarefaService: TarefaService
+---
++ TarefaController(ts: TarefaService)
++ cadastrarTarefa(atividadeId: str, nome: str, habilidades: str[]): str
++ alterarNomeTarefa(idTarefa: str, novoNome: str): void
++ alterarHabilidadesTarefa(idTarefa: str, habilidades: str[]): void
++ adicionarHorasTarefa(idTarefa: str, horas: int): void
++ removerHorasTarefa(idTarefa: str, horas: int): void
++ concluirTarefa(idTarefa: str): void
++ removerTarefa(idTarefa: str): void
++ exibirTarefa(idTarefa: str): str
++ associarPessoaTarefa(cpf: str, idTarefa: str): void
++ removerPessoaTarefa(cpf: str, idTarefa: str): void
+---
 
+TarefaService
+association AtividadeService
+---
+- atividadeService: AtividadeService
+- pessoaService: PessoaService
+---
++ TarefaService(at: AtividadeService, ps: PessoaService)
++ cadastrarTarefa(atividadeId: str, nome: str, habilidades: str[]): str
++ removerTarefa(idTarefa: str): void
++ exibirTarefa(idTarefa: str): str
++ alterarNomeTarefa(idTarefa: str, novoNome: str): void
++ alterarHabilidadesTarefa(idTarefa: str, habilidades: str[]): void
++ concluirTarefa(idTarefa: str): void
++ associarPessoaTarefa(cpf: str, idTarefa: str): void
++ removerPessoaTarefa(cpf: str, idTarefa: str): void
++ adicionarHorasTarefa(idTarefa: str, horas: int): void
++ removerHorasTarefa(idTarefa: str, horas: int): void
+---
+
+Tarefa
+---
+- nome: str
+- habilidadesRecomendadas: str[]
+- responsaveis: Map<String, Pessoa>
+- status: bool
+- id: str
+- duracao: int
+---
++ Tarefa(nome: str, habilidadesRecomendadas: str[])
++ setNome(novoNome: str): void
++ setHabilidades(novasHabilidades: str[]): void
++ concluirTarefa(): void
++ adicionaHoras(horas: int): void
++ removeHoras(horas: int): void
++ adicionarResponsavel(cpf: str): void
++ removerResponsavel(cpf: str): void
++ toString(): str
+---
 

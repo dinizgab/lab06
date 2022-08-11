@@ -1,4 +1,4 @@
-package sapo;
+package sapo.pessoa;
 
 public class Pessoa {
     private String cpf;
