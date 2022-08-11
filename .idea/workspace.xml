@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Initial configurations">
-      <change afterPath="$PROJECT_DIR$/src/sapo/atividade/AtividadeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sapo/atividade/AtividadeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sapo/pessoa/Comentario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/AtividadeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/Pessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/PessoaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/PessoaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/PessoaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/PessoaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/SapoFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/SapoFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/TarefaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sapo/pessoa/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sapo/pessoa/PessoaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/PessoaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sapo/pessoa/PessoaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/PessoaService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,15 +32,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="sapo" />
@@ -69,6 +63,7 @@
       <workItem from="1660177476199" duration="208000" />
       <workItem from="1660186978425" duration="2447000" />
       <workItem from="1660223885276" duration="415000" />
+      <workItem from="1660251679804" duration="3248000" />
     </task>
     <task id="LOCAL-00001" summary="Initial configurations">
       <created>1659984232645</created>

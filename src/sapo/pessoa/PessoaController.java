@@ -23,4 +23,20 @@ public class PessoaController {
         if(novoNome.isBlank()) return;
         ps.alteraNome(cpf, novoNome);   
     }
+
+    public void alterarHabilidadesPessoa(String cpf, String[] novasHabilidades) {
+        ps.alteraHabilidades(cpf, novasHabilidades);
+    }
+
+    public void removerPessoa(String cpf) {
+        ps.removerPessoa(cpf);
+    }
+
+    public void adicionarComentario(String cpf, String comentario, String autorCPF) {
+        ps.adicionaComentario(cpf, comentario, autorCPF);
+    }
+
+    public String listarComentarios(String cpf) {
+        return ps.listaComentarios(cpf);
+    }
 }
