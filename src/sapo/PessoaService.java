@@ -21,4 +21,9 @@ public class PessoaService {
 
         return p.toString();
     }
+
+    public void alteraNome(String cpf, String novoNome) {
+        Pessoa p = pessoaRepository.get(cpf);
+        p.setNome(novoNome);
+    }
 }

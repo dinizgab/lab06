@@ -10,6 +10,9 @@ public class Pessoa {
         this.habilidades = habilidades;
     }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
     public String getCpf() {
         return this.cpf;
     }

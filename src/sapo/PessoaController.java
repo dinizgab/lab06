@@ -17,4 +17,10 @@ public class PessoaController {
     public String exibirPessoa(String cpf) {
         return ps.recuperaPessoa(cpf);
     }
+
+    public void alterarNome(String cpf, String novoNome) {
+        // TODO - Provavelmente criar uma classe Validador para fazer as validacoes
+        if(novoNome.isBlank()) return;
+        ps.alteraNome(cpf, novoNome);   
+    }
 }
