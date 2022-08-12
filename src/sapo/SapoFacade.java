@@ -8,9 +8,9 @@ import sapo.tarefa.TarefaController;
 import sapo.tarefa.TarefaService;
 
 public class SapoFacade {
-    private PessoaController pc;
-    private AtividadeController ac;
-    private TarefaController tc;
+    private final PessoaController pc;
+    private final AtividadeController ac;
+    private final TarefaController tc;
 
     public SapoFacade() {
         PessoaService ps = new PessoaService();

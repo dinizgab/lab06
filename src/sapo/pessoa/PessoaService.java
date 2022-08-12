@@ -10,23 +10,20 @@ public class PessoaService {
         this.pessoaRepository = new HashMap<>();
     }
 
-    public void cadastraPessoa(String cpf, String nome, String[] habilidades) {
-        Pessoa p = new Pessoa(cpf, nome, habilidades);
-        pessoaRepository.put(p.getCpf(), p);
+    public void cadastraPessoa(Pessoa pessoa) {
+        pessoaRepository.put(pessoa.getCpf(), pessoa);
     }
 
     public String recuperaPessoa(String cpf) {
-        Pessoa p = pessoaRepository.get(cpf);
-
-        return p.toString();
+        return pessoaRepository.get(cpf).toString();
     }
 
     public void alteraNome(String cpf, String novoNome) {
-        pessoaRepository.get(cpf).setNome(novoNome);
+        pessoaRepository.get(cpf).alteraNome(novoNome);
     }
 
     public void alteraHabilidades(String cpf, String[] habilidades) {
-        pessoaRepository.get(cpf).setHabilidades(habilidades);
+        pessoaRepository.get(cpf).alteraHabilidades(habilidades);
     }
 
     public void removerPessoa(String cpf) {
@@ -38,13 +35,10 @@ public class PessoaService {
         Pessoa p = pessoaRepository.get(cpf);
         Pessoa autor = pessoaRepository.get(autorCPF);
 
-        Comentario comentario = new Comentario(autor, descricao);
-        p.adicionaComentario(comentario);
+        p.adicionaComentario(new Comentario(autor, descricao));
     }
 
     public String listaComentarios(String cpf) {
-        // TODO - Terminar a listagem de comentarios
-        Pessoa p = pessoaRepository.get(cpf);
-
+        return pessoaRepository.get(cpf).getComentarios();
     }
 }

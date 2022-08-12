@@ -2,7 +2,7 @@ package sapo.pessoa;
 
 import java.util.Date;
 
-public class Comentario {
+public class Comentario  implements  Comparable<Comentario> {
     private Pessoa autor;
     private String descricao;
     private Date data;
@@ -11,6 +11,15 @@ public class Comentario {
         this.autor = autor;
         this.descricao = descricao;
         this.data = new Date();
+    }
+
+    public Date getData() {
+        return this.data;
+    }
+
+    @Override
+    public int compareTo(Comentario c) {
+        return this.getData().compareTo(c.getData());
     }
 
     @Override
