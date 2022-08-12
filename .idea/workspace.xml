@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Initial configurations">
-      <change afterPath="$PROJECT_DIR$/src/sapo/pessoa/ValidadorPessoa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/SapoFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/SapoFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/pessoa/Comentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/Comentario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/pessoa/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/Pessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/pessoa/PessoaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/PessoaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/pessoa/PessoaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/PessoaService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +62,10 @@
       <workItem from="1660223885276" duration="415000" />
       <workItem from="1660251679804" duration="3248000" />
       <workItem from="1660255126184" duration="1279000" />
-      <workItem from="1660271792214" duration="2159000" />
+      <workItem from="1660271792214" duration="2365000" />
+      <workItem from="1660274319045" duration="28000" />
+      <workItem from="1660342629314" duration="368000" />
+      <workItem from="1660345009039" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="Initial configurations">
       <created>1659984232645</created>

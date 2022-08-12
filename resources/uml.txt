@@ -67,6 +67,7 @@ composes Pessoa
 + removerPessoa(cpf: str): void
 + adicionarComentarioPessoa(cpf: str, comentario: str, autorCpf: str): void
 + listarComentariosPessoa(cpf: str): str
++ getPessoa(cpf: str): Pessoa
 ---
 
 Pessoa
@@ -128,24 +129,16 @@ composes Atividade
 + exibirAtividade(atividadeId: str): str
 + alterarDescricaoAtividade(atividadeId: str, descricao: str): void
 + alterarResponsavelAtividade(atividadeId: str, novoResponsavel: Pessoa): void
-
-+ cadastraTarefa(idAtividade: str, tarefa: Tarefa): str
-+ recuperarTarefa(idTarefa: str): str
-+ removerTarefa(idTarefa: str): void
-+ adicionarHorasTarefa(idTarefa: str, horas: int): void
-+ removerHorasTarefa(idTarefa: str, horas: int): void
-+ alterarNomeTarefa(idTarefa: str, novoNome: str): void
-+ alterarHabilidadesTarefa(idTarefa: str, habilidades: str[]): void
 ---
 
 Atividade
-composes Tarefa
+association Tarefa
 ---
 - nome: str
 - descricao: str
 - responsavel: Pessoa
 - status: str
-- tarefas: Set<Tarefa>
+- tarefas: Map<String, Tarefa>
 ---
 + Atividade(nome: str, descricao: str, cpf: str)
 + encerrar(): void
@@ -155,6 +148,7 @@ composes Tarefa
 + toString(): str
 + setDescricao(descricao: str): void
 + setResponsavel(novoResponsavel: Pessoa): void
++ adicionarTarefa(tarefa: Tarefa): void
 ---
 
 TarefaController
@@ -176,7 +170,7 @@ association TarefaService
 ---
 
 TarefaService
-association AtividadeService
+association PessoaService
 ---
 - atividadeService: AtividadeService
 - pessoaService: PessoaService
@@ -192,6 +186,25 @@ association AtividadeService
 + removerPessoaTarefa(cpf: str, idTarefa: str): void
 + adicionarHorasTarefa(idTarefa: str, horas: int): void
 + removerHorasTarefa(idTarefa: str, horas: int): void
+---
+
+TarefaRepository
+composes Tarefa
+association AtividadeService
+association TarefaService
+---
+- tarefas: Map<String, Tarefa>
+---
++ TarefaRepository()
++ cadastraTarefa(idAtividade: str, tarefa: Tarefa): str
++ recuperarTarefa(idTarefa: str): str
++ removerTarefa(idTarefa: str): void
++ adicionarHorasTarefa(idTarefa: str, horas: int): void
++ removerHorasTarefa(idTarefa: str, horas: int): void
++ alterarNomeTarefa(idTarefa: str, novoNome: str): void
++ associarPessoaTarefa(pessoa: Pessoa, idTarefa: str): void
++ removerPessoaTarefa(cpf: str, idTarefa: str): void
++ alterarHabilidadesTarefa(idTarefa: str, habilidades: str[]): void
 ---
 
 Tarefa
