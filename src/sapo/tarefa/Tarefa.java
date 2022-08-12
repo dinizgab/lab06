@@ -16,10 +16,12 @@ public class Tarefa {
     private String id;
     private Atividade atividade;
 
-    public Tarefa(String nome,  String[] habilidades){
+    public Tarefa(String id, String nome,  String[] habilidades){
     	this.nome = nome;
         this.habilidades = habilidades;
+        this.id = id;
     }
+   
 
 	public void setNome(String nome) {
 		this.nome = nome;
