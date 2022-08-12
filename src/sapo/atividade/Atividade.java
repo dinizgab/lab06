@@ -22,7 +22,7 @@ public class Atividade {
 	// tarefa
 	
 	private String geraIdTarefa(){
-		return this.id += qntTarefas;
+		return this.id += "-" + qntTarefas;
 	}
 	
 	public String cadastraTarefa(String nome, String[] habilidades) {
