@@ -113,15 +113,15 @@ public class Tarefa {
 	
 	@Override
 	public String toString() {
-		return this.nome + " - " + codigo + "/n" + atividade.getNome() + "/n" + atividade.getDescricao() + this.horas + " hora(s) executada(s)" 
-	+ exibeHabilidades() + "===/n" + "Equipe: " + exibeEquipe() ;
+		return this.nome + " - " + codigo + "\n" + atividade.getNome() + "\n" + atividade.getDescricao() + this.horas + " hora(s) executada(s)" 
+	+ exibeHabilidades() + "===\n" + "Equipe: " + exibeEquipe() ;
 	}
 	
 	
 	private String exibeHabilidades() {
 		String saida = "";
 		for (int i = 0; i < habilidades.length; i++) {
-			saida += habilidades[i] + "/n";
+			saida += habilidades[i] + "\n";
 		}
 		
 		return saida;
@@ -130,7 +130,7 @@ public class Tarefa {
 	private String exibeEquipe() {
 		String saida = "";
 		for (Entry<String, Pessoa> pair : responsaveis.entrySet()) {
-			saida += pair.getValue().getNome() + " - " + pair.getKey() + "/n";
+			saida += pair.getValue().getNome() + " - " + pair.getKey() + "\n";
 		}
 			
 		return saida;
