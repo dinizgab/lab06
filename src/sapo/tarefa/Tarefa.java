@@ -13,13 +13,14 @@ public class Tarefa {
     private Map<String, Pessoa> responsaveis;
     private Boolean status;
     private int horas;
-    private String id;
+    private String codigo;
     private Atividade atividade;
 
-    public Tarefa(String id, String nome,  String[] habilidades){
+    public Tarefa(String codigo, String nome,  String[] habilidades, Atividade atividade){
     	this.nome = nome;
         this.habilidades = habilidades;
-        this.id = id;
+        this.codigo = codigo;
+        this.atividade = atividade;
     }
    
 
@@ -29,6 +30,10 @@ public class Tarefa {
 
 	public void setHabilidades(String[] habilidades) {
 		this.habilidades = habilidades;
+	}
+	
+	public String getCodigo() {
+		return this.codigo;
 	}
 	
 	public boolean getStatus() {
@@ -57,7 +62,7 @@ public class Tarefa {
 	
 	@Override
 	public String toString() {
-		return this.nome + " - " + id + "/n" + atividade.getNome() + "/n" + atividade.getDescricao() + this.horas + " hora(s) executada(s)" 
+		return this.nome + " - " + codigo + "/n" + atividade.getNome() + "/n" + atividade.getDescricao() + this.horas + " hora(s) executada(s)" 
 	+ exibeHabilidades() + "===/n" + "Equipe: " + exibeEquipe() ;
 	}
 	
