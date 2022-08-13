@@ -8,14 +8,26 @@ import sapo.atividade.Atividade;
 import sapo.pessoa.Pessoa;
 
 public class Tarefa {
+
     private String nome;
     private String[] habilidades;
     private Map<String, Pessoa> responsaveis;
+    /**
+     * status da atividade. quando o status é true, a atividade foi concluida. status false indica que
+     * a atividade esta aberta.
+     */
     private Boolean status;
     private int horas;
     private String codigo;
     private Atividade atividade;
 
+    /**
+     * cria uma tarefa definindo seu codigo, nome, habilidade e a atividade a qual esta relacionada.
+     * @param codigo codigo da tarefa
+     * @param nome nome da tarefa
+     * @param habilidades habilidades recomendadas da tarefa
+     * @param atividade atividade relacionada
+     */
     public Tarefa(String codigo, String nome,  String[] habilidades, Atividade atividade){
     	this.nome = nome;
         this.habilidades = habilidades;
@@ -23,22 +35,45 @@ public class Tarefa {
         this.atividade = atividade;
     }
    
-
+    
+    /**
+     * define o nome da tarefa. 
+     * @param nome nome da tarefa.
+     */
 	public void setNome(String nome) {
-		this.nome = nome;
+		if(!getStatus()) {
+			this.nome = nome;
+		}
 	}
 
+	/**
+	 * define as habilidades recomendadas da tarefa.
+	 * @param habilidades habilidades da tarefa.
+	 */
 	public void setHabilidades(String[] habilidades) {
-		this.habilidades = habilidades;
-	}
+		if(!getStatus()) {
+			this.habilidades = habilidades;
+		}	}
 	
+	/**
+	 * recupera o código da tarefa.
+	 * @return
+	 */
 	public String getCodigo() {
 		return this.codigo;
 	}
 	
+	/**
+	 * recupera o status da tarefa.
+	 * @return status da tarefa.
+	 */
 	public boolean getStatus() {
 		return this.status;
 	}
+	
+	/**
+	 * conclui uma tarefa.
+	 */
 	public void concluirTarefa() {
 		this.status = true;
 	}
