@@ -117,15 +117,9 @@ public class TarefaService {
 	 * @return Id da Atividade
 	 */
 	private String recuperaIdAtividade(String codigo) {
-		int count = 0;
-		String idAtividade = "";
-		String[] caracteres = codigo.split("");
-		for (int i = 0; i < caracteres.length; i++) {
-			if (caracteres[i].equals("-")) { count++; }
-			if (count < 2) { idAtividade += caracteres[i]; }
-		}
-
-		return idAtividade;
+        String[] part = codigo.split("-");
+        String id = part[0] + "-" + part[1];
+		return id;
 	}
 
 }
