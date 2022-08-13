@@ -47,7 +47,7 @@ public class Tarefa {
 	}
 
 	/**
-	 * define as habilidades recomendadas da tarefa.
+	 * define as habilidades recomendadas da tarefa. 
 	 * @param habilidades habilidades da tarefa.
 	 */
 	public void setHabilidades(String[] habilidades) {
@@ -78,18 +78,34 @@ public class Tarefa {
 		this.status = true;
 	}
 	
+	/**
+	 * adiciona horas a uma tarefa.
+	 * @param horas horas a serem adicionadas.
+	 */
 	public void adicionaHoras(int horas) {
 		this.horas += horas;
 	}
 	
+	/**
+	 * remove horas de uma terefa.
+	 * @param horas horas a serem removidas.
+	 */
 	public void removeHoras(int horas) {
 		this.horas -= horas;
 	}
 	
+	/**
+	 * adiciona uma pessoa responsável a tarefa.
+	 * @param pessoa pessoa a ser adicionada
+	 */
 	public void adicionaResponsavel(Pessoa pessoa) {
 		this.responsaveis.put(pessoa.getCpf(), pessoa);	
 	}
 	
+	/**
+	 * remove uma pessoa responsável a partir do seu cpf.
+	 * @param cpf cpf da pessoa a ser removida.
+	 */
 	public void removerResponsavel(String cpf) {
 		this.responsaveis.remove(cpf);
 	}
@@ -100,6 +116,7 @@ public class Tarefa {
 		return this.nome + " - " + codigo + "/n" + atividade.getNome() + "/n" + atividade.getDescricao() + this.horas + " hora(s) executada(s)" 
 	+ exibeHabilidades() + "===/n" + "Equipe: " + exibeEquipe() ;
 	}
+	
 	
 	private String exibeHabilidades() {
 		String saida = "";
