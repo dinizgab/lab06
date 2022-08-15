@@ -1,10 +1,18 @@
 package sapo.tarefa;
 
+import java.util.HashMap;
 import java.util.Map;
 import sapo.pessoa.Pessoa;
 
 public class TarefaRepository {
 	private Map<String, Tarefa> tarefas;
+	
+	/**
+	 * Constroi um repositorio de tarefa, guardando as tarefas em um mapa onde a chave é o codigo da tarefa;
+	 */
+	public TarefaRepository() {
+		this.tarefas = new HashMap<>();
+	}
 
 	/**
 	 * adiciona uma tarefa ao mapa de tarefas

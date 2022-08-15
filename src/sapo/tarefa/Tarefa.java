@@ -1,5 +1,6 @@
 package sapo.tarefa;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -30,8 +31,10 @@ public class Tarefa {
 	 * @param atividade   atividade relacionada
 	 */
 	public Tarefa(String codigo, String nome, String[] habilidades, Atividade atividade) {
+		this.responsaveis = new HashMap<>();
 		this.nome = nome;
 		this.habilidades = habilidades;
+		this.status = false;
 		this.codigo = codigo;
 		this.atividade = atividade;
 	}

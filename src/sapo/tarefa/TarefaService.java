@@ -8,6 +8,18 @@ public class TarefaService {
 	private AtividadeService as;
 	private PessoaService ps;
 	private TarefaRepository tr;
+	
+	/**
+	 * Constroi o tarefaService
+	 * @param as Service de atividade
+	 * @param ps Service de pessoa
+	 * @param tr Repositório de tarefa
+	 */
+	public TarefaService(AtividadeService as, PessoaService ps, TarefaRepository tr) {
+		this.as = as;
+		this.ps = ps;
+		this.tr = tr;
+	}
 
 	/**
 	 * Cadastra uma tarefa e retorna seu codigo, o codigo é formado pela junção do
