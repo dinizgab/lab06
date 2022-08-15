@@ -8,7 +8,12 @@ public class TarefaService {
 	private AtividadeService as;
 	private PessoaService ps;
 	private TarefaRepository tr;
-	
+
+	public TarefaService(AtividadeService as, PessoaService ps, TarefaRepository tr) {
+		this.as = as;
+		this.ps = ps;
+		this.tr = tr;
+	}
 	
 	/**
 	 * Cadastra uma tarefa e retorna seu codigo, o codigo é formado pela 
@@ -99,7 +104,6 @@ public class TarefaService {
      */
 	public void associarPessoaTarefa(String codigo, String cpf) {
 		tr.associarPessoaTarefa(codigo, ps.getPessoa(cpf));
-		
 	}
 
     /**
