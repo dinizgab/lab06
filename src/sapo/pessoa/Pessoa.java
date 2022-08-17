@@ -41,23 +41,23 @@ public class Pessoa {
     }
 
     private String formataComentarios() {
-        StringBuilder listaDeComentarios = new StringBuilder();
+        String listaDeComentarios = "";
         Collections.sort(this.comentarios);
         for(Comentario comentario : this.comentarios) {
-            listaDeComentarios.append(comentario.toString()).append("\n");
+            listaDeComentarios += comentario.toString() + "\n";
         }
 
-        return listaDeComentarios.toString();
+        return listaDeComentarios;
     }
 
     private String formataHabilidades() {
         Arrays.sort(this.habilidades);
-        StringBuilder habilidadesFormatadas = new StringBuilder();
+        String habilidadesFormatadas = "";
 
         for(String habilidade : this.habilidades) {
-            habilidadesFormatadas.append(habilidade);
+            habilidadesFormatadas += habilidade;
         }
-        return habilidadesFormatadas.toString();
+        return habilidadesFormatadas;
     }
     @Override
     public String toString() {
