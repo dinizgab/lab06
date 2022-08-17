@@ -7,53 +7,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class TarefaGerencial {
-    private String nome;
-    private String codigo;
+public class TarefaGerencial extends TarefaAbstract{
     private Set<String> habilidades;
     private Map<String, Pessoa> responsaveis;
     private Set<Tarefa> tarefasGerenciadas;
     private int horas;
-    private Atividade atividade;
     private boolean concluida;
 
     public TarefaGerencial(String nome, String codigo, Atividade atividade, Set<String> habilidades, Set<Tarefa> tarefas) {
-        this.nome = nome;
-        this.codigo = codigo;
-        this.tarefasGerenciadas = tarefas;
-        this.atividade = atividade;
-        this.habilidades = habilidades;
-        this.concluida = false;
+        super(nome, codigo, atividade);
+
         this.responsaveis = new HashMap<>();
-        this.horas = calculaHorasTotais();
+        this.tarefasGerenciadas = tarefas;
+        this.habilidades = this.criaHabilidadesTotais(habilidades);
+        this.horas = this.calculaHorasTotais();
+        this.concluida = false;
     }
 
-    public String getCodigo() {
-        return this.codigo;
-    }
-
-    public void adicionaHoras(int horas) {
-        this.horas += horas;
-    }
-
-    public void removeHoras(int horas) {
-        this.horas -= horas;
-    }
-
-    public void adicionaResponsavel(Pessoa pessoa) {
-        if(this.concluida) return;
-        this.responsaveis.put(pessoa.getCpf(), pessoa);
-    }
-
-    public void removeResponsavel(String cpf) {
-        if(this.concluida) return;
-        this.responsaveis.remove(cpf);
+    public void concluiTarefa() {
+        for (Tarefa t : this.tarefasGerenciadas) {
+            t.concluirTarefa();
+        }
+        this.concluida = true;
     }
 
     @Override
     public String toString() {
-        return this.nome + " - " + codigo + "\n- " + atividade.getNome() + "\n" + this.exibeHabilidades() + "\n(" + this.horas
+        return this.nome + " - " + codigo + "\n- " + /*atividade.getNome() + */"\n" + this.exibeHabilidades() + "\n(" + this.horas
                 + " hora(s) executada(s))" + "\n===\n" + "Equipe: \n" + this.exibeEquipe() + "\n===\nTarefas:\n" + this.exibeTarefas();
+    }
+
+    private Set<String> criaHabilidadesTotais(Set<String> habilidades) {
+        for (Tarefa tarefa : this.tarefasGerenciadas) {
+            habilidades.addAll(tarefa.getHabilidades());
+        }
+        return habilidades;
     }
 
     private int calculaHorasTotais() {
@@ -64,17 +52,9 @@ public class TarefaGerencial {
 
         return horas;
     }
-    private String exibeHabilidades() {
-        String saida = "";
-        for (String habilidade : habilidades) {
-            // TODO - Arrumar essa formatacao aqui
-            saida += habilidade + ", ";
-        }
-
-        return saida;
-    }
 
     private String exibeTarefas() {
+        // TODO - Arrumar um jeito de formatar da tarefa mais nova para a mais antiga
         String saida = "";
         for (Tarefa tarefa : this.tarefasGerenciadas) {
             saida += "- " + tarefa.getNome() + " - " + tarefa.getCodigo() + "\n";
@@ -85,8 +65,17 @@ public class TarefaGerencial {
 
     private String exibeEquipe() {
         String saida = "";
-        for (Map.Entry<String, Pessoa> pair : equipe.entrySet()) {
+        for (Map.Entry<String, Pessoa> pair : responsaveis.entrySet()) {
             saida += pair.getValue().getNome() + " - " + pair.getKey() + "\n";
+        }
+
+        return saida;
+    }
+
+    private String exibeHabilidades() {
+        String saida = "";
+        for (String habilidade : habilidades) {
+            saida += habilidade + "\n";
         }
 
         return saida;

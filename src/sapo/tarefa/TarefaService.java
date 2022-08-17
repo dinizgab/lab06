@@ -9,170 +9,172 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class TarefaService {
-	private AtividadeService as;
-	private PessoaService ps;
-	private TarefaRepository tr;
-	
-	/**
-	 * Constroi o tarefaService
-	 * @param as Service de atividade
-	 * @param ps Service de pessoa
-	 * @param tr Repositório de tarefa
-	 */
-	public TarefaService(AtividadeService as, PessoaService ps, TarefaRepository tr) {
-		this.as = as;
-		this.ps = ps;
-		this.tr = tr;
-	}
+    private AtividadeService as;
+    private PessoaService ps;
+    private TarefaRepository tr;
 
-	/**
-	 * Cadastra uma tarefa e retorna seu codigo, o codigo é formado pela junção do
-	 * Id da Atividade com a ordem de cadastro de tarefas na atividade em questão. A
-	 * tarefa é armazenada na atividade em especifico e no repositório de tarefas.
-	 * 
-	 * @param id          Id da atividade
-	 * @param nome        nome da Tarefa
-	 * @param habilidades habilidades relacionadas a tarefa
-	 * @return codigo da tarefa cadastrada
-	 */
-	public String cadastraTarefa(String atividadeID, String nome, String[] habilidades) {
-		Atividade atividade = as.getAtividade(atividadeID);
-		String codigo = atividadeID + "-" + atividade.getTarefas().size();
-		Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
+    /**
+     * Constroi o tarefaService
+     *
+     * @param as Service de atividade
+     * @param ps Service de pessoa
+     * @param tr Repositório de tarefa
+     */
+    public TarefaService(AtividadeService as, PessoaService ps, TarefaRepository tr) {
+        this.as = as;
+        this.ps = ps;
+        this.tr = tr;
+    }
 
-		Tarefa tarefa = new Tarefa(nome, codigo, atividade, habilidadesSet);
+    /**
+     * Cadastra uma tarefa e retorna seu codigo, o codigo é formado pela junção do
+     * Id da Atividade com a ordem de cadastro de tarefas na atividade em questão. A
+     * tarefa é armazenada na atividade em especifico e no repositório de tarefas.
+     *
+     * @param id          Id da atividade
+     * @param nome        nome da Tarefa
+     * @param habilidades habilidades relacionadas a tarefa
+     * @return codigo da tarefa cadastrada
+     */
+    public String cadastraTarefa(String atividadeID, String nome, String[] habilidades) {
+        Atividade atividade = as.getAtividade(atividadeID);
+        String codigo = atividadeID + "-" + atividade.getTarefas().size();
+        Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
 
-		atividade.adicionaTarefa(tarefa);
-		this.tr.adicionaTarefa(tarefa);
-		return codigo;
-	}
+        Tarefa tarefa = new Tarefa(nome, codigo, atividade, habilidadesSet);
 
-	public String cadastraTarefaGerencial(String atividadeID, String nome, String[] habilidades, String[] IDTarefas) {
-		// TODO - Cria a Atividade JV </3
-		Atividade atividade = as.getAtividade(atividadeID);
-		String codigo = atividadeID + "-" + atividade.getTarefas().size();
-		Set<Tarefa> tarefaSet = criaSetTarefas(IDTarefas);
-		Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
+        atividade.adicionaTarefa(tarefa);
+        this.tr.adicionaTarefa(tarefa);
+        return codigo;
+    }
 
-		// TODO - Criar uma classe pra TarefaGerencial e Tarefa herdarem
-		TarefaGerencial tg = new TarefaGerencial(nome, codigo, atividade, habilidadesSet, tarefaSet);
-		atividade.adicionaTarefaGerencial(tg);
-		this.tr.adicionaTarefaGerencial(tg);
-		return codigo;
-	}
+    public String cadastraTarefaGerencial(String atividadeID, String nome, String[] habilidades, String[] IDTarefas) {
+        // TODO - Cria a Atividade JV </3
+        Atividade atividade = as.getAtividade(atividadeID);
+        String codigo = atividadeID + "-" + atividade.getTarefas().size();
+        Set<Tarefa> tarefaSet = criaSetTarefas(IDTarefas);
+        Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
 
-	private Set<Tarefa> criaSetTarefas(String[] IDTarefas) {
-		Set<Tarefa> tarefasSet = new HashSet<>();
+        // TODO - Criar uma classe pra TarefaGerencial e Tarefa herdarem
+        TarefaGerencial tg = new TarefaGerencial(nome, codigo, atividade, habilidadesSet, tarefaSet);
+        atividade.adicionaTarefaGerencial(tg);
+        this.tr.adicionaTarefaGerencial(tg);
+        return codigo;
+    }
 
-		for(String ID : IDTarefas) {
-			tarefasSet.add(tr.getTarefa(ID));
-		}
-		return tarefasSet;
-	}
+    private Set<Tarefa> criaSetTarefas(String[] IDTarefas) {
+        Set<Tarefa> tarefasSet = new HashSet<>();
 
-	/**
-	 * altera o nome de uma tarefa a partir do seu codigo.
-	 * 
-	 * @param codigo   codigo da tarefa.
-	 * @param novoNome novo nome da tarefa.
-	 */
-	public void alterarNomeTarefa(String codigo, String novoNome) {
-		tr.alterarNomeTarefa(codigo, novoNome);
-	}
+        for (String ID : IDTarefas) {
+            tarefasSet.add(tr.getTarefa(ID));
+        }
+        return tarefasSet;
+    }
 
-	/**
-	 * altera as habilidades referentes a uma tarefa a partir do seu código.
-	 * 
-	 * @param codigo      codigo da tarefa.
-	 * @param habilidades habilidades referentes a tarefa.
-	 */
-	public void alterarHabilidadesTarefa(String codigo, String[] habilidades) {
-		tr.alterarHabilidadesTarefa(codigo, habilidades);
+    /**
+     * altera o nome de uma tarefa a partir do seu codigo.
+     *
+     * @param codigo   codigo da tarefa.
+     * @param novoNome novo nome da tarefa.
+     */
+    public void alterarNomeTarefa(String codigo, String novoNome) {
+        tr.alterarNomeTarefa(codigo, novoNome);
+    }
 
-	}
+    /**
+     * altera as habilidades referentes a uma tarefa a partir do seu código.
+     *
+     * @param codigo      codigo da tarefa.
+     * @param habilidades habilidades referentes a tarefa.
+     */
+    public void alterarHabilidadesTarefa(String codigo, String[] habilidades) {
+        Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
+        tr.alterarHabilidadesTarefa(codigo, habilidadesSet);
 
-	/**
-	 * adiciona horas gastas na atividade.
-	 * 
-	 * @param codigo codigo da atividade
-	 * @pram horas  horas gastas.
-	 */
-	public void adicionarHorasTarefa(String codigo, int horas) {
-		tr.adicionarHorasTarefa(codigo, horas);
-	}
+    }
 
-	/**
-	 * remove horas gastas na atividade.
-	 * 
-	 * @param codigo codigo da atividade.
-	 * @param horas  horas a serem removidas.
-	 */
-	public void removerHorasTarefa(String codigo, int horas) {
-		tr.removerHorasTarefa(codigo, horas);
-	}
+    /**
+     * adiciona horas gastas na atividade.
+     *
+     * @param codigo codigo da atividade
+     * @pram horas  horas gastas.
+     */
+    public void adicionarHorasTarefa(String codigo, int horas) {
+        tr.adicionarHorasTarefa(codigo, horas);
+    }
 
-	/**
-	 * conclui uma tarefa.
-	 * 
-	 * @param codigo codigo da tarefa.
-	 */
-	public void concluirTarefa(String codigo) {
-		tr.concluirTarefa(codigo);
-	}
+    /**
+     * remove horas gastas na atividade.
+     *
+     * @param codigo codigo da atividade.
+     * @param horas  horas a serem removidas.
+     */
+    public void removerHorasTarefa(String codigo, int horas) {
+        tr.removerHorasTarefa(codigo, horas);
+    }
 
-	/**
-	 * remove uma tarefa do sistema. A tarefa é removida no repositório e na
-	 * Atividade.
-	 * 
-	 * @param codigo codigo da tarefa.
-	 */
-	public void removerTarefa(String codigo) {
-		as.getAtividade(recuperaIdAtividade(codigo)).removerTarefa(codigo);
-		;
-		tr.removerTarefa(codigo);
-	}
+    /**
+     * conclui uma tarefa.
+     *
+     * @param codigo codigo da tarefa.
+     */
+    public void concluirTarefa(String codigo) {
+        tr.concluirTarefa(codigo);
+    }
 
-	/**
-	 * exibe uma tarefa.
-	 * 
-	 * @param codigo codigo da tarefa.
-	 * @return a representação textual de uma tarefa.
-	 */
-	public String exibirTarefa(String codigo) {
-		return tr.exibirTarefa(codigo);
-	}
+    /**
+     * remove uma tarefa do sistema. A tarefa é removida no repositório e na
+     * Atividade.
+     *
+     * @param codigo codigo da tarefa.
+     */
+    public void removerTarefa(String codigo) {
+        as.getAtividade(recuperaIdAtividade(codigo)).removerTarefa(codigo);
+        ;
+        tr.removerTarefa(codigo);
+    }
 
-	/**
-	 * associa uma pessoa a uma tarefa.
-	 * 
-	 * @param cpf    cpf da pessoa.
-	 * @param codigo codigo da tarefa.
-	 */
-	public void associarPessoaTarefa(String codigo, String cpf) {
-		tr.associarPessoaTarefa(codigo, ps.getPessoa(cpf));
+    /**
+     * exibe uma tarefa.
+     *
+     * @param codigo codigo da tarefa.
+     * @return a representação textual de uma tarefa.
+     */
+    public String exibirTarefa(String codigo) {
+        return tr.exibirTarefa(codigo);
+    }
 
-	}
+    /**
+     * associa uma pessoa a uma tarefa.
+     *
+     * @param cpf    cpf da pessoa.
+     * @param codigo codigo da tarefa.
+     */
+    public void associarPessoaTarefa(String codigo, String cpf) {
+        tr.associarPessoaTarefa(codigo, ps.getPessoa(cpf));
 
-	/**
-	 * remove uma pessoa de uma tarefa.
-	 * 
-	 * @param codigo codigo da tarefa.
-	 * @param cpf    cpf da pessoa.
-	 */
-	public void removerPessoaTarefa(String codigo, String cpf) {
-		tr.removerPessoaTarefa(codigo, cpf);
-	}
+    }
 
-	/**
-	 * recupera o Id de uma atividade a partir do código de uma tarefa.
-	 * 
-	 * @param codigo codigo da tarefa
-	 * @return Id da Atividade
-	 */
-	private String recuperaIdAtividade(String codigo) {
-		String[] parts = codigo.split("-");
-		String id = parts[0] + "-" + parts[1];
-		return id;
-	}
+    /**
+     * remove uma pessoa de uma tarefa.
+     *
+     * @param codigo codigo da tarefa.
+     * @param cpf    cpf da pessoa.
+     */
+    public void removerPessoaTarefa(String codigo, String cpf) {
+        tr.removerPessoaTarefa(codigo, cpf);
+    }
+
+    /**
+     * recupera o Id de uma atividade a partir do código de uma tarefa.
+     *
+     * @param codigo codigo da tarefa
+     * @return Id da Atividade
+     */
+    private String recuperaIdAtividade(String codigo) {
+        String[] parts = codigo.split("-");
+        String id = parts[0] + "-" + parts[1];
+        return id;
+    }
 
 }

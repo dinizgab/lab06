@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Adicionando getPessoas">
-      <change afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaGerencial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaAbstract.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/Tarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/Tarefa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/TarefaGerencial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaGerencial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/TarefaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/TarefaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaService.java" afterDir="false" />
     </list>
@@ -16,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -76,7 +77,7 @@
       <workItem from="1660693253067" duration="859000" />
       <workItem from="1660710538519" duration="646000" />
       <workItem from="1660741994964" duration="5120000" />
-      <workItem from="1660752218158" duration="4064000" />
+      <workItem from="1660752218158" duration="10568000" />
     </task>
     <task id="LOCAL-00001" summary="Initial configurations">
       <created>1659984232645</created>

@@ -2,6 +2,8 @@ package sapo.tarefa;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
+
 import sapo.pessoa.Pessoa;
 
 public class TarefaRepository {
@@ -43,9 +45,7 @@ public class TarefaRepository {
 	 */
 	public void alterarNomeTarefa(String codigo, String novoNome) {
 		Tarefa tarefa = tarefas.get(codigo);
-		if (!tarefa.getStatus()) {
-			tarefa.setNome(novoNome);
-		}
+		tarefa.setNome(novoNome);
 	}
 
 	/**
@@ -55,11 +55,9 @@ public class TarefaRepository {
 	 * @param codigo      codigo da tarefa.
 	 * @param habilidades habilidades referentes a tarefa.
 	 */
-	public void alterarHabilidadesTarefa(String codigo, String[] habilidades) {
+	public void alterarHabilidadesTarefa(String codigo, Set<String> habilidades) {
 		Tarefa tarefa = tarefas.get(codigo);
-		if (!tarefa.getStatus()) {
-			tarefa.setHabilidades(habilidades);
-		}
+		tarefa.setHabilidades(habilidades);
 	}
 
 	/**
@@ -130,7 +128,7 @@ public class TarefaRepository {
 	 * @param cpf    cpf da pessoa.
 	 */
 	public void removerPessoaTarefa(String codigo, String cpf) {
-		tarefas.get(codigo).removerResponsavel(cpf);
+		tarefas.get(codigo).removeResponsavel(cpf);
 
 	}
 
