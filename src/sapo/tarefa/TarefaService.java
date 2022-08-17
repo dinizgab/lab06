@@ -34,7 +34,7 @@ public class TarefaService {
      * Id da Atividade com a ordem de cadastro de tarefas na atividade em questão. A
      * tarefa é armazenada na atividade em especifico e no repositório de tarefas.
      *
-     * @param id          Id da atividade
+     * @param atividadeID          Id da atividade
      * @param nome        nome da Tarefa
      * @param habilidades habilidades relacionadas a tarefa
      * @return codigo da tarefa cadastrada
@@ -58,7 +58,6 @@ public class TarefaService {
         Set<TarefaInterface> tarefaSet = criaSetTarefas(IDTarefas);
         Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
 
-        // TODO - Criar uma classe pra TarefaGerencial e Tarefa herdarem
         TarefaGerencial tg = new TarefaGerencial(nome, codigo, atividade, habilidadesSet, tarefaSet);
         atividade.adicionaTarefa(tg);
         this.tr.adicionaTarefa(tg);
@@ -122,7 +121,7 @@ public class TarefaService {
      * @param codigo codigo da tarefa.
      */
     public void concluirTarefa(String codigo) {
-        tr.concluirTarefa(codigo);
+        tr.concluiTarefa(codigo);
     }
 
     /**

@@ -19,6 +19,10 @@ public class TarefaController {
 		return ts.cadastraTarefa(id, nome, habilidades);
 	}
 
+	public String cadastrarTarefaGerencial(String id, String nome, String[] habilidades, String[] idTarefas) {
+		return ts.cadastraTarefaGerencial(id, nome, habilidades, idTarefas);
+	}
+
 	/**
 	 * altera o nome de uma tarefa.
 	 * 

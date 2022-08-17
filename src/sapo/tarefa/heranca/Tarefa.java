@@ -1,11 +1,9 @@
 package sapo.tarefa.heranca;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 
 import sapo.atividade.Atividade;
-import sapo.pessoa.Pessoa;
 
 public class Tarefa extends TarefaAbstract{
 	/**

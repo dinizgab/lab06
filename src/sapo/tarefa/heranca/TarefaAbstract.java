@@ -3,7 +3,6 @@ package sapo.tarefa.heranca;
 import sapo.atividade.Atividade;
 import sapo.pessoa.Pessoa;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -25,7 +24,7 @@ public abstract class TarefaAbstract implements TarefaInterface{
     /**
      * recupera o código da tarefa.
      *
-     * @return
+     * @return String que representa o código da tarefa
      */
     public String getCodigo() {
         return this.codigo;
