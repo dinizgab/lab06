@@ -6,7 +6,9 @@ import sapo.pessoa.Pessoa;
 
 public class TarefaRepository {
 	private Map<String, Tarefa> tarefas;
-	
+	private Map<String, TarefaGerencial> tarefasGerenciais;
+
+
 	/**
 	 * Constroi um repositorio de tarefa, guardando as tarefas em um mapa onde a chave é o codigo da tarefa;
 	 */
@@ -21,6 +23,15 @@ public class TarefaRepository {
 	 */
 	public void adicionaTarefa(Tarefa tarefa) {
 		tarefas.put(tarefa.getCodigo(), tarefa);
+	}
+
+	public void adicionaTarefaGerencial(TarefaGerencial tarefa) {
+		tarefasGerenciais.put(tarefa.getCodigo(), tarefa);
+	}
+
+
+	public Tarefa getTarefa(String id) {
+		return this.tarefas.get(id);
 	}
 
 	/**

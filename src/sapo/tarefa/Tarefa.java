@@ -3,6 +3,7 @@ package sapo.tarefa;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 
 import sapo.atividade.Atividade;
 import sapo.pessoa.Pessoa;
@@ -10,13 +11,13 @@ import sapo.pessoa.Pessoa;
 public class Tarefa {
 
 	private String nome;
-	private String[] habilidades;
+	private Set<String> habilidades;
 	private Map<String, Pessoa> responsaveis;
 	/**
 	 * status da atividade. quando o status é true, a atividade foi concluida.
 	 * status false indica que a atividade esta aberta.
 	 */
-	private Boolean status;
+	private boolean concluida;
 	private int horas;
 	private String codigo;
 	private Atividade atividade;
@@ -30,13 +31,17 @@ public class Tarefa {
 	 * @param habilidades habilidades recomendadas da tarefa
 	 * @param atividade   atividade relacionada
 	 */
-	public Tarefa(String codigo, String nome, String[] habilidades, Atividade atividade) {
-		this.responsaveis = new HashMap<>();
+	public Tarefa(String nome, String codigo, Atividade atividade, Set<String> habilidades) {
 		this.nome = nome;
-		this.habilidades = habilidades;
-		this.status = false;
 		this.codigo = codigo;
 		this.atividade = atividade;
+		this.habilidades = habilidades;
+		this.concluida = false;
+		this.responsaveis = new HashMap<>();
+	}
+
+	public String getNome() {
+		return this.nome;
 	}
 
 	/**
@@ -45,7 +50,7 @@ public class Tarefa {
 	 * @param nome nome da tarefa.
 	 */
 	public void setNome(String nome) {
-		if (!getStatus()) {
+		if (!concluida) {
 			this.nome = nome;
 		}
 	}
@@ -56,7 +61,7 @@ public class Tarefa {
 	 * @param habilidades habilidades da tarefa.
 	 */
 	public void setHabilidades(String[] habilidades) {
-		if (!getStatus()) {
+		if (!concluida) {
 			this.habilidades = habilidades;
 		}
 	}
@@ -76,14 +81,18 @@ public class Tarefa {
 	 * @return status da tarefa.
 	 */
 	public boolean getStatus() {
-		return this.status;
+		return this.concluida;
+	}
+
+	public int getHoras() {
+		return this.horas;
 	}
 
 	/**
 	 * conclui uma tarefa.
 	 */
 	public void concluirTarefa() {
-		this.status = true;
+		this.concluida = true;
 	}
 
 	/**
@@ -130,8 +139,8 @@ public class Tarefa {
 
 	private String exibeHabilidades() {
 		String saida = "";
-		for (int i = 0; i < habilidades.length; i++) {
-			saida += habilidades[i] + "\n";
+		for (String habilidade : habilidades) {
+			saida += habilidade + "\n";
 		}
 
 		return saida;

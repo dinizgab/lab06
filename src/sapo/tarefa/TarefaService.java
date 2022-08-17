@@ -4,6 +4,10 @@ import sapo.atividade.Atividade;
 import sapo.atividade.AtividadeService;
 import sapo.pessoa.PessoaService;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public class TarefaService {
 	private AtividadeService as;
 	private PessoaService ps;
@@ -31,13 +35,39 @@ public class TarefaService {
 	 * @param habilidades habilidades relacionadas a tarefa
 	 * @return codigo da tarefa cadastrada
 	 */
-	public String cadastraTarefa(String id, String nome, String[] habilidades) {
-		Atividade atividade = as.getAtividade(id);
-		String codigo = id + "-" + atividade.getTarefas().size();
-		Tarefa tarefa = new Tarefa(codigo, nome, habilidades, atividade);
+	public String cadastraTarefa(String atividadeID, String nome, String[] habilidades) {
+		Atividade atividade = as.getAtividade(atividadeID);
+		String codigo = atividadeID + "-" + atividade.getTarefas().size();
+		Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
+
+		Tarefa tarefa = new Tarefa(nome, codigo, atividade, habilidadesSet);
+
 		atividade.adicionaTarefa(tarefa);
-		tr.adicionaTarefa(tarefa);
+		this.tr.adicionaTarefa(tarefa);
 		return codigo;
+	}
+
+	public String cadastraTarefaGerencial(String atividadeID, String nome, String[] habilidades, String[] IDTarefas) {
+		// TODO - Cria a Atividade JV </3
+		Atividade atividade = as.getAtividade(atividadeID);
+		String codigo = atividadeID + "-" + atividade.getTarefas().size();
+		Set<Tarefa> tarefaSet = criaSetTarefas(IDTarefas);
+		Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
+
+		// TODO - Criar uma classe pra TarefaGerencial e Tarefa herdarem
+		TarefaGerencial tg = new TarefaGerencial(nome, codigo, atividade, habilidadesSet, tarefaSet);
+		atividade.adicionaTarefaGerencial(tg);
+		this.tr.adicionaTarefaGerencial(tg);
+		return codigo;
+	}
+
+	private Set<Tarefa> criaSetTarefas(String[] IDTarefas) {
+		Set<Tarefa> tarefasSet = new HashSet<>();
+
+		for(String ID : IDTarefas) {
+			tarefasSet.add(tr.getTarefa(ID));
+		}
+		return tarefasSet;
 	}
 
 	/**
@@ -65,7 +95,7 @@ public class TarefaService {
 	 * adiciona horas gastas na atividade.
 	 * 
 	 * @param codigo codigo da atividade
-	 * @param horas  horas gastas.
+	 * @pram horas  horas gastas.
 	 */
 	public void adicionarHorasTarefa(String codigo, int horas) {
 		tr.adicionarHorasTarefa(codigo, horas);
