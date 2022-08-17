@@ -45,4 +45,8 @@ public class PessoaService {
     public Pessoa getPessoa(String cpf) {
         return pessoaRepository.get(cpf);
     }
+
+    public Map<String, Pessoa> getPessoas() {
+        return new HashMap<>(this.pessoaRepository);
+    }
 }
