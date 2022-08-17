@@ -5,11 +5,10 @@ import java.util.Map;
 import java.util.Set;
 
 import sapo.pessoa.Pessoa;
+import sapo.tarefa.heranca.TarefaInterface;
 
 public class TarefaRepository {
-	private Map<String, Tarefa> tarefas;
-	private Map<String, TarefaGerencial> tarefasGerenciais;
-
+	private Map<String, TarefaInterface> tarefas;
 
 	/**
 	 * Constroi um repositorio de tarefa, guardando as tarefas em um mapa onde a chave é o codigo da tarefa;
@@ -23,16 +22,11 @@ public class TarefaRepository {
 	 * 
 	 * @param tarefa tarefa
 	 */
-	public void adicionaTarefa(Tarefa tarefa) {
+	public void adicionaTarefa(TarefaInterface tarefa) {
 		tarefas.put(tarefa.getCodigo(), tarefa);
 	}
 
-	public void adicionaTarefaGerencial(TarefaGerencial tarefa) {
-		tarefasGerenciais.put(tarefa.getCodigo(), tarefa);
-	}
-
-
-	public Tarefa getTarefa(String id) {
+	public TarefaInterface getTarefa(String id) {
 		return this.tarefas.get(id);
 	}
 
@@ -44,7 +38,7 @@ public class TarefaRepository {
 	 * @param novoNome novo nome da tarefa.
 	 */
 	public void alterarNomeTarefa(String codigo, String novoNome) {
-		Tarefa tarefa = tarefas.get(codigo);
+		TarefaInterface tarefa = tarefas.get(codigo);
 		tarefa.setNome(novoNome);
 	}
 
@@ -56,7 +50,7 @@ public class TarefaRepository {
 	 * @param habilidades habilidades referentes a tarefa.
 	 */
 	public void alterarHabilidadesTarefa(String codigo, Set<String> habilidades) {
-		Tarefa tarefa = tarefas.get(codigo);
+		TarefaInterface tarefa = tarefas.get(codigo);
 		tarefa.setHabilidades(habilidades);
 	}
 
@@ -86,8 +80,8 @@ public class TarefaRepository {
 	 * 
 	 * @param codigo codigo da tarefa.
 	 */
-	public void concluirTarefa(String codigo) {
-		tarefas.get(codigo).concluirTarefa();
+	public void concluiTarefa(String codigo) {
+		tarefas.get(codigo).concluiTarefa();
 
 	}
 
@@ -129,7 +123,6 @@ public class TarefaRepository {
 	 */
 	public void removerPessoaTarefa(String codigo, String cpf) {
 		tarefas.get(codigo).removeResponsavel(cpf);
-
 	}
 
 }

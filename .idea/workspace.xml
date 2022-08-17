@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Adicionando getPessoas">
-      <change afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaAbstract.java" afterDir="false" />
+    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Iniciando a adição de herança nas tarefas">
+      <change afterPath="$PROJECT_DIR$/src/sapo/tarefa/heranca/TarefaInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/Tarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/Tarefa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/TarefaGerencial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaGerencial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sapo/atividade/Atividade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/atividade/Atividade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/Tarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/heranca/Tarefa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/TarefaAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/heranca/TarefaAbstract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/TarefaGerencial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/heranca/TarefaGerencial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/TarefaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/TarefaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaService.java" afterDir="false" />
     </list>
@@ -17,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -34,15 +36,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "Errors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="sapo" />
@@ -77,7 +79,7 @@
       <workItem from="1660693253067" duration="859000" />
       <workItem from="1660710538519" duration="646000" />
       <workItem from="1660741994964" duration="5120000" />
-      <workItem from="1660752218158" duration="10568000" />
+      <workItem from="1660752218158" duration="13129000" />
     </task>
     <task id="LOCAL-00001" summary="Initial configurations">
       <created>1659984232645</created>
@@ -128,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660742563876</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Iniciando a adição de herança nas tarefas">
+      <created>1660764245884</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1660764245885</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +159,8 @@
     <MESSAGE value="Atualizacao uml" />
     <MESSAGE value="Removendo metodos redundantes" />
     <MESSAGE value="Adicionando getPessoas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando getPessoas" />
+    <MESSAGE value="Iniciando a adição de herança nas tarefas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Iniciando a adição de herança nas tarefas" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

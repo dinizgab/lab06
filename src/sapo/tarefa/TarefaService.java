@@ -3,6 +3,9 @@ package sapo.tarefa;
 import sapo.atividade.Atividade;
 import sapo.atividade.AtividadeService;
 import sapo.pessoa.PessoaService;
+import sapo.tarefa.heranca.Tarefa;
+import sapo.tarefa.heranca.TarefaGerencial;
+import sapo.tarefa.heranca.TarefaInterface;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -41,10 +44,10 @@ public class TarefaService {
         String codigo = atividadeID + "-" + atividade.getTarefas().size();
         Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
 
-        Tarefa tarefa = new Tarefa(nome, codigo, atividade, habilidadesSet);
+        Tarefa t = new Tarefa(nome, codigo, atividade, habilidadesSet);
 
-        atividade.adicionaTarefa(tarefa);
-        this.tr.adicionaTarefa(tarefa);
+        atividade.adicionaTarefa(t);
+        this.tr.adicionaTarefa(t);
         return codigo;
     }
 
@@ -52,18 +55,18 @@ public class TarefaService {
         // TODO - Cria a Atividade JV </3
         Atividade atividade = as.getAtividade(atividadeID);
         String codigo = atividadeID + "-" + atividade.getTarefas().size();
-        Set<Tarefa> tarefaSet = criaSetTarefas(IDTarefas);
+        Set<TarefaInterface> tarefaSet = criaSetTarefas(IDTarefas);
         Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
 
         // TODO - Criar uma classe pra TarefaGerencial e Tarefa herdarem
         TarefaGerencial tg = new TarefaGerencial(nome, codigo, atividade, habilidadesSet, tarefaSet);
-        atividade.adicionaTarefaGerencial(tg);
-        this.tr.adicionaTarefaGerencial(tg);
+        atividade.adicionaTarefa(tg);
+        this.tr.adicionaTarefa(tg);
         return codigo;
     }
 
-    private Set<Tarefa> criaSetTarefas(String[] IDTarefas) {
-        Set<Tarefa> tarefasSet = new HashSet<>();
+    private Set<TarefaInterface> criaSetTarefas(String[] IDTarefas) {
+        Set<TarefaInterface> tarefasSet = new HashSet<>();
 
         for (String ID : IDTarefas) {
             tarefasSet.add(tr.getTarefa(ID));
@@ -130,7 +133,6 @@ public class TarefaService {
      */
     public void removerTarefa(String codigo) {
         as.getAtividade(recuperaIdAtividade(codigo)).removerTarefa(codigo);
-        ;
         tr.removerTarefa(codigo);
     }
 
@@ -152,7 +154,6 @@ public class TarefaService {
      */
     public void associarPessoaTarefa(String codigo, String cpf) {
         tr.associarPessoaTarefa(codigo, ps.getPessoa(cpf));
-
     }
 
     /**
