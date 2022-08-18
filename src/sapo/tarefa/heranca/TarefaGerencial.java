@@ -13,11 +13,11 @@ import java.util.Set;
 public class TarefaGerencial extends TarefaAbstract{
     private Set<String> habilidades;
     private Map<String, Pessoa> responsaveis;
-    private Map<String, TarefaInterface> tarefasGerenciadas;
+    private Map<String, TarefaAbstract> tarefasGerenciadas;
     private int horas;
     private boolean concluida;
 
-    public TarefaGerencial(String nome, String codigo, Atividade atividade, Set<String> habilidades, Map<String, TarefaInterface> tarefas) {
+    public TarefaGerencial(String nome, String codigo, Atividade atividade, Set<String> habilidades, Map<String, TarefaAbstract> tarefas) {
         super(nome, codigo, atividade);
 
         this.responsaveis = new HashMap<>();
@@ -29,7 +29,7 @@ public class TarefaGerencial extends TarefaAbstract{
 
     @Override
     public void concluiTarefa() {
-        for (TarefaInterface t : this.tarefasGerenciadas.values()) {
+        for (TarefaAbstract t : this.tarefasGerenciadas.values()) {
             t.concluiTarefa();
         }
         this.concluida = true;
@@ -42,7 +42,7 @@ public class TarefaGerencial extends TarefaAbstract{
     }
 
     private Set<String> criaHabilidadesTotais(Set<String> habilidades) {
-        for (TarefaInterface t : this.tarefasGerenciadas.values()) {
+        for (TarefaAbstract t : this.tarefasGerenciadas.values()) {
             habilidades.addAll(t.getHabilidades());
         }
         return habilidades;
@@ -50,7 +50,7 @@ public class TarefaGerencial extends TarefaAbstract{
 
     private int calculaHorasTotais() {
         int horas = 0;
-        for (TarefaInterface t : this.tarefasGerenciadas.values()) {
+        for (TarefaAbstract t : this.tarefasGerenciadas.values()) {
             horas += t.getHoras();
         }
 
@@ -60,14 +60,14 @@ public class TarefaGerencial extends TarefaAbstract{
     private String exibeTarefas() {
         // TODO - Arrumar um jeito de formatar da tarefa mais nova para a mais antiga
         String saida = "";
-        for (TarefaInterface t : this.tarefasGerenciadas.values()) {
+        for (TarefaAbstract t : this.tarefasGerenciadas.values()) {
             saida += "- " + t.getNome() + " - " + t.getCodigo() + "\n";
         }
 
         return saida;
     }
 
-    public void adicionaTarefa(TarefaInterface tarefa) {
+    public void adicionaTarefa(TarefaAbstract tarefa) {
         this.tarefasGerenciadas.put(tarefa.getCodigo(), tarefa);
         this.criaHabilidadesTotais(this.habilidades);
     }

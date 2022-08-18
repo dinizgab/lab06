@@ -4,8 +4,8 @@ import sapo.atividade.Atividade;
 import sapo.atividade.AtividadeService;
 import sapo.pessoa.PessoaService;
 import sapo.tarefa.heranca.Tarefa;
+import sapo.tarefa.heranca.TarefaAbstract;
 import sapo.tarefa.heranca.TarefaGerencial;
-import sapo.tarefa.heranca.TarefaInterface;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -52,10 +52,9 @@ public class TarefaController {
     }
 
     public String cadastraTarefaGerencial(String atividadeID, String nome, String[] habilidades, String[] IDTarefas) {
-        // TODO - Cria a Atividade JV </3
         Atividade atividade = as.getAtividade(atividadeID);
         String codigo = atividadeID + "-" + atividade.getTarefas().size();
-        Set<TarefaInterface> tarefaSet = criaSetTarefas(IDTarefas);
+        Set<TarefaAbstract> tarefaSet = criaSetTarefas(IDTarefas);
         Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
 
         TarefaGerencial tg = new TarefaGerencial(nome, codigo, atividade, habilidadesSet, tarefaSet);
@@ -64,8 +63,8 @@ public class TarefaController {
         return codigo;
     }
 
-    private Set<TarefaInterface> criaSetTarefas(String[] IDTarefas) {
-        Set<TarefaInterface> tarefasSet = new HashSet<>();
+    private Set<TarefaAbstract> criaSetTarefas(String[] IDTarefas) {
+        Set<TarefaAbstract> tarefasSet = new HashSet<>();
 
         for (String ID : IDTarefas) {
             tarefasSet.add(tr.getTarefa(ID));
@@ -99,7 +98,7 @@ public class TarefaController {
      * adiciona horas gastas na atividade.
      *
      * @param codigo codigo da atividade
-     * @pram horas  horas gastas.
+     * @param horas  horas gastas.
      */
     public void adicionarHorasTarefa(String codigo, int horas) {
         tr.adicionarHorasTarefa(codigo, horas);
@@ -174,7 +173,7 @@ public class TarefaController {
     }
 
     public int totalDeTarefasGerenciadas(String idGerencial) {
-        return tr.contaTarefasNasGerenciais();
+        return tr.contaTarefasNasGerenciais(idGerencial);
     }
 
     /**

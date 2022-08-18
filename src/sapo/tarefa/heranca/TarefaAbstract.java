@@ -6,7 +6,7 @@ import sapo.pessoa.Pessoa;
 import java.util.Map;
 import java.util.Set;
 
-public abstract class TarefaAbstract implements TarefaInterface{
+public abstract class TarefaAbstract {
     protected String nome;
     protected String codigo;
     protected Set<String> habilidades;

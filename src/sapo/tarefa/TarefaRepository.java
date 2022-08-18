@@ -6,11 +6,11 @@ import java.util.Set;
 
 import sapo.pessoa.Pessoa;
 import sapo.tarefa.heranca.Tarefa;
+import sapo.tarefa.heranca.TarefaAbstract;
 import sapo.tarefa.heranca.TarefaGerencial;
-import sapo.tarefa.heranca.TarefaInterface;
 
 public class TarefaRepository {
-	private Map<String, TarefaInterface> tarefas;
+	private Map<String, TarefaAbstract> tarefas;
 
 	/**
 	 * Constroi um repositorio de tarefa, guardando as tarefas em um mapa onde a chave é o codigo da tarefa;
@@ -24,11 +24,11 @@ public class TarefaRepository {
 	 * 
 	 * @param tarefa tarefa
 	 */
-	public void adicionaTarefa(TarefaInterface tarefa) {
+	public void adicionaTarefa(TarefaAbstract tarefa) {
 		tarefas.put(tarefa.getCodigo(), tarefa);
 	}
 
-	public TarefaInterface getTarefa(String id) {
+	public TarefaAbstract getTarefa(String id) {
 		return this.tarefas.get(id);
 	}
 
@@ -40,7 +40,7 @@ public class TarefaRepository {
 	 * @param novoNome novo nome da tarefa.
 	 */
 	public void alterarNomeTarefa(String codigo, String novoNome) {
-		TarefaInterface tarefa = tarefas.get(codigo);
+		TarefaAbstract tarefa = tarefas.get(codigo);
 		tarefa.setNome(novoNome);
 	}
 
@@ -128,7 +128,7 @@ public class TarefaRepository {
 	}
 
 	public void adicionaNasGerenciais(String idGerencial, String idTarefa) {
-		TarefaInterface t = this.tarefas.get(idTarefa);
+		TarefaAbstract t = this.tarefas.get(idTarefa);
 		TarefaGerencial tg = (TarefaGerencial) this.tarefas.get(idGerencial);
 		tg.adicionaTarefa(t);
 	}

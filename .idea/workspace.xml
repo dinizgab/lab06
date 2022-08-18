@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Finalizando tarefas gerenciais">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/busca/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/TarefaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/TarefaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/heranca/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/heranca/Tarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/heranca/Tarefa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/heranca/TarefaAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/heranca/TarefaAbstract.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/heranca/TarefaGerencial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/heranca/TarefaGerencial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/heranca/TarefaInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/heranca/TarefaInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/heranca/TarefaInterface.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +21,9 @@
         <option value="Interface" />
       </list>
     </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -148,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660838347605</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Finalizando tarefas gerenciais">
+      <created>1660847179632</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1660847179632</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

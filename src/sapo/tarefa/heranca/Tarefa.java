@@ -1,11 +1,17 @@
 package sapo.tarefa.heranca;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 import sapo.atividade.Atividade;
+import sapo.pessoa.Pessoa;
 
 public class Tarefa extends TarefaAbstract{
+	private Set<String> habilidades;
+	private Map<String, Pessoa> responsaveis;
+	private boolean concluida;
+
 	/**
 	 * cria uma tarefa definindo seu codigo, nome, habilidade e a atividade a qual
 	 * esta relacionada.
