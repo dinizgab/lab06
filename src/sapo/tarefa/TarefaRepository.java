@@ -5,6 +5,8 @@ import java.util.Map;
 import java.util.Set;
 
 import sapo.pessoa.Pessoa;
+import sapo.tarefa.heranca.Tarefa;
+import sapo.tarefa.heranca.TarefaGerencial;
 import sapo.tarefa.heranca.TarefaInterface;
 
 public class TarefaRepository {
@@ -50,7 +52,7 @@ public class TarefaRepository {
 	 * @param habilidades habilidades referentes a tarefa.
 	 */
 	public void alterarHabilidadesTarefa(String codigo, Set<String> habilidades) {
-		TarefaInterface tarefa = tarefas.get(codigo);
+		Tarefa tarefa = (Tarefa) tarefas.get(codigo);
 		tarefa.setHabilidades(habilidades);
 	}
 
@@ -123,6 +125,22 @@ public class TarefaRepository {
 	 */
 	public void removerPessoaTarefa(String codigo, String cpf) {
 		tarefas.get(codigo).removeResponsavel(cpf);
+	}
+
+	public void adicionaNasGerenciais(String idGerencial, String idTarefa) {
+		TarefaInterface t = this.tarefas.get(idTarefa);
+		TarefaGerencial tg = (TarefaGerencial) this.tarefas.get(idGerencial);
+		tg.adicionaTarefa(t);
+	}
+
+	public void removeDasGerenciais(String idGerencial, String idTarefa) {
+		TarefaGerencial tg = (TarefaGerencial) this.tarefas.get(idGerencial);
+		tg.removeTarefa(idTarefa);
+	}
+
+	public int contaTarefasNasGerenciais(String idGerencial) {
+		TarefaGerencial tg = (TarefaGerencial) this.tarefas.get(idGerencial);
+		return tg.totalDeTarefas();
 	}
 
 }

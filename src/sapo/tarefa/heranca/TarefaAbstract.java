@@ -80,16 +80,6 @@ public abstract class TarefaAbstract implements TarefaInterface{
     }
 
     /**
-     * define as habilidades recomendadas da tarefa.
-     *
-     * @param habilidades habilidades da tarefa.
-     */
-    public void setHabilidades(Set<String> habilidades) {
-        if (!this.concluida) return;
-        this.habilidades = habilidades;
-    }
-
-    /**
      * adiciona uma pessoa responsável a tarefa.
      *
      * @param pessoa pessoa a ser adicionada

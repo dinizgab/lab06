@@ -13,8 +13,6 @@ public interface TarefaInterface {
 
     public Set<String> getHabilidades();
 
-    public void setHabilidades(Set<String> habilidades);
-
     public void adicionaHoras(int horas);
 
     public void removeHoras(int horas);

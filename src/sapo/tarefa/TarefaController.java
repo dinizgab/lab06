@@ -165,6 +165,18 @@ public class TarefaController {
         tr.removerPessoaTarefa(codigo, cpf);
     }
 
+    public void adicionaNasGerenciais(String idGerencial, String idTarefa) {
+        tr.adicionaNasGerenciais(idGerencial, idTarefa);
+    }
+
+    public void removeDasGerenciais(String idGerencial, String idTarefa) {
+        tr.removeDasGerenciais(idGerencial, idTarefa);
+    }
+
+    public int totalDeTarefasGerenciadas(String idGerencial) {
+        return tr.contaTarefasNasGerenciais();
+    }
+
     /**
      * recupera o Id de uma atividade a partir do código de uma tarefa.
      *
@@ -176,5 +188,4 @@ public class TarefaController {
         String id = parts[0] + "-" + parts[1];
         return id;
     }
-
 }

@@ -22,6 +22,16 @@ public class Tarefa extends TarefaAbstract{
 		this.concluida = false;
 	}
 
+	/**
+	 * define as habilidades recomendadas da tarefa.
+	 *
+	 * @param habilidades habilidades da tarefa.
+	 */
+	public void setHabilidades(Set<String> habilidades) {
+		if (!this.concluida) return;
+		this.habilidades = habilidades;
+	}
+
 	@Override
 	public String toString() {
 		return this.nome + " - " + codigo + "\n" + /*atividade.getNome() + */ "\n" + /*atividade.getDescricao() + */ this.horas
