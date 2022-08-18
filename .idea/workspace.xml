@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Iniciando a adição de herança nas tarefas">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/TarefaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaService.java" afterDir="false" />
-    </list>
+    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Corrigindo doc" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +72,7 @@
       <workItem from="1660741994964" duration="5120000" />
       <workItem from="1660752218158" duration="16349000" />
       <workItem from="1660830891129" duration="602000" />
-      <workItem from="1660837913768" duration="394000" />
+      <workItem from="1660837913768" duration="710000" />
     </task>
     <task id="LOCAL-00001" summary="Initial configurations">
       <created>1659984232645</created>
@@ -133,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660764245885</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Corrigindo doc">
+      <created>1660838347605</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1660838347605</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +160,8 @@
     <MESSAGE value="Removendo metodos redundantes" />
     <MESSAGE value="Adicionando getPessoas" />
     <MESSAGE value="Iniciando a adição de herança nas tarefas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Iniciando a adição de herança nas tarefas" />
+    <MESSAGE value="Corrigindo doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrigindo doc" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
