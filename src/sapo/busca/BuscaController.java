@@ -7,9 +7,6 @@ import sapo.pessoa.PessoaService;
 import sapo.tarefa.TarefaController;
 
 public class BuscaController {
-	public interface Busca {
-
-	}
 
 	private BuscaService bs;
 	private ValidadorBusca vb;
@@ -37,7 +34,7 @@ public class BuscaController {
 	}
 	
 	public List<String> buscaTarefas(String id, String nome){
-		return bs.busca(new BuscaTarefa(as.getAtividade(id), nome));
+		return null;
 	}
 	
 	public List<String> sugerirTarefas(String cpf){

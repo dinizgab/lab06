@@ -6,21 +6,16 @@ import java.util.List;
 import java.util.Map;
 import sapo.pessoa.Pessoa;
 
-public class BuscaPessoa implements BuscaInterface {
-	private String tipo;
+public class BuscaPessoa extends BuscaAbstract {
 	private String[] termos;
 	private Map<String, Pessoa> pessoas;
 	
 	public BuscaPessoa(String[] termos, Map<String, Pessoa> pessoas){
+		super("PESSOA");
 		this.termos = termos;
-		this.tipo = "PESSOA";
 		this.pessoas = pessoas;
 	}
 	
-	public String getTipo(){
-		return this.tipo;
-	}
-
 	public List<String> busca() {
 		List<String> resultado = new ArrayList<>(); 
 		
