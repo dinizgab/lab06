@@ -3,7 +3,9 @@ package sapo.tarefa.heranca;
 import sapo.atividade.Atividade;
 import sapo.pessoa.Pessoa;
 
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 
 public abstract class TarefaAbstract {
@@ -11,7 +13,7 @@ public abstract class TarefaAbstract {
     protected String codigo;
     protected Set<String> habilidades;
     protected Map<String, Pessoa> responsaveis;
-    protected int horas = 0;
+    protected int horas;
     protected boolean concluida;
     protected Atividade atividade;
 
@@ -19,6 +21,8 @@ public abstract class TarefaAbstract {
         this.nome = nome;
         this.codigo = codigo;
         this.atividade = atividade;
+        this.responsaveis = new HashMap<>();
+        this.concluida = false;
     }
 
     /**
@@ -102,6 +106,12 @@ public abstract class TarefaAbstract {
      */
     public void concluiTarefa() {
         this.concluida = true;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if(!(o instanceof TarefaAbstract)) return false;
+        return ((TarefaAbstract) o).getCodigo().equals(this.codigo);
     }
 
     protected String exibeEquipe() {

@@ -1,16 +1,11 @@
 package sapo.tarefa.heranca;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 
 import sapo.atividade.Atividade;
-import sapo.pessoa.Pessoa;
 
 public class Tarefa extends TarefaAbstract{
 	private Set<String> habilidades;
-	private Map<String, Pessoa> responsaveis;
-	private boolean concluida;
 
 	/**
 	 * cria uma tarefa definindo seu codigo, nome, habilidade e a atividade a qual
@@ -24,8 +19,6 @@ public class Tarefa extends TarefaAbstract{
 	public Tarefa (String nome, String codigo, Atividade atividade, Set<String> habilidades) {
 		super(nome, codigo, atividade);
 		this.habilidades = habilidades;
-		this.responsaveis = new HashMap<>();
-		this.concluida = false;
 	}
 
 	/**
@@ -40,7 +33,7 @@ public class Tarefa extends TarefaAbstract{
 
 	@Override
 	public String toString() {
-		return this.nome + " - " + codigo + "\n" + /*atividade.getNome() + */ "\n" + /*atividade.getDescricao() + */ this.horas
+		return this.nome + " - " + codigo + "\n" + atividade.getNome() + "\n" + atividade.getDescricao() + this.horas
 				+ " hora(s) executada(s)" + this.exibeHabilidades() + "===\n" + "Equipe: " + this.exibeEquipe();
 	}
 }

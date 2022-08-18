@@ -1,30 +1,24 @@
 package sapo.tarefa.heranca;
 
 import sapo.atividade.Atividade;
-import sapo.pessoa.Pessoa;
+import sapo.tarefa.ValidadorTarefa;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-// TODO - Cadastro de tarefas normais e tarefas gerenciadas
-// TODO - Maneira de checar se está ocorrendo loop de cadastro de tarefas gerenciais
-
 public class TarefaGerencial extends TarefaAbstract{
     private Set<String> habilidades;
-    private Map<String, Pessoa> responsaveis;
     private Map<String, TarefaAbstract> tarefasGerenciadas;
     private int horas;
-    private boolean concluida;
+    private ValidadorTarefa validador;
 
     public TarefaGerencial(String nome, String codigo, Atividade atividade, Set<String> habilidades, Map<String, TarefaAbstract> tarefas) {
         super(nome, codigo, atividade);
 
-        this.responsaveis = new HashMap<>();
+        this.validador = new ValidadorTarefa();
         this.tarefasGerenciadas = tarefas;
         this.habilidades = this.criaHabilidadesTotais(habilidades);
         this.horas = this.calculaHorasTotais();
-        this.concluida = false;
     }
 
     @Override
@@ -37,7 +31,7 @@ public class TarefaGerencial extends TarefaAbstract{
 
     @Override
     public String toString() {
-        return this.nome + " - " + codigo + "\n- " + /*atividade.getNome() + */"\n" + this.exibeHabilidades() + "\n(" + this.horas
+        return this.nome + " - " + codigo + "\n- " + atividade.getNome() + "\n" + this.exibeHabilidades() + "\n(" + this.horas
                 + " hora(s) executada(s))" + "\n===\n" + "Equipe: \n" + this.exibeEquipe() + "\n===\nTarefas:\n" + this.exibeTarefas();
     }
 
@@ -67,12 +61,14 @@ public class TarefaGerencial extends TarefaAbstract{
         return saida;
     }
 
-    public void adicionaTarefa(TarefaAbstract tarefa) {
+    public void adicionaTarefaGerenciada(TarefaAbstract tarefa) {
+        validador.validaCiclo(this.tarefasGerenciadas, tarefa);
+
         this.tarefasGerenciadas.put(tarefa.getCodigo(), tarefa);
         this.criaHabilidadesTotais(this.habilidades);
     }
 
-    public void removeTarefa(String codigo) {
+    public void removeTarefaGerenciada(String codigo) {
         this.tarefasGerenciadas.remove(codigo);
         this.criaHabilidadesTotais(this.habilidades);
     }

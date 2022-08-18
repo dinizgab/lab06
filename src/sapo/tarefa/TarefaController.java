@@ -8,6 +8,7 @@ import sapo.tarefa.heranca.TarefaAbstract;
 import sapo.tarefa.heranca.TarefaGerencial;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -54,22 +55,24 @@ public class TarefaController {
     public String cadastraTarefaGerencial(String atividadeID, String nome, String[] habilidades, String[] IDTarefas) {
         Atividade atividade = as.getAtividade(atividadeID);
         String codigo = atividadeID + "-" + atividade.getTarefas().size();
-        Set<TarefaAbstract> tarefaSet = criaSetTarefas(IDTarefas);
+
+        HashMap<String, TarefaAbstract> tarefaMap = criaMapTarefas(IDTarefas);
         Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
 
-        TarefaGerencial tg = new TarefaGerencial(nome, codigo, atividade, habilidadesSet, tarefaSet);
+        TarefaGerencial tg = new TarefaGerencial(nome, codigo, atividade, habilidadesSet, tarefaMap);
         atividade.adicionaTarefa(tg);
         this.tr.adicionaTarefa(tg);
         return codigo;
     }
 
-    private Set<TarefaAbstract> criaSetTarefas(String[] IDTarefas) {
-        Set<TarefaAbstract> tarefasSet = new HashSet<>();
+    private HashMap<String, TarefaAbstract> criaMapTarefas(String[] IDTarefas) {
+        HashMap<String, TarefaAbstract> tarefasMap = new HashMap<>();
 
         for (String ID : IDTarefas) {
-            tarefasSet.add(tr.getTarefa(ID));
+            TarefaAbstract t = tr.getTarefa(ID);
+            tarefasMap.put(t.getCodigo(), t);
         }
-        return tarefasSet;
+        return tarefasMap;
     }
 
     /**

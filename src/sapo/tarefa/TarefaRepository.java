@@ -130,12 +130,12 @@ public class TarefaRepository {
 	public void adicionaNasGerenciais(String idGerencial, String idTarefa) {
 		TarefaAbstract t = this.tarefas.get(idTarefa);
 		TarefaGerencial tg = (TarefaGerencial) this.tarefas.get(idGerencial);
-		tg.adicionaTarefa(t);
+		tg.adicionaTarefaGerenciada(t);
 	}
 
 	public void removeDasGerenciais(String idGerencial, String idTarefa) {
 		TarefaGerencial tg = (TarefaGerencial) this.tarefas.get(idGerencial);
-		tg.removeTarefa(idTarefa);
+		tg.removeTarefaGerenciada(idTarefa);
 	}
 
 	public int contaTarefasNasGerenciais(String idGerencial) {
