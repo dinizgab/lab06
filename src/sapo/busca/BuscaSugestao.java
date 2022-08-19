@@ -22,6 +22,11 @@ public class BuscaSugestao extends BuscaAbstract{
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	
+	//funcao para pegar os com mais habilidades em comum
+	//funcao para, em caso de empate de duas tarefas, decidir qual tem menos pessoas
+	//funcao para, ainda em caso de empate, decidir por oredem alfabetica de id
 
 
 	
