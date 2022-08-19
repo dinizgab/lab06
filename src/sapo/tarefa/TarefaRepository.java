@@ -1,8 +1,10 @@
 package sapo.tarefa;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import sapo.pessoa.Pessoa;
 import sapo.tarefa.heranca.Tarefa;
@@ -143,8 +145,8 @@ public class TarefaRepository {
 		return tg.totalDeTarefas();
 	}
 
-	public Map<String, TarefaAbstract> getTarefas() {
-		return this.tarefas;
+	public List<TarefaAbstract> getTarefas() {
+		return this.tarefas.values().stream().collect(Collectors.toList());
 	}
 
 }
