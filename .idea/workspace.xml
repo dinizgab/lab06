@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Removendo gitignore inutil">
-      <change beforePath="$PROJECT_DIR$/src/sapo/pessoa/PessoaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/PessoaController.java" afterDir="false" />
-    </list>
+    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Corrigindo getAtividade" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,16 +34,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="sapo" />
@@ -85,6 +83,7 @@
       <workItem from="1660837913768" duration="710000" />
       <workItem from="1660877019957" duration="43000" />
       <workItem from="1660937031599" duration="1384000" />
+      <workItem from="1660942081084" duration="272000" />
     </task>
     <task id="LOCAL-00001" summary="Initial configurations">
       <created>1659984232645</created>
@@ -177,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660938238195</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Corrigindo getAtividade">
+      <created>1660942322862</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1660942322862</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +211,8 @@
     <MESSAGE value="Retirando a Interface" />
     <MESSAGE value="Terminando mesmo a Tarefa Gerencial" />
     <MESSAGE value="Removendo gitignore inutil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removendo gitignore inutil" />
+    <MESSAGE value="Corrigindo getAtividade" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrigindo getAtividade" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
