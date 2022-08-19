@@ -1,25 +1,22 @@
 package sapo.atividade;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import sapo.pessoa.Pessoa;
 import sapo.pessoa.PessoaService;
 
 public class AtividadeService {
   private PessoaService ps;
-  private Map<String, Atividade> atividades;
+  private AtividadeRepository ar;
 
   public AtividadeService(PessoaService ps) {
     this.ps = ps;
-    this.atividades = new HashMap<>();
+    this.ar = new AtividadeRepository();
   }
 
   public String cadastrarAtividade(String nome, String descricao, String cpf) {
     Pessoa responsavel = ps.getPessoa(cpf);
     String codigoDaAtividade = gerarCodigo(nome);
     Atividade novaAtividade = new Atividade(codigoDaAtividade, nome, descricao, responsavel);
-    atividades.put(codigoDaAtividade, novaAtividade);
+    ar.add(codigoDaAtividade, novaAtividade);
     return codigoDaAtividade;
   }
 
@@ -42,32 +39,35 @@ public class AtividadeService {
       }
     }
 
-    return codigo + "-" + atividades.size();
+    return codigo + "-" + ar.size();
   }
 
   public void encerrarAtividade(String atividadeId) {
-    atividades.get(atividadeId).encerrar();
+    ar.get(atividadeId).encerrar();
   }
 
   public void desativarAtividade(String atividadeId) {
-    atividades.get(atividadeId).desativar();
+    ar.get(atividadeId).desativar();
   }
 
   public void reabrirAtividade(String atividadeId) {
-    atividades.get(atividadeId).reabrir();
+    ar.get(atividadeId).reabrir();
   }
 
   public String exibirAtividade(String atividadeId) {
-    return atividades.get(atividadeId).toString();
+    return ar.get(atividadeId).toString();
   }
 
   public void alterarDescricaoAtividade(String atividadeId, String descricao) {
-    atividades.get(atividadeId).setDescricao(descricao);
+    ar.get(atividadeId).setDescricao(descricao);
   }
 
   public void alterarResponsavelAtividade(String atividadeId, String cpf) {
     Pessoa novoResponsavel = ps.getPessoa(cpf);
-    atividades.get(atividadeId).setResponsavel(novoResponsavel);
+    ar.get(atividadeId).setResponsavel(novoResponsavel);
   }
 
+  public Atividade getAtividade(String codigo) {
+    return ar.get(codigo);
+  }
 }

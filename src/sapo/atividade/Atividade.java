@@ -17,34 +17,36 @@ import sapo.tarefa.heranca.TarefaAbstract;
  * @author João Victor de Souza Lucena
  */
 public class Atividade {
-  private String codigo;
+  private final String id;
   private String nome;
   private String descricao;
   private Pessoa responsavel;
   private String status;
   private Map<String, TarefaAbstract> tarefas;
+  private int proximoTarefaId;
 
   /**
    * 
-   * @param codigo      Código da atividade.
+   * @param id          Código da atividade.
    * @param nome        Nome da atividade.
    * @param descricao   Descrição da atividade.
    * @param responsavel Pessoa responsável por essa atividade.
    * @throws IllegalArgumentException Levanta erro caso o nome, a descrição ou o
    *                                  responsável sejam inválidos (nulo ou vazio).
    */
-  public Atividade(String codigo, String nome, String descricao, Pessoa responsavel) throws IllegalArgumentException {
+  public Atividade(String id, String nome, String descricao, Pessoa responsavel) throws IllegalArgumentException {
     if (!argumentoEhValido(nome) || !argumentoEhValido(descricao))
       throw new IllegalArgumentException("Nome e descrição da atividade não podem ser vazios ou nulos.");
     if (responsavel == null)
       throw new IllegalArgumentException("Responsável não pode ser nulo.");
 
-    this.codigo = codigo;
+    this.id = id;
     this.nome = nome;
     this.descricao = descricao;
     this.responsavel = responsavel;
     this.status = "aberta";
     this.tarefas = new HashMap<>();
+    this.proximoTarefaId = 0;
   }
 
   /**
@@ -127,8 +129,8 @@ public class Atividade {
 
   @Override
   public String toString() {
-    String result = codigo + ": " + this.nome + "\n";
-    result += "Responsável: " + this.responsavel.toString().split("\n")[0] + "\n";
+    String result = id + ": " + this.nome + "\n";
+    result += "Responsável: " + this.responsavel.getNome() + " - " + this.responsavel.getCpf() + "\n";
     result += "===\n";
     result += this.descricao + "\n";
     result += "===\n";
@@ -139,7 +141,8 @@ public class Atividade {
     List<TarefaAbstract> ultimasTarefasPendentes = getUltimasTarefasPendentes(3);
     for (int i = 0; i < ultimasTarefasPendentes.size(); i++) {
       TarefaAbstract tarefa = ultimasTarefasPendentes.get(i);
-      result += "- " + tarefa.toString().split("\n")[0] + (i == ultimasTarefasPendentes.size() - 1 ? "" : "\n");
+      result += "- " + tarefa.getNome() + " - " + tarefa.getCodigo()
+          + (i == ultimasTarefasPendentes.size() - 1 ? "" : "\n");
     }
 
     return result;
@@ -206,6 +209,38 @@ public class Atividade {
     if (tarefa == null)
       throw new IllegalArgumentException("Tarefa não pode ser nula.");
 
-    this.tarefas.put(this.codigo + "-" + (this.tarefas.size() - 1), tarefa);
+    this.tarefas.put(this.id + "-" + this.proximoTarefaId++, tarefa);
+  }
+
+  /**
+   * @param id Código da tarefa a ser removida.
+   * @throws IllegalArgumentException Levanta erro caso o código seja nulo ou
+   *                                  vazio.
+   */
+  public void removerTarefa(String id) throws IllegalArgumentException {
+    if (!argumentoEhValido(id))
+      throw new IllegalArgumentException("Código da tarefa não pode ser nula ou vazia.");
+
+    this.tarefas.remove(id);
+  }
+
+  public String getId() {
+    return id;
+  }
+
+  public String getNome() {
+    return nome;
+  }
+
+  public String getDescricao() {
+    return descricao;
+  }
+
+  public Pessoa getResponsavel() {
+    return responsavel;
+  }
+
+  public String getStatus() {
+    return status;
   }
 }
