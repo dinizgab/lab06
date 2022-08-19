@@ -143,4 +143,8 @@ public class TarefaRepository {
 		return tg.totalDeTarefas();
 	}
 
+	public Map<String, TarefaAbstract> getTarefas() {
+		return this.tarefas;
+	}
+
 }
