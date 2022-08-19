@@ -6,6 +6,7 @@ public class PessoaController {
 
     public PessoaController(PessoaService ps) {
         this.ps = ps;
+        this.validador = new ValidadorPessoa();
     }
 
     public void cadastraPessoa(String cpf, String nome, String[] habilidades) {

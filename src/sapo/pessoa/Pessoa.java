@@ -35,6 +35,10 @@ public class Pessoa {
         this.comentarios.add(comentario);
     }
 
+    public String[] getHabilidades() {
+        return this.habilidades;
+    }
+
     public String getComentarios() {
         String listaComentarios = formataComentarios();
         return this.nome + " - " + this.cpf + "Comentários:\n" + listaComentarios;

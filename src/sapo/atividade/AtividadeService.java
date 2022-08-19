@@ -66,4 +66,8 @@ public class AtividadeService {
     Pessoa novoResponsavel = ps.getPessoa(cpf);
     ar.get(atividadeId).setResponsavel(novoResponsavel);
   }
+
+  public Atividade getAtividade(String codigo) {
+    return ar.get(codigo);
+  }
 }

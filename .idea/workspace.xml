@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Retirando a Interface">
-      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/TarefaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/TarefaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/ValidadorTarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/ValidadorTarefa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/heranca/Tarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/heranca/Tarefa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/heranca/TarefaAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/heranca/TarefaAbstract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/heranca/TarefaGerencial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/heranca/TarefaGerencial.java" afterDir="false" />
-    </list>
+    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Corrigindo getAtividade" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +25,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2D5H7flVrICsiS9AePZIKwnqJmd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -44,7 +40,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -84,6 +81,9 @@
       <workItem from="1660752218158" duration="16349000" />
       <workItem from="1660830891129" duration="602000" />
       <workItem from="1660837913768" duration="710000" />
+      <workItem from="1660877019957" duration="43000" />
+      <workItem from="1660937031599" duration="1384000" />
+      <workItem from="1660942081084" duration="272000" />
     </task>
     <task id="LOCAL-00001" summary="Initial configurations">
       <created>1659984232645</created>
@@ -162,7 +162,28 @@
       <option name="project" value="LOCAL" />
       <updated>1660850555070</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Terminando mesmo a Tarefa Gerencial">
+      <created>1660861287145</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1660861287145</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Removendo gitignore inutil">
+      <created>1660938238195</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1660938238195</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Corrigindo getAtividade">
+      <created>1660942322862</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1660942322862</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +209,10 @@
     <MESSAGE value="Corrigindo doc" />
     <MESSAGE value="Finalizando tarefas gerenciais" />
     <MESSAGE value="Retirando a Interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="Retirando a Interface" />
+    <MESSAGE value="Terminando mesmo a Tarefa Gerencial" />
+    <MESSAGE value="Removendo gitignore inutil" />
+    <MESSAGE value="Corrigindo getAtividade" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrigindo getAtividade" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
