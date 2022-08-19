@@ -7,9 +7,9 @@ public class AtividadeService {
   private PessoaService ps;
   private AtividadeRepository ar;
 
-  public AtividadeService(PessoaService ps) {
+  public AtividadeService(PessoaService ps, AtividadeRepository ar) {
     this.ps = ps;
-    this.ar = new AtividadeRepository();
+    this.ar = ar;
   }
 
   public String cadastrarAtividade(String nome, String descricao, String cpf) {
@@ -65,9 +65,5 @@ public class AtividadeService {
   public void alterarResponsavelAtividade(String atividadeId, String cpf) {
     Pessoa novoResponsavel = ps.getPessoa(cpf);
     ar.get(atividadeId).setResponsavel(novoResponsavel);
-  }
-
-  public Atividade getAtividade(String codigo) {
-    return ar.get(codigo);
   }
 }

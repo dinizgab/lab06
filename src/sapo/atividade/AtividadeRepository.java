@@ -1,7 +1,9 @@
 package sapo.atividade;
 
 import java.util.Map;
+import java.util.stream.Collectors;
 import java.util.HashMap;
+import java.util.List;
 
 public class AtividadeRepository {
   private Map<String, Atividade> atividades;
@@ -24,5 +26,9 @@ public class AtividadeRepository {
 
   public Atividade get(String codigo) {
     return this.atividades.get(codigo);
+  }
+
+  public List<Atividade> getAtividades() {
+    return this.atividades.values().stream().collect(Collectors.toList());
   }
 }
