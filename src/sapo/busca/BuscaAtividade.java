@@ -9,9 +9,9 @@ import sapo.atividade.Atividade;
 
 public class BuscaAtividade extends BuscaAbstract{
 	private String[] termos;
-	private Map<String, Atividade> atividades;
+	private List<Atividade> atividades;
 	
-	public BuscaAtividade(String[] termos, Map<String, Atividade> atividades) {
+	public BuscaAtividade(String[] termos, List<Atividade> atividades) {
 		super("ATIVIDADE");
 		this.termos = termos;
 		this.atividades = atividades;
@@ -20,8 +20,7 @@ public class BuscaAtividade extends BuscaAbstract{
 	public List<String> busca() {
 		List<Atividade> atividadesbusca = new ArrayList<>();
 		
-		for(Map.Entry<String, Atividade> pair : atividades.entrySet()) {
-			Atividade atividade = pair.getValue();
+		for (Atividade atividade : atividades) {
 			for (String termo : termos) {
 				if(comparaNome(atividade, termo) || comparaCodigo(atividade, termo) || comparaDecricao(atividade, termo)) {
 					if(!atividadesbusca.contains(atividade)) {
@@ -29,8 +28,7 @@ public class BuscaAtividade extends BuscaAbstract{
 					}
 				}
 			}
-		}		
-		
+		}			
 		List<String> resultado = ordenaAtividades(atividadesbusca);
 		return resultado;
 	}
@@ -60,7 +58,4 @@ public class BuscaAtividade extends BuscaAbstract{
 	private boolean comparaNome(Atividade atividade, String termo) {
 		return (atividade.getNome().equalsIgnoreCase(termo));
 	}
-
-	
-	
 }

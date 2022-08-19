@@ -5,15 +5,16 @@ import java.util.Map;
 
 import sapo.pessoa.Pessoa;
 import sapo.tarefa.heranca.Tarefa;
+import sapo.tarefa.heranca.TarefaAbstract;
 
 public class BuscaSugestao extends BuscaAbstract{
 	private Pessoa pessoa;
-	private Map<String, Tarefa> tarefas;
+	private Map<String, TarefaAbstract> tarefas;
 	
-	public BuscaSugestao(Pessoa pessoa, Map<String, Tarefa> tarefas){
+	public BuscaSugestao(Pessoa pessoa, Map<String, TarefaAbstract> map){
 		super("SUGESTAO");
 		this.pessoa = pessoa;
-		this.tarefas = tarefas;
+		this.tarefas = map;
 	}
 
 	@Override

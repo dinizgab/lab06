@@ -14,5 +14,15 @@ public class BuscaService {
 		List<String> pesquisa = busca.busca();
 		br.adicionaBusca(busca.getTipo(), pesquisa);
 		return pesquisa;
+	}
+
+	public List<String> getBusca(int indexBusca) {
+		return br.getBusca(indexBusca);
+	}
+
+	public List<String> buscasMaisRecentes(int nBuscas) {
+		return br.getBuscasMaisRecentes(nBuscas);
 	}	
+	
+	
 }

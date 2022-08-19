@@ -2,7 +2,7 @@ package sapo.busca;
 
 import java.util.List;
 
-import sapo.atividade.AtividadeService;
+import sapo.atividade.AtividadeRepository;
 import sapo.pessoa.PessoaService;
 import sapo.tarefa.TarefaController;
 
@@ -11,13 +11,15 @@ public class BuscaController {
 	private BuscaService bs;
 	private ValidadorBusca vb;
 	private PessoaService ps;
-	private AtividadeService as;
+	private AtividadeRepository ar;
 	private TarefaController tc;
 	
 	
-	public BuscaController(BuscaService bs, PessoaService ps){
+	public BuscaController(BuscaService bs, PessoaService ps, AtividadeRepository ar, TarefaController tc){
 		this.bs = bs;
 		this.ps = ps;
+		this.ar = ar;
+		this.tc = tc;
 		this.vb = new ValidadorBusca();
 	}
 
@@ -26,7 +28,7 @@ public class BuscaController {
 	}
 	
 	public List<String> buscarAtividade(String consulta){
-		return bs.busca(new BuscaAtividade(consulta.split(""), as.getAtividaes()));
+		return bs.busca(new BuscaAtividade(consulta.split(""), ar.getAtividades()));
 	}
 	
 	public List<String> buscarTarefas(String nome){
@@ -34,6 +36,7 @@ public class BuscaController {
 	}
 	
 	public List<String> buscaTarefas(String id, String nome){
+		// TO DO
 		return null;
 	}
 	
@@ -42,12 +45,11 @@ public class BuscaController {
 	}
 	
 	public List<String> buscasMaisRecentes(int nBuscas){
-		return null;
+		return bs.buscasMaisRecentes(nBuscas);
 	}
 	
-	
 	public List<String> exibirHistóricoBusca(int indexBusca){
-		return null;
+		return bs.getBusca(indexBusca);
 	}
 
 }
