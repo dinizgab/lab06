@@ -47,7 +47,7 @@ public class TarefaController {
 
         Tarefa t = new Tarefa(nome, codigo, atividade, habilidadesSet);
 
-        atividade.adicionaTarefa(t);
+        atividade.adicionarTarefa(t);
         this.tr.adicionaTarefa(t);
         return codigo;
     }
@@ -60,7 +60,7 @@ public class TarefaController {
         Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
 
         TarefaGerencial tg = new TarefaGerencial(nome, codigo, atividade, habilidadesSet, tarefaMap);
-        atividade.adicionaTarefa(tg);
+        atividade.adicionarTarefa(tg);
         this.tr.adicionaTarefa(tg);
         return codigo;
     }
