@@ -5,7 +5,6 @@ import sapo.pessoa.Pessoa;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Set;
 
 public abstract class TarefaAbstract {
