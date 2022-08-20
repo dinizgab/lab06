@@ -55,7 +55,7 @@ public class TarefaController {
 
     public String cadastraTarefaGerencial(String atividadeID, String nome, String[] habilidades, String[] IDTarefas) {
         Atividade atividade = as.getAtividade(atividadeID);
-        String codigo = atividadeID + "-" + atividade.getTarefas().size();
+        String codigo = atividadeID + "-" + atividade.getProximoTarefaId();
 
         HashMap<String, TarefaAbstract> tarefaMap = criaMapTarefas(IDTarefas);
         Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
