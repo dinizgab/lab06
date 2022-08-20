@@ -3,8 +3,7 @@ package sapo.tarefa.heranca;
 import sapo.atividade.Atividade;
 import sapo.tarefa.ValidadorTarefa;
 
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class TarefaGerencial extends TarefaAbstract{
     private Set<String> habilidades;
@@ -32,7 +31,7 @@ public class TarefaGerencial extends TarefaAbstract{
     @Override
     public String toString() {
         return this.nome + " - " + codigo + "\n- " + atividade.getNome() + "\n" + this.exibeHabilidades() + "\n(" + this.horas
-                + " hora(s) executada(s))" + "\n===\n" + "Equipe: \n" + this.exibeEquipe() + "\n===\nTarefas:\n" + this.exibeTarefas();
+                + " hora(s) executada(s))" + "\n===\n" + "Equipe:\n" + this.exibeEquipe() + "\n===\nTarefas:\n" + this.exibeTarefas();
     }
 
     private Set<String> criaHabilidadesTotais(Set<String> habilidades) {
@@ -52,10 +51,12 @@ public class TarefaGerencial extends TarefaAbstract{
     }
 
     private String exibeTarefas() {
-        // TODO - Arrumar um jeito de formatar da tarefa mais nova para a mais antiga
+        List<String> listaCodigos = new ArrayList<>(this.tarefasGerenciadas.keySet());
+        listaCodigos.sort(Collections.reverseOrder());
+
         String saida = "";
-        for (TarefaAbstract t : this.tarefasGerenciadas.values()) {
-            saida += "- " + t.getNome() + " - " + t.getCodigo() + "\n";
+        for (String cods : listaCodigos) {
+            saida += "- " + this.tarefasGerenciadas.get(cods).getNome() + this.tarefasGerenciadas.get(cods).getCodigo() + "\n";
         }
 
         return saida;
