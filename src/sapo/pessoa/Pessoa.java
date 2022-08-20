@@ -58,6 +58,14 @@ public class Pessoa {
     this.func = func;
   }
 
+  public String[] getHabilidades() {
+    return this.habilidades;
+  }
+
+  public String listarComentarios() {
+    return this.nome + " - " + this.cpf + "Comentários:\n" + this.formataComentarios();
+  }
+
   public void addTarefa(TarefaAbstract novaTarefa) {
     trfsQueAfetamNivel.put(novaTarefa.getCodigo(), novaTarefa);
   }
@@ -110,7 +118,7 @@ public class Pessoa {
     String habilidadesFormatadas = "";
 
     for (String habilidade : this.habilidades) {
-      habilidadesFormatadas += habilidade;
+      habilidadesFormatadas += "- " + habilidade + "\n";
     }
     return habilidadesFormatadas;
   }

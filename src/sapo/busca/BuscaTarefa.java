@@ -10,21 +10,21 @@ import sapo.tarefa.heranca.TarefaAbstract;
 
 public class BuscaTarefa extends BuscaAbstract{
 	private String nome;
-	private Map<String, TarefaAbstract> tarefas;
+	private List<TarefaAbstract> tarefas;
 	
 	
-	public BuscaTarefa(Map<String, TarefaAbstract> map, String nome){
+	public BuscaTarefa(List<TarefaAbstract> tarefas, String nome){
 		super("TAREFA");
 		this.nome = nome;
-		this.tarefas = map;
+		this.tarefas = tarefas;
 	}
 	
 	@Override
 	public List<String> busca() {
 		List<String> resultado = new ArrayList<>();
-		for (Entry<String, TarefaAbstract> pair: tarefas.entrySet()) {
-			if(pair.getValue().getNome().equalsIgnoreCase(this.nome)) {
-				resultado.add(pair.getValue().toString());
+		for (TarefaAbstract tarefa: tarefas) {
+			if(tarefa.getNome().equalsIgnoreCase(this.nome)) {
+				resultado.add(tarefa.toString());
 			}
 		}
 		return resultado;

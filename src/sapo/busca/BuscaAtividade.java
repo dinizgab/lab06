@@ -40,7 +40,7 @@ public class BuscaAtividade extends BuscaAbstract{
 			resultado.add(atividade.toString());
 		}
 		return resultado;
-	}
+	} 
 
 	private boolean comparaDecricao(Atividade atividade, String termo){
 		return (atividade.getDescricao().equalsIgnoreCase(termo));

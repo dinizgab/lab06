@@ -1,7 +1,7 @@
 package sapo.busca;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import sapo.pessoa.Pessoa;
@@ -31,11 +31,15 @@ public class BuscaPessoa extends BuscaAbstract {
 		}
 		
 		
-		Collections.sort(resultado);
-		return resultado;
+		return ordenaResultado(resultado);
 	}
 
-	//analisar uma implementacao melhor
+	private List<String> ordenaResultado(List<String> resultado) {
+		String[] array = resultado.toArray(new String[resultado.size()]);
+        Arrays.sort(array, String.CASE_INSENSITIVE_ORDER);
+		return Arrays.asList(array);
+	}
+
 	private boolean comaparaHabilidade(Pessoa pessoa, String termo) {
 		for (String habilidade : pessoa.getHabilidades()) {
 			if(habilidade.equalsIgnoreCase(termo)){

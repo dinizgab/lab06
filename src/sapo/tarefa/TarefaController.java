@@ -10,6 +10,7 @@ import sapo.tarefa.heranca.TarefaGerencial;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class TarefaController {
@@ -193,5 +194,9 @@ public class TarefaController {
     String[] parts = codigo.split("-");
     String id = parts[0] + "-" + parts[1];
     return id;
+  }
+
+  public List<TarefaAbstract> getTarefas() {
+    return tr.getTarefas();
   }
 }
