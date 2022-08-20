@@ -4,8 +4,10 @@ import sapo.atividade.Atividade;
 import sapo.pessoa.Pessoa;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public abstract class TarefaAbstract {
     protected String nome;
@@ -129,5 +131,9 @@ public abstract class TarefaAbstract {
         }
 
         return saida;
+    }
+    
+    public List<Pessoa> getResponsaveis() {
+    	return this.responsaveis.values().stream().collect(Collectors.toList());
     }
 }
