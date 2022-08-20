@@ -25,14 +25,14 @@ public class BuscaRepository {
 	 * @param pesquisa busca realizada
 	 */
 	public void adicionaBusca(String tipo, List<String> pesquisa){
-		List<String> p = new ArrayList<String>(pesquisa);
+		List<String> p = new ArrayList<>(pesquisa);
 		p.add(0, tipo);
 		buscas.add(p);
 	}
 	
 	/**
 	 * retorna uma busca específica a partir do seu index
-	 * @param indexBusca index da busca
+	 * @param index index da busca
 	 * @return busca realizada
 	 */
 	public List<String> getBusca(int index){

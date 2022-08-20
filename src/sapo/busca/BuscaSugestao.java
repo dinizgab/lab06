@@ -44,13 +44,13 @@ public class BuscaSugestao extends BuscaAbstract{
 	@Override
 	public List<String> busca() {
 		Map<Integer, List<TarefaAbstract>> mapa = new HashMap<>(); // num de habilidades em comum -> tarefas 
-		Set<String> habilidadesPessoa = new HashSet<String>(Arrays.asList(pessoa.getHabilidades()));
+		Set<String> habilidadesPessoa = new HashSet<>(Arrays.asList(pessoa.getHabilidades()));
 		for (TarefaAbstract tarefa: tarefas) {
 			Set<String> habilidadesTarefa = tarefa.getHabilidades();
 			habilidadesTarefa.retainAll(habilidadesPessoa);
 			Integer numHabilidadesEmComum = habilidadesTarefa.size();
 			if(!mapa.containsKey(numHabilidadesEmComum)) {
-				mapa.put(numHabilidadesEmComum, new ArrayList<TarefaAbstract>());
+				mapa.put(numHabilidadesEmComum, new ArrayList<>());
 			}
 			mapa.get(numHabilidadesEmComum).add(tarefa);
 		}
@@ -65,9 +65,9 @@ public class BuscaSugestao extends BuscaAbstract{
 	
 	
 	private List<TarefaAbstract> ordenaHabilidades(Map<Integer, List<TarefaAbstract>> mapa){
-		List<TarefaAbstract> resultado = new ArrayList<TarefaAbstract>();
-		ArrayList<Integer> chaves = (new ArrayList<Integer>(mapa.keySet()));
-		Collections.sort(chaves, Collections.reverseOrder());
+		List<TarefaAbstract> resultado = new ArrayList<>();
+		ArrayList<Integer> chaves = (new ArrayList<>(mapa.keySet()));
+		chaves.sort(Collections.reverseOrder());
 		for (Integer key : chaves){
 			resultado.addAll(desempataMenosPessoas(mapa.get(key)));
 		} 
@@ -76,16 +76,16 @@ public class BuscaSugestao extends BuscaAbstract{
 	}
 	
 	private List<TarefaAbstract> desempataMenosPessoas(List<TarefaAbstract> tarefas){
-		Collections.sort(tarefas, new Comparator<TarefaAbstract>() {
-		    @Override
-		    public int compare(TarefaAbstract t1, TarefaAbstract t2) {
-		        int comparacaoPorQtdPessoas = t1.getResponsaveis().size() - t2.getResponsaveis().size();
-		        if(comparacaoPorQtdPessoas != 0) {
-		        	return comparacaoPorQtdPessoas;
-		        }else {
-		        	return t1.getCodigo().compareTo(t2.getCodigo());
-		        }
-		    }
+		tarefas.sort(new Comparator<>() {
+			@Override
+			public int compare(TarefaAbstract t1, TarefaAbstract t2) {
+				int comparacaoPorQtdPessoas = t1.getResponsaveis().size() - t2.getResponsaveis().size();
+				if (comparacaoPorQtdPessoas != 0) {
+					return comparacaoPorQtdPessoas;
+				} else {
+					return t1.getCodigo().compareTo(t2.getCodigo());
+				}
+			}
 		});
 		
 		return tarefas;
