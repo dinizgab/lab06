@@ -236,4 +236,8 @@ public class Atividade {
     public String getStatus() {
         return status;
     }
+    
+    public int getProximoTarefaId() {
+    	return this.proximoTarefaId;
+    }
 }
