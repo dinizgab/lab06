@@ -3,11 +3,7 @@ package sapo.tarefa.heranca;
 import sapo.atividade.Atividade;
 import sapo.pessoa.Pessoa;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
+import java.util.*;
 
 public abstract class TarefaAbstract {
     protected String nome;
@@ -111,7 +107,7 @@ public abstract class TarefaAbstract {
 
     @Override
     public boolean equals(Object o) {
-        if(!(o instanceof TarefaAbstract)) return false;
+        if (!(o instanceof TarefaAbstract)) return false;
         return ((TarefaAbstract) o).getCodigo().equals(this.codigo);
     }
 
@@ -129,8 +125,8 @@ public abstract class TarefaAbstract {
 
         return setString.substring(1, setString.length() - 1);
     }
-    
+
     public List<Pessoa> getResponsaveis() {
-    	return this.responsaveis.values().stream().collect(Collectors.toList());
+        return new ArrayList<>(this.responsaveis.values());
     }
 }

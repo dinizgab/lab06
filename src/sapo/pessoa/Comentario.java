@@ -2,7 +2,7 @@ package sapo.pessoa;
 
 import java.util.Date;
 
-public class Comentario  implements  Comparable<Comentario> {
+public class Comentario implements Comparable<Comentario> {
     private Pessoa autor;
     private String descricao;
     private Date data;
