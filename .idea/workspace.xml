@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Criando a exibicao de tarefa e corrigindo Pessoa">
+    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Refatoracoes menores">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
@@ -68,6 +68,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -127,7 +128,7 @@
       <workItem from="1660942081084" duration="272000" />
       <workItem from="1660946603764" duration="748000" />
       <workItem from="1660950239369" duration="5860000" />
-      <workItem from="1661003985050" duration="2690000" />
+      <workItem from="1661003985050" duration="2998000" />
     </task>
     <task id="LOCAL-00001" summary="Initial configurations">
       <created>1659984232645</created>
@@ -241,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660956012092</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Refatoracoes menores">
+      <created>1661006979960</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1661006979960</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +280,8 @@
     <MESSAGE value="Corrigindo getAtividade" />
     <MESSAGE value=" Criando getHabilidades em Pessoa" />
     <MESSAGE value="Criando a exibicao de tarefa e corrigindo Pessoa" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criando a exibicao de tarefa e corrigindo Pessoa" />
+    <MESSAGE value="Refatoracoes menores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatoracoes menores" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
