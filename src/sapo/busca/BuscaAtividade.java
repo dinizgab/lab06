@@ -3,7 +3,6 @@ package sapo.busca;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 
 import sapo.atividade.Atividade;
 
@@ -17,30 +16,28 @@ public class BuscaAtividade extends BuscaAbstract{
 		this.atividades = atividades;
 	}
 
+	/**
+	 * Encontra as atividades que tem relação com a busca. A relação existe se o nome da atividade for igual a chave
+	 * de busca, se a o id completo da atividade, a parte textual ou a parte númerica for igual a chave ou se a 
+	 * descrição da atividade for igual a chave. Ignora-se a diferença entre as letras minusculas e maiusculas.
+	 * @return  lista de ID's das atividades encontradas na busca em oderm alfabetica de ID;
+	 */
 	public List<String> busca() {
-		List<Atividade> atividadesbusca = new ArrayList<>();
+		List<String> resultado = new ArrayList<>();
 		
 		for (Atividade atividade : atividades) {
 			for (String termo : termos) {
 				if(comparaNome(atividade, termo) || comparaCodigo(atividade, termo) || comparaDecricao(atividade, termo)) {
-					if(!atividadesbusca.contains(atividade)) {
-						atividadesbusca.add(atividade);
+					if(!resultado.contains(atividade.getId())) {
+						resultado.add(atividade.getId());
 					}
 				}
 			}
-		}			
-		List<String> resultado = ordenaAtividades(atividadesbusca);
+		}
+		
+		Collections.sort(resultado);
 		return resultado;
 	}
-
-	private List<String> ordenaAtividades(List<Atividade> atividades) {
-		Collections.sort(atividades);
-		List<String> resultado = new ArrayList<>();
-		for (Atividade atividade : atividades) {
-			resultado.add(atividade.toString());
-		}
-		return resultado;
-	} 
 
 	private boolean comparaDecricao(Atividade atividade, String termo){
 		return (atividade.getDescricao().equalsIgnoreCase(termo));

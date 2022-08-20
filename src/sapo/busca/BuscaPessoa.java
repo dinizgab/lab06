@@ -16,6 +16,12 @@ public class BuscaPessoa extends BuscaAbstract {
 		this.pessoas = pessoas;
 	}
 	
+	/**
+	 * Encontra as pessoas que tem relacao com a busca. A relação existe se a chave de busca for igual
+	 * ao nome de uma pessoa, se a chave de busca for igual ao cpf de uma pessoa ou se a chave de busca for uma
+	 * habilidade que uma pessoa possua. Ignora-se a diferença entre as letras minusculas e maiusculas.
+	 * @return  lista de nomes das pessoas que tem relação com a busca em ordem alfabetica de nome;
+	 */
 	public List<String> busca() {
 		List<String> resultado = new ArrayList<>(); 
 		
@@ -29,7 +35,6 @@ public class BuscaPessoa extends BuscaAbstract {
 				}
 			}
 		}
-		
 		
 		return ordenaResultado(resultado);
 	}

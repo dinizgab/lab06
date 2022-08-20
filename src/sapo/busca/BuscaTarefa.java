@@ -19,6 +19,11 @@ public class BuscaTarefa extends BuscaAbstract{
 		this.tarefas = tarefas;
 	}
 	
+	/**
+	 * Encontra as tarefas que tem relacao com a busca. A relação existe se o nome dado na buca for igual ao nome
+	 * de uma tarefa
+	 * @return versões textuais das tarefas encontradas na busca.
+	 */
 	@Override
 	public List<String> busca() {
 		List<String> resultado = new ArrayList<>();

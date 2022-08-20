@@ -23,6 +23,14 @@ public class BuscaSugestao extends BuscaAbstract{
 		this.tarefas = tarefas;
 	}
 
+	/**
+	 * Ordena as tarefas existentes no sistema de acordo com as habilidades que cada tarefa tem com as habilidades da
+	 * pessoa. A ordem é da tarefa que mais tem habilidade em comum com a pessoa até a que tem menos habilidades em 
+	 * comum. Em caso de empate de número de habilidades em comum o desempate é feito por menor número de pessoas rela
+	 * cionadas a tarefa e, em caso de empate novamente, o desempate é feito por ordem alfabetica de código da tarefa.
+	 * 
+	 * @return codigos das tarefas;
+	 */
 	@Override
 	public List<String> busca() {
 		Map<Integer, List<TarefaAbstract>> mapa = new HashMap<>(); // num de habilidades em comum -> tarefas 
@@ -40,7 +48,7 @@ public class BuscaSugestao extends BuscaAbstract{
 		List<TarefaAbstract> tarefasOrdenadas = ordenaHabilidades(mapa);
 		List<String> resultadoBusca = new ArrayList<>();
 		for (TarefaAbstract tarefa : tarefasOrdenadas) {
-			resultadoBusca.add(tarefa.toString());
+			resultadoBusca.add(tarefa.getCodigo());
 		}
 		return resultadoBusca;
 	}
