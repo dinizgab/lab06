@@ -6,10 +6,20 @@ import java.util.List;
 
 import sapo.atividade.Atividade;
 
+/**
+ * Busca as atividades nos sistema
+ * @author Sabrina Barbosa
+ *
+ */
 public class BuscaAtividade extends BuscaAbstract{
 	private String[] termos;
 	private List<Atividade> atividades;
 	
+	/**
+	 * cria a Busca a partir dos termos de busca e da lista de atividades do sistema
+	 * @param termos termos de busca
+	 * @param atividades atividades do sistema
+	 */
 	public BuscaAtividade(String[] termos, List<Atividade> atividades) {
 		super("ATIVIDADE");
 		this.termos = termos;

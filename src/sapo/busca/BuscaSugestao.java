@@ -13,10 +13,20 @@ import java.util.Set;
 import sapo.pessoa.Pessoa;
 import sapo.tarefa.heranca.TarefaAbstract;
 
+/**
+ * Tipo de Busca do Sistema que sugere tarefas para uma pessoa
+ * @author Sabrina Barbosa
+ *
+ */
 public class BuscaSugestao extends BuscaAbstract{
 	private Pessoa pessoa;
 	private List<TarefaAbstract> tarefas;
 	
+	/**
+	 * Constrói a Busca a partir de uma pessoa e uma lista de tarefas
+	 * @param pessoa pessoa passada pelo sistema
+	 * @param tarefas tarefas tarefas do sistema
+	 */
 	public BuscaSugestao(Pessoa pessoa, List<TarefaAbstract> tarefas){
 		super("SUGESTAO");
 		this.pessoa = pessoa;

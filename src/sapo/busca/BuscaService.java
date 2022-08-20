@@ -6,10 +6,18 @@ import java.util.List;
 import sapo.atividade.Atividade;
 import sapo.tarefa.heranca.TarefaAbstract;
 
+/**
+ * service da funcionalidade de buscas do sistema
+ * @author Sabrina Barbosa
+ *
+ */
 public class BuscaService {
 	private BuscaRepository br;
 	
-	
+	/**
+	 * cosntrói o service de busca
+	 * @param br repositorio de busca
+	 */
 	public BuscaService(BuscaRepository br) {
 		this.br = br;
 	}

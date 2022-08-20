@@ -5,8 +5,9 @@ import java.util.List;
 import sapo.atividade.AtividadeRepository;
 import sapo.pessoa.PessoaService;
 import sapo.tarefa.TarefaController;
+
 /**
- * 
+ * Controller da funcionalidade de buscas do sistema
  * @author Sabrina Barbosa
  *
  */
@@ -18,11 +19,11 @@ public class BuscaController {
 	private TarefaController tc;
 	
 	/**
-	 * 
-	 * @param bs
-	 * @param ps
-	 * @param ar
-	 * @param tc
+	 * Cria o controller de buscas
+	 * @param bs Service de Busca
+	 * @param ps Service de Pessoa
+	 * @param ar Repositorio de atividade
+	 * @param tc Controller de Tarefa
 	 */
 	public BuscaController(BuscaService bs, PessoaService ps, AtividadeRepository ar, TarefaController tc){
 		this.bs = bs;

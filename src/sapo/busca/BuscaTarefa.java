@@ -8,11 +8,20 @@ import java.util.Map.Entry;
 import sapo.tarefa.heranca.Tarefa;
 import sapo.tarefa.heranca.TarefaAbstract;
 
+/**
+ * encontra tarefas no sistema que tenham nome igual ao passado na busca.
+ * @author Sabrina Barbosa
+ *
+ */
 public class BuscaTarefa extends BuscaAbstract{
 	private String nome;
 	private List<TarefaAbstract> tarefas;
 	
-	
+	/**
+	 * constrói a busca a partir da lista de tarefas do sistema e do nome de tarefa a ser buscado
+	 * @param tarefas tarefas so sistema
+	 * @param nome nome da tarefa
+	 */
 	public BuscaTarefa(List<TarefaAbstract> tarefas, String nome){
 		super("TAREFA");
 		this.nome = nome;
