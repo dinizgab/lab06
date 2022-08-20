@@ -43,7 +43,7 @@ public class TarefaController {
      */
     public String cadastraTarefa(String atividadeID, String nome, String[] habilidades) {
         Atividade atividade = as.getAtividade(atividadeID);
-        String codigo = atividadeID + "-" + atividade.getTarefas().size();
+        String codigo = atividadeID + "-" + atividade.getProximoTarefaId();
         Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
 
         Tarefa t = new Tarefa(nome, codigo, atividade, habilidadesSet);
