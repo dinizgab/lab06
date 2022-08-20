@@ -33,7 +33,7 @@ public class Tarefa extends TarefaAbstract{
 
 	@Override
 	public String toString() {
-		return this.nome + " - " + codigo + "\n" + atividade.getNome() + "\n" + atividade.getDescricao() + this.horas
-				+ " hora(s) executada(s)" + this.exibeHabilidades() + "===\n" + "Equipe: " + this.exibeEquipe();
+		return this.nome + " - " + codigo + "\n- " + atividade.getNome() + "\n" + this.exibeHabilidades() + "\n(" + this.horas
+				+ " hora(s) executada(s))" + "\n===\n" + "Equipe:\n" + this.exibeEquipe();
 	}
 }

@@ -39,9 +39,8 @@ public class Pessoa {
         return this.habilidades;
     }
 
-    public String getComentarios() {
-        String listaComentarios = formataComentarios();
-        return this.nome + " - " + this.cpf + "Comentários:\n" + listaComentarios;
+    public String listarComentarios() {
+        return this.nome + " - " + this.cpf + "Comentários:\n" + this.formataComentarios();
     }
 
     private String formataComentarios() {
@@ -59,13 +58,12 @@ public class Pessoa {
         String habilidadesFormatadas = "";
 
         for(String habilidade : this.habilidades) {
-            habilidadesFormatadas += habilidade;
+            habilidadesFormatadas += "- " + habilidade + "\n";
         }
         return habilidadesFormatadas;
     }
     @Override
     public String toString() {
-        String habilidades = formataHabilidades();
-        return this.nome + " - " + this.cpf + "\n" + habilidades;
+        return this.nome + " - " + this.cpf + "\n" + this.formataHabilidades();
     }
 }

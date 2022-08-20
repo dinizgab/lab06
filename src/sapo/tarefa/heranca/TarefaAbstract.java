@@ -115,7 +115,7 @@ public abstract class TarefaAbstract {
 
     protected String exibeEquipe() {
         String saida = "";
-        for (Map.Entry<String, Pessoa> pair : responsaveis.entrySet()) {
+        for (Map.Entry<String, Pessoa> pair : this.responsaveis.entrySet()) {
             saida += pair.getValue().getNome() + " - " + pair.getKey() + "\n";
         }
 
@@ -123,11 +123,8 @@ public abstract class TarefaAbstract {
     }
 
     protected String exibeHabilidades() {
-        String saida = "";
-        for (String habilidade : habilidades) {
-            saida += habilidade + "\n";
-        }
+        String setString = this.habilidades.toString();
 
-        return saida;
+        return setString.substring(1, setString.length() - 1);
     }
 }
