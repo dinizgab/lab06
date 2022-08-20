@@ -16,7 +16,7 @@ import sapo.tarefa.heranca.TarefaAbstract;
  * 
  * @author João Victor de Souza Lucena
  */
-public class Atividade implements Comparable<Atividade>{
+public class Atividade {
   private final String id;
   private String nome;
   private String descricao;
@@ -242,10 +242,5 @@ public class Atividade implements Comparable<Atividade>{
 
   public String getStatus() {
     return status;
-  }
-  
-  @Override
-  public int compareTo(Atividade atividade) {
-      return atividade.id.compareTo(this.id);
   }
 }
