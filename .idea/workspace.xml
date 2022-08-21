@@ -1,38 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Refatoracoes menores">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml" afterDir="false" />
+    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Mais refatoracoes">
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab06.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lab06.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/atividade/Atividade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/atividade/Atividade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sapo/SapoFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/SapoFacade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/atividade/AtividadeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/atividade/AtividadeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/atividade/AtividadeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/atividade/AtividadeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/atividade/AtividadeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/atividade/AtividadeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/busca/BuscaAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/busca/BuscaAbstract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/busca/BuscaAtividade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/busca/BuscaAtividade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/busca/BuscaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/busca/BuscaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/busca/BuscaInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/busca/BuscaInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/busca/BuscaPessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/busca/BuscaPessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/busca/BuscaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/busca/BuscaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/busca/BuscaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/busca/BuscaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/busca/BuscaSugestao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/busca/BuscaSugestao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/busca/BuscaTarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/busca/BuscaTarefa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/busca/ValidadorBusca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/busca/ValidadorBusca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/funcao/Funcao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/funcao/Funcao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/funcao/FuncaoAluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/funcao/FuncaoAluno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/funcao/FuncaoProfessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/funcao/FuncaoProfessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/pessoa/Comentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/Comentario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/pessoa/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/Pessoa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/pessoa/PessoaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/PessoaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/pessoa/PessoaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/PessoaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/TarefaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/TarefaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/ValidadorTarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/ValidadorTarefa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/heranca/Tarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/heranca/Tarefa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/heranca/TarefaAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/heranca/TarefaAbstract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/heranca/TarefaGerencial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/heranca/TarefaGerencial.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,26 +46,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/gabriel/programacao/prog-2/lab06",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/gabriel/programacao/prog-2/lab06&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="sapo" />
@@ -128,7 +108,10 @@
       <workItem from="1660942081084" duration="272000" />
       <workItem from="1660946603764" duration="748000" />
       <workItem from="1660950239369" duration="5860000" />
-      <workItem from="1661003985050" duration="2998000" />
+      <workItem from="1661003985050" duration="3568000" />
+      <workItem from="1661007838399" duration="999000" />
+      <workItem from="1661014446740" duration="744000" />
+      <workItem from="1661087215901" duration="3140000" />
     </task>
     <task id="LOCAL-00001" summary="Initial configurations">
       <created>1659984232645</created>
@@ -249,7 +232,21 @@
       <option name="project" value="LOCAL" />
       <updated>1661006979960</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Formatando">
+      <created>1661007049419</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1661007049419</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Mais refatoracoes">
+      <created>1661007329357</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1661007329357</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +278,9 @@
     <MESSAGE value=" Criando getHabilidades em Pessoa" />
     <MESSAGE value="Criando a exibicao de tarefa e corrigindo Pessoa" />
     <MESSAGE value="Refatoracoes menores" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refatoracoes menores" />
+    <MESSAGE value="Formatando" />
+    <MESSAGE value="Mais refatoracoes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mais refatoracoes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

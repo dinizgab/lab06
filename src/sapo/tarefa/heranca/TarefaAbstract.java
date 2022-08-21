@@ -126,7 +126,12 @@ public abstract class TarefaAbstract {
         return setString.substring(1, setString.length() - 1);
     }
 
-    public List<Pessoa> getResponsaveis() {
+    public List<Pessoa> getResponsaveisComparacao() {
         return new ArrayList<>(this.responsaveis.values());
     }
+
+    public Map<String, Pessoa> getResponsaveis() {
+        return this.responsaveis;
+    }
+
 }

@@ -145,4 +145,9 @@ public class TarefaRepository {
         return new ArrayList<>(this.tarefas.values());
     }
 
+    public void removerPessoaTarefaLGPD(String cpf) {
+        for (TarefaAbstract t : this.tarefas.values()) {
+            t.getResponsaveis().remove(cpf);
+        }
+    }
 }

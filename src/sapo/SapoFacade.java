@@ -19,8 +19,8 @@ public class SapoFacade {
         PessoaService ps = new PessoaService();
         AtividadeService as = new AtividadeService(ps, ar);
 
-        this.pc = new PessoaController(ps);
         this.ac = new AtividadeController(as);
         this.tc = new TarefaController(as, ps, tr);
+        this.pc = new PessoaController(ps, ac, tc);
     }
 }

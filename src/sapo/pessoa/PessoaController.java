@@ -1,14 +1,20 @@
 package sapo.pessoa;
 
+import sapo.atividade.AtividadeController;
 import sapo.funcao.FuncaoAluno;
 import sapo.funcao.FuncaoProfessor;
+import sapo.tarefa.TarefaController;
 
 public class PessoaController {
     private PessoaService ps;
+    private AtividadeController ac;
+    private TarefaController tc;
     private ValidadorPessoa validador;
 
-    public PessoaController(PessoaService ps) {
+    public PessoaController(PessoaService ps, AtividadeController ac, TarefaController tc) {
         this.ps = ps;
+        this.ac = ac;
+        this.tc = tc;
         this.validador = new ValidadorPessoa();
     }
 
@@ -69,6 +75,8 @@ public class PessoaController {
 
     public void removerPessoa(String cpf) {
         ps.removerPessoa(cpf);
+        tc.removerPessoaTarefaLGPD(cpf);
+        ac.removerPessoaAtividaceLGPD(cpf);
     }
 
     public void adicionarComentario(String cpf, String comentario, String autorCPF) {

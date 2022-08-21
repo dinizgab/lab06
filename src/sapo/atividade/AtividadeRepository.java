@@ -31,4 +31,10 @@ public class AtividadeRepository {
     public List<Atividade> getAtividades() {
         return new ArrayList<>(this.atividades.values());
     }
+
+    public void removeRsponsavel(String cpf) {
+        for(Atividade atv : this.atividades.values()) {
+            if(atv.getResponsavel().getCpf().equals(cpf)) atv.setResponsavel(null);
+        }
+    }
 }

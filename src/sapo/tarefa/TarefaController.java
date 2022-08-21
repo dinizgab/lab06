@@ -172,6 +172,10 @@ public class TarefaController {
         pessoa.removeTarefa(codigo);
     }
 
+    public void removerPessoaTarefaLGPD(String cpf) {
+        tr.removerPessoaTarefaLGPD(cpf);
+    }
+
     public void adicionaNasGerenciais(String idGerencial, String idTarefa) {
         tr.adicionaNasGerenciais(idGerencial, idTarefa);
     }

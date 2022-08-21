@@ -76,10 +76,11 @@ public class BuscaSugestao extends BuscaAbstract{
 	}
 	
 	private List<TarefaAbstract> desempataMenosPessoas(List<TarefaAbstract> tarefas){
+
 		tarefas.sort(new Comparator<>() {
 			@Override
 			public int compare(TarefaAbstract t1, TarefaAbstract t2) {
-				int comparacaoPorQtdPessoas = t1.getResponsaveis().size() - t2.getResponsaveis().size();
+				int comparacaoPorQtdPessoas = t1.getResponsaveisComparacao().size() - t2.getResponsaveisComparacao().size();
 				if (comparacaoPorQtdPessoas != 0) {
 					return comparacaoPorQtdPessoas;
 				} else {

@@ -35,4 +35,7 @@ public class AtividadeController {
         this.as.alterarResponsavelAtividade(atividadeId, cpf);
     }
 
+    public void removerPessoaAtividaceLGPD(String cpf) {
+        as.removeResponsavelAtividadeLGPD(cpf);
+    }
 }
