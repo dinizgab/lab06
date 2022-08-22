@@ -8,6 +8,10 @@ import sapo.pessoa.PessoaController;
 import sapo.tarefa.TarefaController;
 public class BaseTest {
 	
+	protected PessoaController pc;
+	protected AtividadeController at;
+	protected TarefaController tc;
+	
 	@BeforeEach
 	public void Base() {
 		SapoFacade facade = new SapoFacade();
