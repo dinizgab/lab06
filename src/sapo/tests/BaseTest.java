@@ -6,21 +6,20 @@ import sapo.SapoFacade;
 import sapo.atividade.AtividadeController;
 import sapo.pessoa.PessoaController;
 import sapo.tarefa.TarefaController;
-public class BaseTest {
+class BaseTest {
 	
 	protected PessoaController pc;
 	protected AtividadeController at;
 	protected TarefaController tc;
+	protected SapoFacade facade;
 	
 	@BeforeEach
-	public void Base() {
-		SapoFacade facade = new SapoFacade();
-		PessoaController pc = facade.getPessoaController();
-		AtividadeController at = facade.getAtividadeController();
-		TarefaController tc = facade.getTarefaController();
-		
-		
-		
+	void Base() {
+		facade = new SapoFacade();
+		pc = facade.getPessoaController();
+		at = facade.getAtividadeController();
+		tc = facade.getTarefaController();
+
 	}
 	
 }
