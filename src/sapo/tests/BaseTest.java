@@ -1,10 +1,22 @@
 package sapo.tests;
 
-import static org.junit.Assert.assertTrue;
 
-import org.junit.jupiter.api.Test;
-
+import org.junit.jupiter.api.BeforeEach;
+import sapo.SapoFacade;
+import sapo.atividade.AtividadeController;
+import sapo.pessoa.PessoaController;
+import sapo.tarefa.TarefaController;
 public class BaseTest {
 	
+	@BeforeEach
+	public void Base() {
+		SapoFacade facade = new SapoFacade();
+		PessoaController pc = facade.getPessoaController();
+		AtividadeController at = facade.getAtividadeController();
+		TarefaController tc = facade.getTarefaController();
+		
+		
+		
+	}
 	
 }
