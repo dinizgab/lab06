@@ -12,4 +12,14 @@ public class ValidadorTarefa {
                 throw new IllegalArgumentException("CICLO DETECTADO! A tarefa adicionada já gerencia essa tarefa");
         }
     }
+    
+	public static boolean argumentoValido(String arg) {
+		return !(arg.isBlank() || arg == null);
+	}
+	
+	public static boolean argumentoValido(String[] arg) {
+		return !(arg == null);
+	}
+	
+	
 }

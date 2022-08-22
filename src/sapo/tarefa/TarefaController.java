@@ -42,6 +42,9 @@ public class TarefaController {
      * @return codigo da tarefa cadastrada
      */
     public String cadastraTarefa(String atividadeID, String nome, String[] habilidades) {
+    	if(!(ValidadorTarefa.argumentoValido(atividadeID) || ValidadorTarefa.argumentoValido(nome)  || ValidadorTarefa.argumentoValido(habilidades))){
+    		throw new IllegalArgumentException("nenhum campo pode ser nulo");
+    	}
         Atividade atividade = as.getAtividade(atividadeID);
         String codigo = atividadeID + "-" + atividade.getProximoTarefaId();
         Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
@@ -54,6 +57,10 @@ public class TarefaController {
     }
 
     public String cadastraTarefaGerencial(String atividadeID, String nome, String[] habilidades, String[] IDTarefas) {
+    	if(!(ValidadorTarefa.argumentoValido(atividadeID) || ValidadorTarefa.argumentoValido(nome)  || ValidadorTarefa.argumentoValido(habilidades)
+    			|| ValidadorTarefa.argumentoValido(IDTarefas))){
+    		throw new IllegalArgumentException("nenhum campo pode ser nulo");
+    	}
         Atividade atividade = as.getAtividade(atividadeID);
         String codigo = atividadeID + "-" + atividade.getProximoTarefaId();
 
@@ -67,6 +74,9 @@ public class TarefaController {
     }
 
     private HashMap<String, TarefaAbstract> criaMapTarefas(String[] IDTarefas) {
+    	if(!ValidadorTarefa.argumentoValido(IDTarefas)){
+    		throw new IllegalArgumentException("o array de IDs não pode ser nulo");
+    	}
         HashMap<String, TarefaAbstract> tarefasMap = new HashMap<>();
 
         for (String ID : IDTarefas) {
@@ -83,6 +93,9 @@ public class TarefaController {
      * @param novoNome novo nome da tarefa.
      */
     public void alterarNomeTarefa(String codigo, String novoNome) {
+      	if(!(ValidadorTarefa.argumentoValido(codigo) || ValidadorTarefa.argumentoValido(novoNome))){
+    		throw new IllegalArgumentException("nenhum campo pode ser vazio ou nulo");
+    	}
         tr.alterarNomeTarefa(codigo, novoNome);
     }
 
@@ -93,6 +106,9 @@ public class TarefaController {
      * @param habilidades habilidades referentes a tarefa.
      */
     public void alterarHabilidadesTarefa(String codigo, String[] habilidades) {
+      	if(!(ValidadorTarefa.argumentoValido(codigo) || ValidadorTarefa.argumentoValido(habilidades))){
+    		throw new IllegalArgumentException("nenhum campo pode ser nulo");
+    	}
         Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
         tr.alterarHabilidadesTarefa(codigo, habilidadesSet);
 
@@ -105,6 +121,9 @@ public class TarefaController {
      * @param horas  horas gastas.
      */
     public void adicionarHorasTarefa(String codigo, int horas) {
+      	if(!(ValidadorTarefa.argumentoValido(codigo))){
+    		throw new IllegalArgumentException("o codigo não pode ser vazio ou nulo");
+    	}
         tr.adicionarHorasTarefa(codigo, horas);
     }
 
@@ -115,6 +134,9 @@ public class TarefaController {
      * @param horas  horas a serem removidas.
      */
     public void removerHorasTarefa(String codigo, int horas) {
+      	if(!(ValidadorTarefa.argumentoValido(codigo))){
+    		throw new IllegalArgumentException("o codigo não pode ser vazio ou nulo");
+    	}
         tr.removerHorasTarefa(codigo, horas);
     }
 
@@ -124,6 +146,9 @@ public class TarefaController {
      * @param codigo codigo da tarefa.
      */
     public void concluirTarefa(String codigo) {
+      	if(!(ValidadorTarefa.argumentoValido(codigo))){
+    		throw new IllegalArgumentException("o codigo não pode ser vazio ou nulo");
+    	}
         tr.concluiTarefa(codigo);
     }
 
@@ -134,6 +159,9 @@ public class TarefaController {
      * @param codigo codigo da tarefa.
      */
     public void removerTarefa(String codigo) {
+      	if(!(ValidadorTarefa.argumentoValido(codigo))){
+    		throw new IllegalArgumentException("o codigo não pode ser vazio ou nulo");
+    	}
         as.getAtividade(recuperaIdAtividade(codigo)).removerTarefa(codigo);
         tr.removerTarefa(codigo);
     }
@@ -145,6 +173,9 @@ public class TarefaController {
      * @return a representação textual de uma tarefa.
      */
     public String exibirTarefa(String codigo) {
+      	if(!(ValidadorTarefa.argumentoValido(codigo))){
+    		throw new IllegalArgumentException("o codigo não pode ser vazio ou nulo");
+    	}
         return tr.exibirTarefa(codigo);
     }
 
@@ -155,6 +186,9 @@ public class TarefaController {
      * @param codigo codigo da tarefa.
      */
     public void associarPessoaTarefa(String codigo, String cpf) {
+      	if(!(ValidadorTarefa.argumentoValido(codigo) || (ValidadorTarefa.argumentoValido(cpf)))){
+    		throw new IllegalArgumentException("o codigo nem o cpf podem ser vazios ou nulos");
+    	}
         var pessoa = ps.getPessoa(cpf);
         tr.associarPessoaTarefa(codigo, pessoa);
         pessoa.addTarefa(tr.getTarefa(codigo));
@@ -167,6 +201,9 @@ public class TarefaController {
      * @param cpf    cpf da pessoa.
      */
     public void removerPessoaTarefa(String codigo, String cpf) {
+      	if(!(ValidadorTarefa.argumentoValido(codigo) || (ValidadorTarefa.argumentoValido(cpf)))){
+    		throw new IllegalArgumentException("o codigo nem o cpf podem ser vazios ou nulos");
+    	}
         var pessoa = ps.getPessoa(cpf);
         tr.removerPessoaTarefa(codigo, cpf);
         pessoa.removeTarefa(codigo);
