@@ -23,4 +23,16 @@ public class SapoFacade {
         this.tc = new TarefaController(as, ps, tr);
         this.pc = new PessoaController(ps, ac, tc);
     }
+
+	public PessoaController getPessoaController() {
+		return pc;
+	}
+
+	public AtividadeController getAtividadeController() {
+		return ac;
+	}
+
+	public TarefaController getTarefaController() {
+		return tc;
+	}
 }
