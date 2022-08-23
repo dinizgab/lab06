@@ -22,27 +22,11 @@ class PessoaTest extends BaseTest{
 		return disciplinas;
 	}
 	
-	
-
 	@Test
 	void testCadastraPessoa() {			
 		pc.cadastraPessoa("111.111.111-11", "Ada Lovelace", this.preparaHabilidades());
 		String representacao = pc.exibirPessoa("111.111.111-11");
 		assertEquals("Ada Lovelace - 111.111.111-11\n- matematica\n- programacao\n", representacao);
-	}
-	
-	@Test
-	void testCadastraAluno(){
-		pc.cadastraAluno("111.111.111-11", "Ada Lovelace", this.preparaHabilidades(), "1211", 2);
-		String representacao = pc.exibirPessoa("111.111.111-11");
-		assertEquals("Ada Lovelace - 111.111.111-11\nAluno - 1211 - 2\n- matematica\n- programacao\n", representacao);
-	}
-	
-	@Test
-	void testCadastraProfessor(){
-		pc.cadastraProfessor("333.333.333-33", "Alan Turing", this.preparaHabilidades(), "1211", this.preparaDisciplinas());
-		String representacao = pc.exibirPessoa("333.333.333-33");
-		assertEquals("Alan Turing - 333.333.333-33\nProfessor - 1211 - programacao, criptografia\n- matematica\n- programacao\n", representacao);
 	}
 	
 	@Test
