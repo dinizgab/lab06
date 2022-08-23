@@ -27,6 +27,10 @@ public class AtividadeController {
         return this.as.exibirAtividade(atividadeId);
     }
 
+    public String getStatus(String codigo) {
+        return as.getStatus(codigo);
+    }
+
     public void alterarDescricaoAtividade(String atividadeId, String descricao) {
         this.as.alterarDescricaoAtividade(atividadeId, descricao);
     }

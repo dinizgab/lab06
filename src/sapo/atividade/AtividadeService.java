@@ -70,6 +70,10 @@ public class AtividadeService {
     public Atividade getAtividade(String codigo) {
         return ar.get(codigo);
     }
+    
+    public String getStatus(String codigo) {
+        return ar.get(codigo).getStatus();
+    }
 
     public void removeResponsavelAtividadeLGPD(String cpf) {
         ar.removeRsponsavel(cpf);
