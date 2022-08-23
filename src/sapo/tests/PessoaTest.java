@@ -1,5 +1,6 @@
 package sapo.tests;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
@@ -62,8 +63,25 @@ class PessoaTest extends BaseTest{
 	}
 	
 	@Test
+	void TestListarPessoas() {
+		pc.cadastraPessoa("111.111.111-11", "Ada Lovelace", this.preparaHabilidades());
+		pc.cadastraPessoa("222.222.222-22", "Alan Turing", this.preparaHabilidades());
+		
+		String[] listaDePessoas = new String[2]; 
+		listaDePessoas[0] = ("Ada Lovelace - 111.111.111-11\n- matematica\n- programacao\n");
+		listaDePessoas[1] = ("Alan Turing - 222.222.222-22\n- matematica\n- programacao\n");
+		
+		assertArrayEquals(pc.listarPessoas(), listaDePessoas);
+	}
+	
+	@Test
 	void testRemoverPessoa() {
-		// TO DO
+		pc.cadastraPessoa("111.111.111-11", "Ada Lovelace", this.preparaHabilidades());
+		String[] listaDePessoas = new String[1]; 
+		listaDePessoas[0] = ("Ada Lovelace - 111.111.111-11\n- matematica\n- programacao\n");
+		assertArrayEquals(pc.listarPessoas(), listaDePessoas);
+		pc.removerPessoa("111.111.111-11");
+		assertArrayEquals(pc.listarPessoas(), new String[0]);
 	}
 
 	
