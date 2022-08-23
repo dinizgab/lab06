@@ -233,8 +233,7 @@ public class TarefaController {
      */
     private String recuperaIdAtividade(String codigo) {
         String[] parts = codigo.split("-");
-        String id = parts[0] + "-" + parts[1];
-        return id;
+        return parts[0] + "-" + parts[1];
     }
 
     public List<TarefaAbstract> getTarefas() {

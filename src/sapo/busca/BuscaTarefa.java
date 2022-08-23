@@ -2,10 +2,7 @@ package sapo.busca;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 
-import sapo.tarefa.heranca.Tarefa;
 import sapo.tarefa.heranca.TarefaAbstract;
 
 /**

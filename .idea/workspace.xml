@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Atualizando o README">
-      <change afterPath="$PROJECT_DIR$/src/sapo/tests/AtividadeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/atividade/AtividadeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/atividade/AtividadeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tests/BaseTest.java" afterDir="false" />
+    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Comecando testes de Atividade">
+      <change beforePath="$PROJECT_DIR$/src/sapo/busca/BuscaAtividade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/busca/BuscaAtividade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sapo/busca/BuscaTarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/busca/BuscaTarefa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sapo/tarefa/TarefaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tarefa/TarefaController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +169,7 @@
       <workItem from="1661216576056" duration="257000" />
       <workItem from="1661218706346" duration="884000" />
       <workItem from="1661259262854" duration="421000" />
-      <workItem from="1661269039562" duration="1754000" />
+      <workItem from="1661269039562" duration="2063000" />
     </task>
     <task id="LOCAL-00001" summary="Initial configurations">
       <created>1659984232645</created>
@@ -326,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661269184754</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Comecando testes de Atividade">
+      <created>1661270957536</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1661270957536</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,13 +369,17 @@
     <MESSAGE value="Terminando de fazer a exclusao de usuarios" />
     <MESSAGE value="Consertando o getComentarios" />
     <MESSAGE value="Atualizando o README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atualizando o README" />
+    <MESSAGE value="Comecando testes de Atividade" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comecando testes de Atividade" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/lab06$AtividadeTest.ic" NAME="AtividadeTest Coverage Results" MODIFIED="1661270930318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>sapo.tests.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/lab06$PessoaTest.ic" NAME="PessoaTest Coverage Results" MODIFIED="1661259585334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>sapo.tests.*</FILTER>
       <FILTER>sapo.*</FILTER>
