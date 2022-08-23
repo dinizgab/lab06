@@ -59,7 +59,7 @@ public class PessoaService {
     }
 
     public String listaComentarios(String cpf) {
-        return pessoaRepository.get(cpf).listarComentarios();
+        return pessoaRepository.get(cpf).getComentarios();
     }
 
     public Pessoa getPessoa(String cpf) {
