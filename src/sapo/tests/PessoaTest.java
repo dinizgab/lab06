@@ -68,10 +68,10 @@ class PessoaTest extends BaseTest{
 		pc.cadastraPessoa("222.222.222-22", "Alan Turing", this.preparaHabilidades());
 		pc.cadastraPessoa("333.333.333-33", "Sabrina Barbosa", this.preparaHabilidades());
 		pc.adicionarComentario("111.111.111-11", "uma grande referencia no campo da computação", "222.222.222-22");
-		pc.adicionarComentario("111.111.111-11", "uma inspuração para as mulheres de TI", "333.333.333-33");
+		pc.adicionarComentario("111.111.111-11", "uma inspiração para as mulheres de TI", "333.333.333-33");
 		String listaDeComentarios = pc.listarComentarios("111.111.111-11");
 		assertEquals("Ada Lovelace - 111.111.111-11Comentários:\numa grande referencia no campo da computação (Alan Turing)\n"
-				+ "uma inspuração para as mulheres de TI (Sabrina Barbosa)\n", listaDeComentarios);
+				+ "uma inspiração para as mulheres de TI (Sabrina Barbosa)\n", listaDeComentarios);
 	}
 	
 	@Test
