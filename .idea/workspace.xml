@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Terminando de fazer a exclusao de usuarios">
+    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Consertando o getComentarios">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sapo/pessoa/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/Pessoa.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +65,33 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="PessoaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sapo.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="sapo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sapo.tests" />
+      <option name="MAIN_CLASS_NAME" value="sapo.tests.PessoaTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PessoaTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -103,6 +131,8 @@
       <workItem from="1661014446740" duration="744000" />
       <workItem from="1661087215901" duration="3233000" />
       <workItem from="1661216576056" duration="257000" />
+      <workItem from="1661218706346" duration="884000" />
+      <workItem from="1661259262854" duration="421000" />
     </task>
     <task id="LOCAL-00001" summary="Initial configurations">
       <created>1659984232645</created>
@@ -244,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661090876125</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Consertando o getComentarios">
+      <created>1661218941131</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1661218941131</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,10 +316,17 @@
     <MESSAGE value="Formatando" />
     <MESSAGE value="Mais refatoracoes" />
     <MESSAGE value="Terminando de fazer a exclusao de usuarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Terminando de fazer a exclusao de usuarios" />
+    <MESSAGE value="Consertando o getComentarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Consertando o getComentarios" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/lab06$PessoaTest.ic" NAME="PessoaTest Coverage Results" MODIFIED="1661259585334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>sapo.tests.*</FILTER>
+      <FILTER>sapo.*</FILTER>
+    </SUITE>
   </component>
 </project>

@@ -95,8 +95,7 @@ public class Pessoa {
     }
 
     public String getComentarios() {
-        String listaComentarios = formataComentarios();
-        return this.nome + " - " + this.cpf + "Comentários:\n" + listaComentarios;
+        return this.nome + " - " + this.cpf + "Comentários:\n" + this.formataComentarios();
     }
 
     private String formataComentarios() {

@@ -16,6 +16,6 @@
 
 ### Testes
 
-- Gabriel - 2, 5
-- João - 3, 4
-- Sabrina - 1, 6
+- Gabriel - 2, 4
+- João - 3, 6
+- Sabrina - 1, 5
