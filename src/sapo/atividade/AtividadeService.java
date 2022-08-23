@@ -22,12 +22,12 @@ public class AtividadeService {
 
     private String gerarCodigo(String nome) {
         String codigo = "";
-        for (char caractere : nome.toCharArray()) {
+        for (char caractere : nome.toUpperCase().toCharArray()) {
             if (codigo.length() == 3)
                 break;
 
             String letra = "" + caractere;
-            if ("aeiou".contains(letra))
+            if ("AEIOU".contains(letra))
                 continue;
 
             codigo += letra.toUpperCase();

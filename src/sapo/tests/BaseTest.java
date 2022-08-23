@@ -19,7 +19,5 @@ class BaseTest {
 		pc = facade.getPessoaController();
 		at = facade.getAtividadeController();
 		tc = facade.getTarefaController();
-
 	}
-	
 }

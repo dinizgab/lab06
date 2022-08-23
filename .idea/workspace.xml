@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Consertando o getComentarios">
+    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Atualizando o README">
+      <change afterPath="$PROJECT_DIR$/src/sapo/tests/AtividadeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/pessoa/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/pessoa/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sapo/atividade/AtividadeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/atividade/AtividadeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sapo/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tests/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -62,10 +64,43 @@
       <recent name="sapo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/sapo" />
+      <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.AtividadeTest">
+    <configuration name="AtividadeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sapo.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sapo.tests" />
+      <option name="MAIN_CLASS_NAME" value="sapo.tests.AtividadeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AtividadeTest.testaCadastraAtividade" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sapo.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sapo.tests" />
+      <option name="MAIN_CLASS_NAME" value="sapo.tests.AtividadeTest" />
+      <option name="METHOD_NAME" value="testaCadastraAtividade" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PessoaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab06" />
       <extension name="coverage">
@@ -88,6 +123,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AtividadeTest" />
+        <item itemvalue="JUnit.AtividadeTest.testaCadastraAtividade" />
         <item itemvalue="JUnit.PessoaTest" />
       </list>
     </recent_temporary>
@@ -133,6 +170,7 @@
       <workItem from="1661216576056" duration="257000" />
       <workItem from="1661218706346" duration="884000" />
       <workItem from="1661259262854" duration="421000" />
+      <workItem from="1661269039562" duration="1754000" />
     </task>
     <task id="LOCAL-00001" summary="Initial configurations">
       <created>1659984232645</created>
@@ -281,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661218941131</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Atualizando o README">
+      <created>1661269184754</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1661269184754</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +362,8 @@
     <MESSAGE value="Mais refatoracoes" />
     <MESSAGE value="Terminando de fazer a exclusao de usuarios" />
     <MESSAGE value="Consertando o getComentarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Consertando o getComentarios" />
+    <MESSAGE value="Atualizando o README" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualizando o README" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
