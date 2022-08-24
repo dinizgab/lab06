@@ -24,7 +24,7 @@ public class Tarefa extends TarefaAbstract {
    * @param habilidades habilidades da tarefa.
    */
   public void setHabilidades(Set<String> habilidades) {
-    if (!this.concluida)
+    if (this.concluida)
       return;
     this.habilidades = habilidades;
   }
