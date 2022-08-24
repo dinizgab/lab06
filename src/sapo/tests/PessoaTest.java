@@ -1,5 +1,6 @@
 package sapo.tests;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
@@ -53,7 +54,7 @@ class PessoaTest extends BaseTest{
 	}
 	
 	@Test
-	void testAdicionarEListarComentarios() {
+	void testAdicionarComentarios() {
 		pc.cadastraPessoa("111.111.111-11", "Ada Lovelace", this.preparaHabilidades());
 		pc.cadastraPessoa("222.222.222-22", "Alan Turing", this.preparaHabilidades());
 		pc.adicionarComentario("111.111.111-11", "uma grande referencia no campo da computação", "222.222.222-22");
@@ -62,8 +63,37 @@ class PessoaTest extends BaseTest{
 	}
 	
 	@Test
+	void listarComentarios() {
+		pc.cadastraPessoa("111.111.111-11", "Ada Lovelace", this.preparaHabilidades());
+		pc.cadastraPessoa("222.222.222-22", "Alan Turing", this.preparaHabilidades());
+		pc.cadastraPessoa("333.333.333-33", "Sabrina Barbosa", this.preparaHabilidades());
+		pc.adicionarComentario("111.111.111-11", "uma grande referencia no campo da computação", "222.222.222-22");
+		pc.adicionarComentario("111.111.111-11", "uma inspiração para as mulheres de TI", "333.333.333-33");
+		String listaDeComentarios = pc.listarComentarios("111.111.111-11");
+		assertEquals("Ada Lovelace - 111.111.111-11Comentários:\numa grande referencia no campo da computação (Alan Turing)\n"
+				+ "uma inspiração para as mulheres de TI (Sabrina Barbosa)\n", listaDeComentarios);
+	}
+	
+	@Test
+	void TestListarPessoas() {
+		pc.cadastraPessoa("222.222.222-22", "Alan Turing", this.preparaHabilidades());
+		pc.cadastraPessoa("111.111.111-11", "Ada Lovelace", this.preparaHabilidades());
+		
+		String[] listaDePessoas = new String[2]; 
+		listaDePessoas[0] = ("Ada Lovelace - 111.111.111-11\n- matematica\n- programacao\n");
+		listaDePessoas[1] = ("Alan Turing - 222.222.222-22\n- matematica\n- programacao\n");
+		
+		assertArrayEquals(pc.listarPessoas(), listaDePessoas);
+	}
+	
+	@Test
 	void testRemoverPessoa() {
-		// TO DO
+		pc.cadastraPessoa("111.111.111-11", "Ada Lovelace", this.preparaHabilidades());
+		String[] listaDePessoas = new String[1]; 
+		listaDePessoas[0] = ("Ada Lovelace - 111.111.111-11\n- matematica\n- programacao\n");
+		assertArrayEquals(pc.listarPessoas(), listaDePessoas);
+		pc.removerPessoa("111.111.111-11");
+		assertArrayEquals(pc.listarPessoas(), new String[0]);
 	}
 
 	
