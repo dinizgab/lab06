@@ -41,7 +41,7 @@ public class BuscaController {
 		if(!ValidadorBusca.argumentoValido(consulta)) {
 			throw new IllegalArgumentException("A consulta não pode ser vazia ou nula");
 		}
-		return bs.busca(new BuscaPessoa(consulta.split(""), ps.getPessoas()));
+		return bs.busca(new BuscaPessoa(consulta.split(" "), ps.getPessoas()));
 	}
 	
 	/**
@@ -53,7 +53,7 @@ public class BuscaController {
 		if(!ValidadorBusca.argumentoValido(consulta)) {
 			throw new IllegalArgumentException("A consulta não pode ser vazia ou nula");
 		}
-		return bs.busca(new BuscaAtividade(consulta.split(""), ar.getAtividades()));
+		return bs.busca(new BuscaAtividade(consulta.split(" "), ar.getAtividades()));
 	}
 	
 	/**
@@ -74,7 +74,7 @@ public class BuscaController {
 	 * @param nome nome da tarefa
 	 * @return lista das versões textuais das tarefas encontradas na busca.
 	 */
-	public List<String> buscaTarefas(String id, String nome){
+	public List<String> buscarTarefas(String id, String nome){
 		if(!ValidadorBusca.argumentoValido(id) || (!ValidadorBusca.argumentoValido(nome))) {
 			throw new IllegalArgumentException("Nem o id da atividade nem o nome da tarefa podem ser vazias ou nulas");
 		}
@@ -107,7 +107,7 @@ public class BuscaController {
 	 * @param indexBusca index da busca
 	 * @return busca realizada
 	 */
-	public List<String> exibirHistóricoBusca(int indexBusca){
+	public List<String> exibirHistoricoBusca(int indexBusca){
 		return bs.getBusca(indexBusca);
 	}
 

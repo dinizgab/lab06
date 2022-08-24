@@ -47,7 +47,7 @@ public class TarefaController {
     	}
         Atividade atividade = as.getAtividade(atividadeID);
         String codigo = atividadeID + "-" + atividade.getProximoTarefaId();
-        Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
+        Set<String> habilidadesSet = Set.of(habilidades);
 
         Tarefa t = new Tarefa(nome, codigo, atividade, habilidadesSet);
 
@@ -65,7 +65,7 @@ public class TarefaController {
         String codigo = atividadeID + "-" + atividade.getProximoTarefaId();
 
         HashMap<String, TarefaAbstract> tarefaMap = criaMapTarefas(IDTarefas);
-        Set<String> habilidadesSet = new HashSet<>(Arrays.asList(habilidades));
+        Set<String> habilidadesSet = Set.of(habilidades);
 
         TarefaGerencial tg = new TarefaGerencial(nome, codigo, atividade, habilidadesSet, tarefaMap);
         atividade.adicionarTarefa(tg);

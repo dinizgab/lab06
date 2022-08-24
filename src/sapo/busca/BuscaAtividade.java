@@ -1,8 +1,6 @@
 package sapo.busca;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import sapo.atividade.Atividade;
 
@@ -50,7 +48,7 @@ public class BuscaAtividade extends BuscaAbstract{
 	}
 
 	private boolean comparaDecricao(Atividade atividade, String termo){
-		return (atividade.getDescricao().equalsIgnoreCase(termo));
+		return (Set.of(atividade.getDescricao().split(" ")).contains(termo));
 	}
 
 	private boolean comparaCodigo(Atividade atividade, String termo) {
@@ -63,6 +61,6 @@ public class BuscaAtividade extends BuscaAbstract{
 	}
 
 	private boolean comparaNome(Atividade atividade, String termo) {
-		return (atividade.getNome().equalsIgnoreCase(termo));
+		return (Set.of(atividade.getNome().split(" ")).contains(termo));
 	}
 }

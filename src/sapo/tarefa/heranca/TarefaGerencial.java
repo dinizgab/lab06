@@ -75,4 +75,13 @@ public class TarefaGerencial extends TarefaAbstract {
     public int totalDeTarefas() {
         return this.tarefasGerenciadas.size();
     }
+
+    @Override
+    protected String exibeHabilidades() {
+        ArrayList<String> habilidadesList = new ArrayList<>(this.habilidades);
+        Collections.sort(habilidadesList);
+        String listString = habilidadesList.toString();
+
+        return listString.substring(1, listString.length() - 1);
+    }
 }
