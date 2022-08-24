@@ -1,18 +1,13 @@
 package sapo.tarefa.heranca;
 
-import sapo.tarefa.ValidadorTarefa;
-
 import java.util.*;
 
 public class TarefaGerencial extends TarefaAbstract {
   private Map<String, TarefaAbstract> tarefasGerenciadas;
-  private int horas;
-  private ValidadorTarefa validador;
 
   public TarefaGerencial(String nome, String codigo, String atividadeNome, Map<String, TarefaAbstract> tarefas) {
     super(nome, codigo, atividadeNome);
 
-    this.validador = new ValidadorTarefa();
     this.tarefasGerenciadas = tarefas;
     this.habilidades = this.criaHabilidadesTotais();
     this.horas = this.calculaHorasTotais();
@@ -29,7 +24,7 @@ public class TarefaGerencial extends TarefaAbstract {
   @Override
   public String toString() {
     return this.nome + " - " + codigo + "\n- " + atividadeNome + "\n" + this.exibeHabilidades() + "\n(" + this.horas
-        + " hora(s) executada(s))" + "\n===\n" + "Equipe:\n" + this.exibeEquipe() + "\n===\nTarefas:\n"
+        + " hora(s) executada(s))" + "\n===\n" + "Equipe:\n" + this.exibeEquipe() + "===\nTarefas:\n"
         + this.exibeTarefas();
   }
 
@@ -57,7 +52,8 @@ public class TarefaGerencial extends TarefaAbstract {
 
     String saida = "";
     for (String cods : listaCodigos) {
-      saida += "- " + this.tarefasGerenciadas.get(cods).getNome() + this.tarefasGerenciadas.get(cods).getCodigo()
+      saida += "- " + this.tarefasGerenciadas.get(cods).getNome() + " - "
+          + this.tarefasGerenciadas.get(cods).getCodigo()
           + "\n";
     }
 
@@ -65,10 +61,25 @@ public class TarefaGerencial extends TarefaAbstract {
   }
 
   public void adicionaTarefaGerenciada(TarefaAbstract tarefa) {
-    validador.validaCiclo(this.tarefasGerenciadas, tarefa);
+    if (tarefa instanceof TarefaGerencial)
+      validaCiclo((TarefaGerencial) tarefa);
 
     this.tarefasGerenciadas.put(tarefa.getCodigo(), tarefa);
     this.habilidades = this.criaHabilidadesTotais();
+  }
+
+  protected void validaCiclo(TarefaGerencial tarefaAdicionada) {
+    if (tarefaAdicionada.equals(this))
+      throw new IllegalArgumentException("CICLO DETECTADO! A tarefa adicionada já gerencia essa tarefa");
+
+    for (TarefaAbstract t : tarefaAdicionada.getTarefasGerenciadas().values()) {
+      if (t instanceof TarefaGerencial)
+        validaCiclo((TarefaGerencial) t);
+    }
+  }
+
+  public Map<String, TarefaAbstract> getTarefasGerenciadas() {
+    return new HashMap<>(this.tarefasGerenciadas);
   }
 
   public void removeTarefaGerenciada(String codigo) {
