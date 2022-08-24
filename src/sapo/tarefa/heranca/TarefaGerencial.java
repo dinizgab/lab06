@@ -6,9 +6,7 @@ import sapo.tarefa.ValidadorTarefa;
 import java.util.*;
 
 public class TarefaGerencial extends TarefaAbstract {
-    private Set<String> habilidades;
     private Map<String, TarefaAbstract> tarefasGerenciadas;
-    private int horas;
     private ValidadorTarefa validador;
 
     public TarefaGerencial(String nome, String codigo, Atividade atividade, Set<String> habilidades, Map<String, TarefaAbstract> tarefas) {
@@ -76,5 +74,14 @@ public class TarefaGerencial extends TarefaAbstract {
 
     public int totalDeTarefas() {
         return this.tarefasGerenciadas.size();
+    }
+
+    @Override
+    protected String exibeHabilidades() {
+        ArrayList<String> habilidadesList = new ArrayList<>(this.habilidades);
+        Collections.sort(habilidadesList);
+        String listString = habilidadesList.toString();
+
+        return listString.substring(1, listString.length() - 1);
     }
 }
