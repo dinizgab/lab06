@@ -42,7 +42,7 @@ public class TarefaTest extends BaseTest {
   void testToString() {
     String esperado = "Testar Tarefa - LBX-0-0\n" +
         "- LAB06\n" +
-        "legal, LP2\n" +
+        "LP2, legal\n" +
         "(8 hora(s) executada(s))\n" +
         "===\n" +
         "Equipe:\n" +

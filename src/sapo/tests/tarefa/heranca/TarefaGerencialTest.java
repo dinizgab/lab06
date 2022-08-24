@@ -78,7 +78,7 @@ public class TarefaGerencialTest {
     tg.adicionaTarefaGerenciada(trf);
     String esperado = "Testar Tarefa - LBX-4-0\n" +
         "- LAB06\n" +
-        "gestão, rápido, hábil\n" +
+        "gestão, hábil, rápido\n" +
         "(3 hora(s) executada(s))\n" +
         "===\n" +
         "Equipe:\n" +
