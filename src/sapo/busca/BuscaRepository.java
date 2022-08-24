@@ -47,7 +47,7 @@ public class BuscaRepository {
 	public List<String> getBuscasMaisRecentes(int nBuscas) {
 		List<String> saida = new ArrayList<>();
 		for (int i = 0; i < nBuscas; i++) {
-			if(!buscas.get(i).equals(null)) {
+			if(buscas.get(i) != null) {
 				saida.addAll(buscas.get(i));
 			}
 		}

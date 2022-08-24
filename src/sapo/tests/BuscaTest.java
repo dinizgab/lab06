@@ -63,6 +63,49 @@ public class BuscaTest extends BaseTest {
 
     @Test
     void testaBuscaTarefas() {
+        String esperada = "Estudar Integrais - STD-0-1\n- Estudar Calculo 1\nAreas, Calculo, Matematica\n(0 hora(s) executada(s))" + "\n===\n" + "Equipe:\n";
 
+        this.at.cadastrarAtividade("Estudar Calculo 1", "Estudo sobre derivadas e integrais", "111.111.111-11");
+        this.tc.cadastraTarefa("STD-0", "Estudar derivadas", new String[] {"Matematica", "Calculo", "Funcoes"});
+        this.tc.cadastraTarefa("STD-0", "Estudar Integrais", new String[] {"Matematica", "Calculo", "Areas"});
+        this.tc.cadastraTarefa("STD-0", "Estudar funcoes", new String[] {"Matematica", "Calculo", "Graficos"});
+        List<String> resultado = this.bc.buscarTarefas("STD-0", "Estudar Integrais");
+
+        assertEquals(esperada, resultado.get(0));
+    }
+
+    @Test
+    void testeBuscaTarefasErro() {
+        assertThrows(IllegalArgumentException.class, () -> this.bc.buscarTarefas("", ""));
+        assertThrows(IllegalArgumentException.class, () -> this.bc.buscarTarefas("", "Estudar Matematica"));
+        assertThrows(IllegalArgumentException.class, () -> this.bc.buscarTarefas("STD-0", ""));
+    }
+
+    @Test
+    void testeBuscasMaisRecentes() {
+        this.at.cadastrarAtividade("Estudar Calculo 1", "Estudo sobre derivadas e integrais", "111.111.111-11");
+        this.at.cadastrarAtividade("Fazer o laboratorio de LP2", "Terminar a parte 2 do lab6", "222.222.222-22");
+        this.tc.cadastraTarefa("STD-0", "Estudar derivadas", new String[] {"Matematica", "Calculo", "Funcoes"});
+
+        List<String> resultadoBuscaPessoa = this.bc.exibirPessoas("Java");
+        List<String> resultadoBuscaAtv = this.bc.buscarAtividade("lab6");
+        List<String> resultadoBuscaTarefas = this.bc.buscarTarefas("Estudar derivadas");
+        List<String> resultadoBuscaTarefasAtv = this.bc.buscarTarefas("STD-0", "Estudar Integrais");
+
+        List<String> resultadoNBuscas = this.bc.buscasMaisRecentes(2);
+        assertEquals(2, resultadoNBuscas.size());
+    }
+
+    @Test
+    void testeGetBusca() {
+        this.at.cadastrarAtividade("Estudar Calculo 1", "Estudo sobre derivadas e integrais", "111.111.111-11");
+        this.at.cadastrarAtividade("Fazer o laboratorio de LP2", "Terminar a parte 2 do lab6", "222.222.222-22");
+
+        List<String> resultadoBuscaPessoa = this.bc.exibirPessoas("Java");
+        List<String> resultadoBuscaAtv = this.bc.buscarAtividade("lab6");
+
+        List<String> resultado = this.bc.exibirHistoricoBusca(1);
+
+        assertEquals("ATIVIDADE", resultado.get(0));
     }
 }

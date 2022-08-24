@@ -107,7 +107,7 @@ public class BuscaController {
 	 * @param indexBusca index da busca
 	 * @return busca realizada
 	 */
-	public List<String> exibirHistóricoBusca(int indexBusca){
+	public List<String> exibirHistoricoBusca(int indexBusca){
 		return bs.getBusca(indexBusca);
 	}
 
