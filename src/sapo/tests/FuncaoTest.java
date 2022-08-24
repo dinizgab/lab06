@@ -20,6 +20,7 @@ public class FuncaoTest extends BaseTest{
 		assertEquals("Alan Turing - 333.333.333-33\nProfessor - 1211 - programacao, criptografia\n- matematica\n- programacao\n", representacao);
 	
 }
+	
 	@Test
 	void testDefinirFuncaoAluno() {
 		pc.cadastraPessoa("111.111.111-11", "Ada Lovelace", this.preparaHabilidades());
