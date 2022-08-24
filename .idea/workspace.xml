@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Terminando os testes de busca">
+    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Terminando os testes de Busca">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/busca/BuscaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/busca/BuscaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/busca/BuscaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/busca/BuscaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/tests/BuscaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tests/BuscaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/tests/PessoaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tests/PessoaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +68,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BuscaTest">
+  <component name="RunManager" selected="JUnit.sapo.tests in lab06">
     <configuration name="BuscaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab06" />
       <extension name="coverage">
@@ -164,9 +160,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.sapo.tests in lab06" />
         <item itemvalue="JUnit.BuscaTest" />
         <item itemvalue="JUnit.BuscaTest.testeGetBusca" />
-        <item itemvalue="JUnit.sapo.tests in lab06" />
         <item itemvalue="JUnit.BuscaTest.testeBuscasMaisRecentes" />
         <item itemvalue="JUnit.BuscaTest.testeBuscaTarefasErro" />
       </list>
@@ -468,7 +464,7 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lab06$BuscaTest.ic" NAME="BuscaTest Coverage Results" MODIFIED="1661306823250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/lab06$BuscaTest.ic" NAME="BuscaTest Coverage Results" MODIFIED="1661308778097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>sapo.tests.*</FILTER>
       <FILTER>sapo.busca.*</FILTER>
     </SUITE>
