@@ -94,6 +94,7 @@ public class BuscaTest extends BaseTest {
 
         List<String> resultadoNBuscas = this.bc.buscasMaisRecentes(2);
         assertEquals(2, resultadoNBuscas.size());
+        assertEquals("PESSOA", resultadoNBuscas.get(0));
     }
 
     @Test
@@ -104,8 +105,8 @@ public class BuscaTest extends BaseTest {
         List<String> resultadoBuscaPessoa = this.bc.exibirPessoas("Java");
         List<String> resultadoBuscaAtv = this.bc.buscarAtividade("lab6");
 
-        List<String> resultado = this.bc.exibirHistoricoBusca(1);
+        String resultado = this.bc.exibirHistoricoBusca(1);
 
-        assertEquals("ATIVIDADE", resultado.get(0));
+        assertEquals("ATIVIDADE", resultado);
     }
 }

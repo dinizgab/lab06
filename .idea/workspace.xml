@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Metade dos testes de Busca">
+    <list default="true" id="2a7fa8a2-f375-4b73-b918-a37d0ff3fdab" name="Changes" comment="Terminando os testes de busca">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sapo/busca/BuscaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/busca/BuscaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/busca/BuscaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/busca/BuscaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sapo/busca/BuscaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/busca/BuscaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sapo/tests/BuscaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tests/BuscaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sapo/tests/PessoaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sapo/tests/PessoaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +29,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -93,22 +93,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BuscaTest.testaBuscaTarefas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab06" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sapo.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="sapo.tests" />
-      <option name="MAIN_CLASS_NAME" value="sapo.tests.BuscaTest" />
-      <option name="METHOD_NAME" value="testaBuscaTarefas" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BuscaTest.testeBuscaTarefasErro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab06" />
       <extension name="coverage">
@@ -157,9 +141,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="sapo.tests in lab06" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sapo.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sapo.tests" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="JUnit.sapo.tests in lab06" />
       <item itemvalue="JUnit.BuscaTest.testeGetBusca" />
-      <item itemvalue="JUnit.BuscaTest.testaBuscaTarefas" />
       <item itemvalue="JUnit.BuscaTest.testeBuscaTarefasErro" />
       <item itemvalue="JUnit.BuscaTest.testeBuscasMaisRecentes" />
       <item itemvalue="JUnit.BuscaTest" />
@@ -168,9 +166,9 @@
       <list>
         <item itemvalue="JUnit.BuscaTest" />
         <item itemvalue="JUnit.BuscaTest.testeGetBusca" />
+        <item itemvalue="JUnit.sapo.tests in lab06" />
         <item itemvalue="JUnit.BuscaTest.testeBuscasMaisRecentes" />
         <item itemvalue="JUnit.BuscaTest.testeBuscaTarefasErro" />
-        <item itemvalue="JUnit.BuscaTest.testaBuscaTarefas" />
       </list>
     </recent_temporary>
   </component>
@@ -221,6 +219,7 @@
       <workItem from="1661286660606" duration="2716000" />
       <workItem from="1661289393594" duration="10190000" />
       <workItem from="1661306035538" duration="748000" />
+      <workItem from="1661306799714" duration="1747000" />
     </task>
     <task id="LOCAL-00001" summary="Initial configurations">
       <created>1659984232645</created>
@@ -404,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661302800186</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Terminando os testes de busca">
+      <created>1661306900584</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1661306900584</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,7 +450,8 @@
     <MESSAGE value="Refatoracoes menores" />
     <MESSAGE value="Terminando Testes de Atividade" />
     <MESSAGE value="Metade dos testes de Busca" />
-    <option name="LAST_COMMIT_MESSAGE" value="Metade dos testes de Busca" />
+    <MESSAGE value="Terminando os testes de busca" />
+    <option name="LAST_COMMIT_MESSAGE" value="Terminando os testes de busca" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -461,7 +468,7 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lab06$BuscaTest.ic" NAME="BuscaTest Coverage Results" MODIFIED="1661306053274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/lab06$BuscaTest.ic" NAME="BuscaTest Coverage Results" MODIFIED="1661306823250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>sapo.tests.*</FILTER>
       <FILTER>sapo.busca.*</FILTER>
     </SUITE>

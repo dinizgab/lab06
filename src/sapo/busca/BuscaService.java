@@ -29,7 +29,7 @@ public class BuscaService {
 	 */
 	public List<String> busca(BuscaInterface busca) {
 		List<String> pesquisa = busca.busca();
-		br.adicionaBusca(busca.getTipo(), pesquisa);
+		br.adicionaBusca(busca.getTipo());
 		return pesquisa;
 	}
 	
@@ -56,7 +56,7 @@ public class BuscaService {
 	 * @param indexBusca index da busca
 	 * @return busca realizada
 	 */
-	public List<String> getBusca(int indexBusca) {
+	public String getBusca(int indexBusca) {
 		return br.getBusca(indexBusca);
 	}
 

@@ -1,7 +1,9 @@
 package sapo.busca;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * armazena as buscas realizadas no sistema.
@@ -9,13 +11,15 @@ import java.util.List;
  *
  */
 public class BuscaRepository {
-	List<List<String>> buscas;
+	int contador;
+	Map<Integer, String> buscas;
 	
 	/**
 	 * constrói a lista de buscas
 	 */
 	public BuscaRepository() {
-		this.buscas = new ArrayList<>();
+		this.buscas = new HashMap<>();
+		this.contador = 0;
 	}
 	
 	/**
@@ -24,10 +28,9 @@ public class BuscaRepository {
 	 * @param tipo tipo da busca
 	 * @param pesquisa busca realizada
 	 */
-	public void adicionaBusca(String tipo, List<String> pesquisa){
-		List<String> p = new ArrayList<>(pesquisa);
-		p.add(0, tipo);
-		buscas.add(p);
+	public void adicionaBusca(String tipoPesquisa){
+		buscas.put(contador, tipoPesquisa);
+		contador++;
 	}
 	
 	/**
@@ -35,7 +38,7 @@ public class BuscaRepository {
 	 * @param index index da busca
 	 * @return busca realizada
 	 */
-	public List<String> getBusca(int index){
+	public String getBusca(int index){
 		return this.buscas.get(index);
 	}
 	
@@ -48,7 +51,7 @@ public class BuscaRepository {
 		List<String> saida = new ArrayList<>();
 		for (int i = 0; i < nBuscas; i++) {
 			if(buscas.get(i) != null) {
-				saida.addAll(buscas.get(i));
+				saida.add(buscas.get(i));
 			}
 		}
 		return saida;
