@@ -5,18 +5,16 @@ import sapo.tarefa.ValidadorTarefa;
 import java.util.*;
 
 public class TarefaGerencial extends TarefaAbstract {
-  private Set<String> habilidades;
   private Map<String, TarefaAbstract> tarefasGerenciadas;
   private int horas;
   private ValidadorTarefa validador;
 
-  public TarefaGerencial(String nome, String codigo, String atividadeNome, Set<String> habilidades,
-      Map<String, TarefaAbstract> tarefas) {
+  public TarefaGerencial(String nome, String codigo, String atividadeNome, Map<String, TarefaAbstract> tarefas) {
     super(nome, codigo, atividadeNome);
 
     this.validador = new ValidadorTarefa();
     this.tarefasGerenciadas = tarefas;
-    this.habilidades = this.criaHabilidadesTotais(habilidades);
+    this.habilidades = this.criaHabilidadesTotais();
     this.horas = this.calculaHorasTotais();
   }
 
@@ -35,10 +33,12 @@ public class TarefaGerencial extends TarefaAbstract {
         + this.exibeTarefas();
   }
 
-  private Set<String> criaHabilidadesTotais(Set<String> habilidades) {
+  private Set<String> criaHabilidadesTotais() {
+    Set<String> habilidades = new HashSet<>();
     for (TarefaAbstract t : this.tarefasGerenciadas.values()) {
       habilidades.addAll(t.getHabilidades());
     }
+    habilidades.add("gestão");
     return habilidades;
   }
 
@@ -68,15 +68,24 @@ public class TarefaGerencial extends TarefaAbstract {
     validador.validaCiclo(this.tarefasGerenciadas, tarefa);
 
     this.tarefasGerenciadas.put(tarefa.getCodigo(), tarefa);
-    this.criaHabilidadesTotais(this.habilidades);
+    this.habilidades = this.criaHabilidadesTotais();
   }
 
   public void removeTarefaGerenciada(String codigo) {
     this.tarefasGerenciadas.remove(codigo);
-    this.criaHabilidadesTotais(this.habilidades);
+    this.habilidades = this.criaHabilidadesTotais();
   }
 
   public int totalDeTarefas() {
-    return this.tarefasGerenciadas.size();
+    int quantTarefas = 0;
+    for (TarefaAbstract tarefa : this.tarefasGerenciadas.values()) {
+      if (tarefa instanceof Tarefa) {
+        quantTarefas++;
+      } else {
+        TarefaGerencial tg = (TarefaGerencial) tarefa;
+        quantTarefas += tg.totalDeTarefas();
+      }
+    }
+    return quantTarefas;
   }
 }
