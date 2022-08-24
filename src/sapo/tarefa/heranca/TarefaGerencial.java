@@ -6,9 +6,7 @@ import sapo.tarefa.ValidadorTarefa;
 import java.util.*;
 
 public class TarefaGerencial extends TarefaAbstract {
-    private Set<String> habilidades;
     private Map<String, TarefaAbstract> tarefasGerenciadas;
-    private int horas;
     private ValidadorTarefa validador;
 
     public TarefaGerencial(String nome, String codigo, Atividade atividade, Set<String> habilidades, Map<String, TarefaAbstract> tarefas) {

@@ -47,15 +47,15 @@ public class Pessoa {
             throw new IllegalStateException("Não é possível remover a função da pessoa de cpf "
                     + this.cpf + ", pois ela não possui função.");
         }
-
-        if (this.func.getClass() == func.getClass()) {
-            throw new IllegalStateException("Não é possível definir a função de " + func.getClass() + " para a pessoa de cpf "
-                    + this.cpf + ", pois ela já assume essa função.");
+        
+        if(this.func == null) {
+        	this.nivel += func.calcNivel(trfsQueAfetamNivel, habilidades);
+            this.trfsQueAfetamNivel = new HashMap<>();
+            this.func = func;
+        }else if(this.func.getClass() == func.getClass()){
+        	 throw new IllegalStateException("Não é possível definir a função de " + func.getClass() + " para a pessoa de cpf "
+                     + this.cpf + ", pois ela já assume essa função.");
         }
-
-        this.nivel += func.calcNivel(trfsQueAfetamNivel, habilidades);
-        this.trfsQueAfetamNivel = new HashMap<>();
-        this.func = func;
     }
 
     public String[] getHabilidades() {

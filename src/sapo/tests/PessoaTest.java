@@ -23,6 +23,11 @@ class PessoaTest extends BaseTest{
 		return disciplinas;
 	}
 	
+	void cadastrarDuasPessoas() {
+		pc.cadastraPessoa("222.222.222-22", "Alan Turing", this.preparaHabilidades());
+		pc.cadastraPessoa("111.111.111-11", "Ada Lovelace", this.preparaHabilidades());
+	}
+	
 	@Test
 	void testCadastraPessoa() {			
 		pc.cadastraPessoa("111.111.111-11", "Ada Lovelace", this.preparaHabilidades());
@@ -55,8 +60,8 @@ class PessoaTest extends BaseTest{
 	
 	@Test
 	void testAdicionarComentarios() {
-		pc.cadastraPessoa("111.111.111-11", "Ada Lovelace", this.preparaHabilidades());
-		pc.cadastraPessoa("222.222.222-22", "Alan Turing", this.preparaHabilidades());
+		this.cadastrarDuasPessoas();
+		
 		pc.adicionarComentario("111.111.111-11", "uma grande referencia no campo da computação", "222.222.222-22");
 		String listaDeComentarios = pc.listarComentarios("111.111.111-11");
 		assertEquals("Ada Lovelace - 111.111.111-11Comentários:\numa grande referencia no campo da computação (Alan Turing)\n", listaDeComentarios);
@@ -64,11 +69,12 @@ class PessoaTest extends BaseTest{
 	
 	@Test
 	void listarComentarios() {
-		pc.cadastraPessoa("111.111.111-11", "Ada Lovelace", this.preparaHabilidades());
-		pc.cadastraPessoa("222.222.222-22", "Alan Turing", this.preparaHabilidades());
+		this.cadastrarDuasPessoas();
 		pc.cadastraPessoa("333.333.333-33", "Sabrina Barbosa", this.preparaHabilidades());
+		
 		pc.adicionarComentario("111.111.111-11", "uma grande referencia no campo da computação", "222.222.222-22");
 		pc.adicionarComentario("111.111.111-11", "uma inspiração para as mulheres de TI", "333.333.333-33");
+		
 		String listaDeComentarios = pc.listarComentarios("111.111.111-11");
 		assertEquals("Ada Lovelace - 111.111.111-11Comentários:\numa grande referencia no campo da computação (Alan Turing)\n"
 				+ "uma inspiração para as mulheres de TI (Sabrina Barbosa)\n", listaDeComentarios);
@@ -76,8 +82,7 @@ class PessoaTest extends BaseTest{
 	
 	@Test
 	void TestListarPessoas() {
-		pc.cadastraPessoa("222.222.222-22", "Alan Turing", this.preparaHabilidades());
-		pc.cadastraPessoa("111.111.111-11", "Ada Lovelace", this.preparaHabilidades());
+		this.cadastrarDuasPessoas();
 		
 		String[] listaDePessoas = new String[2]; 
 		listaDePessoas[0] = ("Ada Lovelace - 111.111.111-11\n- matematica\n- programacao\n");

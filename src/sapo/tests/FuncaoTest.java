@@ -44,6 +44,40 @@ public class FuncaoTest extends BaseTest{
 		assertEquals(nivel, 0);
 	}
 	
+	@Test
+	void pegarNivelAluno() {
+		pc.cadastraPessoa("111.111.111-11", "Pedro", this.preparaHabilidades());
+		pc.definirFuncaoAluno("111.111.111-11", "1211", 2);
+		at.cadastrarAtividade("Revisar encapsulamento", "estudar para prova de OO", "111.111.111-11") ;
+		tc.cadastraTarefa("RVS-0", "A", this.preparaHabilidades());
+		tc.cadastraTarefa("RVS-0", "B", this.preparaHabilidades());
+		tc.cadastraTarefa("RVS-0", "C", this.preparaHabilidades());
+		
+		tc.associarPessoaTarefa("RVS-0-0", "111.111.111-11");
+		tc.associarPessoaTarefa("RVS-0-1", "111.111.111-11");
+		tc.associarPessoaTarefa("RVS-0-2", "111.111.111-11");
+		
+		int nivel = pc.pegarNivel("111.111.111-11");
+		assertEquals(nivel, 1);
+	}
+	
+	@Test
+	void pegarNivelAlunoComTarefaTerminada() {
+		pc.cadastraPessoa("111.111.111-11", "Pedro", this.preparaHabilidades());
+		pc.definirFuncaoAluno("111.111.111-11", "1211", 2);
+		at.cadastrarAtividade("Revisar encapsulamento", "estudar para prova de OO", "111.111.111-11") ;
+		tc.cadastraTarefa("RVS-0", "A", this.preparaHabilidades());
+		tc.cadastraTarefa("RVS-0", "B", this.preparaHabilidades());
+		tc.cadastraTarefa("RVS-0", "C", this.preparaHabilidades());
+		
+		tc.associarPessoaTarefa("RVS-0-0", "111.111.111-11");
+		tc.associarPessoaTarefa("RVS-0-1", "111.111.111-11");
+		tc.associarPessoaTarefa("RVS-0-2", "111.111.111-11");
+		
+		tc.concluirTarefa("RVS-0-0");
+		int nivel = pc.pegarNivel("111.111.111-11");
+		assertEquals(nivel, 3);
+	}
 	String[] preparaHabilidades() {
 		String[] habilidades = new String[2];
 		habilidades[0] = "matematica";

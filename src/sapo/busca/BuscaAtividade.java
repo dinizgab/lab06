@@ -56,7 +56,10 @@ public class BuscaAtividade extends BuscaAbstract{
 	private boolean comparaCodigo(Atividade atividade, String termo) {
 		String codigo = atividade.getId();
 		String[] parts = codigo.split("-");
-		return codigo.equalsIgnoreCase(termo) || parts[0].equalsIgnoreCase(termo) || parts[1].equalsIgnoreCase(termo);
+		if(codigo.equalsIgnoreCase(termo) || parts[0].equalsIgnoreCase(termo) || parts[1].equalsIgnoreCase(termo)) {
+			return true;
+		}	
+		return false;
 	}
 
 	private boolean comparaNome(Atividade atividade, String termo) {

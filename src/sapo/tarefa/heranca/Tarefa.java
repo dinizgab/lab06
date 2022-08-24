@@ -5,7 +5,6 @@ import java.util.Set;
 import sapo.atividade.Atividade;
 
 public class Tarefa extends TarefaAbstract {
-    private Set<String> habilidades;
 
     /**
      * cria uma tarefa definindo seu codigo, nome, habilidade e a atividade a qual
